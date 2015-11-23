@@ -1,0 +1,115 @@
+/*
+##Header
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$layout-prefix}toggle-mobile-nav {
+  display: none;
+  @include breakpoints(max-width,small) {
+    display: block;
+  }
+}
+
+.#{$layout-prefix}header {
+  background-color: map-deep-get($ui, "dark", base);
+  align-items: center;
+  height: $header-height;
+  display: flex;
+  z-index: 9999;
+  color: #fff;
+  position: relative;
+  box-shadow: 0px 1px 4px 0px $global-shadow;
+}
+
+.#{$layout-prefix}header-navigation {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.#{$layout-prefix}header-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  @include breakpoints(max-width, medium) {
+    display: none;
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 99;
+  }
+}
+
+.#{$layout-prefix}header-nav-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  &:after {
+    content: " / ";
+    color: $global-border-color;
+  }
+  &:last-child {
+    &:after {
+      content: "";
+    }
+  }
+  &:first-child {
+    padding-left: 0;
+  }
+  @include breakpoints(max-width, medium) {
+    display: block;
+    color: #333;
+    font-size: $font-size-base * 1.2;
+    position: relative;
+    &:after {
+      content: "";
+    }
+    .header-dropdown {
+      position: absolute;
+      right: $global-margin;
+      top: $global-margin / 2;
+    }
+  }
+}
+
+.#{$layout-prefix}header-nav-link {
+  padding: $global-padding / 2 $global-padding;
+  display: block;
+  @include breakpoints(max-width, medium) {
+    padding: 1rem;
+  }
+}
+
+.#{$layout-prefix}header-nav-item--selected {
+  color: $color-primary;
+}
+
+.#{$layout-prefix}header-tools {
+  padding: 0 $global-padding / 2;
+  display: flex;
+}
+
+.#{$layout-prefix}header-tool {
+  padding: $global-padding / 3;
+}
+
+.#{$layout-prefix}header-settings {
+  display: flex;
+  height: $header-height;
+  padding: $global-padding / 2 $global-padding;
+  background: map-deep-get($ui,"dark",light);
+  align-items: center;
+  position: relative;
+}
+
+.#{$layout-prefix}mobile-nav {
+  padding: $global-padding / 3;
+  margin-left: $global-margin / 3;
+  flex: 1;
+}

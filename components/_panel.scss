@@ -1,0 +1,76 @@
+/*
+##Panel
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+
+.#{$component-prefix}panel {
+  display: none;
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 999;
+  width: $panel-width;
+  @extend %scrollable-content;
+  @include breakpoints(max-width,small) {
+    width: 100vw;
+  }
+}
+
+.#{$component-prefix}panel--visible {
+  display: flex;
+  flex-direction: column;
+}
+
+.#{$component-prefix}panel-header {
+  border-bottom: 1px solid $global-border-color;
+  margin-bottom: 0.5rem;
+  padding: $global-padding;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+
+.#{$component-prefix}panel-content {
+  padding: 0 $global-padding 80px $global-padding;
+  -webkit-transform: translateZ(0);
+  height: 100%;
+}
+
+.#{$component-prefix}panel-close {
+  cursor: pointer;
+}
+
+.#{$component-prefix}panel-heading {
+  font-weight: $font-weight-bold;
+  margin: 0;
+}
+
+.#{$component-prefix}panel--edit {
+  left: auto;
+  width: 40rem;
+  top: auto;
+  bottom: 0;
+  border-radius: $global-radius $global-radius 0 0;
+  box-shadow: 0 0 10px 0 $global-shadow;
+  @include breakpoints(max-width,small) {
+    width: 100vw;
+    left: auto;
+  }
+}
+
+.#{$component-prefix}panel--left {
+  right: auto;
+  box-shadow: 2px 0 5px 0px $global-shadow;
+}
+
+.#{$component-prefix}panel--right {
+  left: auto;
+  box-shadow: -2px 0px 5px 0px $global-shadow;
+}

@@ -1,0 +1,203 @@
+/*
+##Nav
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$component-prefix}nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.#{$component-prefix}nav-item {
+  padding: $global-padding / 2 0;
+}
+
+.#{$component-prefix}nav-heading {
+  padding: ($global-padding / 1.5) 0 0 0;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.#{$component-prefix}nav-link {
+  display: block;
+  flex-shrink: 0;
+  &:last-child {
+    border: 0;
+  }
+  @include breakpoints(max-width,xsmall) {
+    padding: ($global-padding / 1.2) 0;
+    font-size: $font-size-base *1.2;
+  }
+}
+
+.#{$component-prefix}nav-item--selected > a{
+  color: $color-default;
+}
+
+.#{$component-prefix}nav-icon {
+  margin-right: 0.5rem;
+}
+
+.#{$component-prefix}nav-dots {
+  // Hide sub levels
+  .#{$component-prefix}nav-item #{$component-prefix}nav {
+    display: none;
+  }
+  // Show sub levels when parent is selected
+  .#{$component-prefix}nav-item--opened #{$component-prefix}nav {
+    display: block;
+  }
+  .#{$component-prefix}nav-item--opened > a {
+    color: $color-default;
+  }
+  .#{$component-prefix}nav-link {
+    display: block;
+  }
+  // 2nd level
+  .#{$component-prefix}nav-item .#{$component-prefix}nav-item {
+    border-left: 2px solid  map-deep-get($ui, "light", dark);
+    background: map-deep-get($ui, "light", light);
+    margin-left: $global-margin;
+    padding-left: $global-padding;
+  }
+  // 2nd level selected
+  .#{$component-prefix}nav-item .#{$component-prefix}nav-item.#{$component-prefix}nav-item--selected {
+    color: $color-default;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 16px;
+      left: -9px;
+
+      background: $color-blue;
+      width: 16px;
+      height: 16px;
+
+      border: 3px solid #fff;
+      border-radius: $global-rounded;
+      content: "";
+    }
+  }
+}
+
+.#{$component-prefix}nav-children-toggle {
+  float: right;
+  width: 40px;
+  border-radius: $global-radius;
+  background: map-deep-get($ui,"dark",light);
+  color: #fff;
+  text-align: center;
+}
+
+.#{$component-prefix}nav-inline {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.#{$component-prefix}nav-inline-heading {
+  @extend .#{$component-prefix}nav-heading;
+  flex-basis: 100%;
+}
+
+.#{$component-prefix}nav-inline-item {
+  margin: 0.3rem;
+  display: block;
+}
+
+.#{$component-prefix}nav-item--selected > a {
+  font-weight: $font-weight-bold;
+}
+
+// Pagination
+
+.#{$component-prefix}pagination {
+  display: flex;
+  align-items: center;
+}
+
+.#{$component-prefix}pagination-number--selected {
+  cursor: pointer;
+}
+
+.#{$component-prefix}pagination-prev,
+.#{$component-prefix}pagination-next {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  background: #fff;
+  border-radius: $global-rounded;
+}
+
+.#{$component-prefix}pagination-prev {
+  margin-right: 0.3rem;
+}
+.#{$component-prefix}pagination-next {
+  margin-left: 0.3rem;
+}
+
+.#{$component-prefix}pagination-content {
+  flex: 1;
+  padding: 0.2rem;
+}
+
+.#{$component-prefix}pagination-jump {
+  @extend .#{$component-prefix}pagination;
+  .#{$component-prefix}form-input {
+    margin: 0;
+    width: auto;
+    max-width: 3rem;
+    text-align: center;
+    border-radius: $global-rounded;
+  }
+  .#{$component-prefix}pagination-jumpto {
+    display: inline-block;
+  }
+  @include breakpoints(max-width,small) {
+    .#{$component-prefix}pagination-jumpto {
+      display: none;
+    }
+  }
+}
+
+// Breadcrumb
+
+.#{$component-prefix}breadcrumb {
+  display: flex;
+  align-items: center;
+  > li {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    &:after {
+      content: " / ";
+      color: $global-border-color;
+    }
+    &:last-child {
+      &:after {
+        content: "";
+      }
+    }
+    .#{$component-prefix}breadcrumb-item {
+      padding-left: 0.5rem;
+      font-weight: $font-weight-bold;
+    }
+    .#{$component-prefix}breadcrumb-link {
+      padding: 0.5rem 0.8rem;
+    }
+    &:first-child {
+      .#{$component-prefix}breadcrumb-item {
+        padding-left: 0;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+  .#{$component-prefix}breadcrumb-item--selected {
+    font-weight: $font-weight-base;
+    color: $color-primary;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Boston css framework",
+  "authors": [
+    "Martin@digilar.se"
+  ],
+  "description": "A css framework used to standardize Digilär.se web profile",
+  "main": "bower.json",
+  "moduleType": [],
+  "keywords": [
+    "Digilär"
+  ],
+  "license": "MIT",
+  "homepage": "digilär.se",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

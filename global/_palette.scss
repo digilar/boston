@@ -1,0 +1,106 @@
+// Base colors
+
+$color-purple: #402341;
+$color-teal: #35C7B0;
+$color-navy: #2E8BBA;
+$color-peach: #D96363;
+$color-pink: #DD3182;
+$color-marine: #574E84;
+$color-sand: #F9F4EF;
+$color-red: #E14D4D;
+$color-green:#64b886;
+$color-blue: #368ED8;
+$color-grey:#f4f4f4;
+$color-yellow:#F8E71C;
+$color-brown:#e9af88;
+$color-black:#2e2e2e;
+
+$color-lightgreen:lighten($color-green,40%);
+$color-lightblue: lighten($color-blue,40%);
+$color-lightyellow: lighten($color-yellow,30%);
+$color-lightbrown: lighten($color-brown,20%);
+
+// Common
+
+$color-primary: #E36526;
+$color-secondary: $color-purple;
+$color-default:$color-blue;
+$color-info:$color-lightblue;
+
+// Text formats
+
+// Word colors
+
+// States
+$color-success:$color-green;
+$color-error:$color-red;
+
+// Ui
+
+$body-bg: #F9F9F9;
+$body-text: #333;
+
+$complementary: (
+  grey: (
+    base: $color-grey,
+  ),
+  lightblue: (
+    base: $color-lightblue,
+  ),
+  purple: (
+    base: $color-purple,
+  ),
+  white: (
+    base: #fff,
+  ),
+  black: (
+    base: $color-black,
+  ),
+  red: (
+    base: $color-red,
+  ),
+);
+
+$colors: (
+  primary: (
+    base: $color-primary,
+    dark: darken($color-primary, 10%),
+    light: lighten($color-primary, 10%),
+    textcolor: #fff
+  ),
+  secondary: (
+    base: $color-secondary,
+    dark: darken($color-secondary, 10%),
+    light: lighten($color-secondary, 10%),
+    textcolor: #fff
+  ),
+  default: (
+    base: $color-default,
+    dark: darken($color-default, 10%),
+    light: lighten($color-default, 10%),
+    textcolor: #fff
+  ),
+  success: (
+    base: $color-success,
+    dark: darken(#53A82B, 10%),
+    light: lighten(#53A82B, 10%),
+    textcolor: #fff
+  ),
+  error: (
+    base: $color-error,
+    dark: darken($color-error, 10%),
+    light: lighten($color-error, 10%),
+    textcolor: #fff
+  ),
+  info: (
+    base: $color-info,
+    dark: darken($color-info, 10%),
+    light: lighten($color-info, 10%),
+    textcolor: #333
+  ),
+  link: (
+    base: $color-default,
+    dark: darken($color-default, 10%),
+    light: lighten($color-default, 10%)
+  ),
+);

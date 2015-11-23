@@ -1,0 +1,136 @@
+///
+/// Viewport sized typography with minimum and maximum values
+///
+/// @author Eduardo Boucas (@eduardoboucas)
+///
+/// @param {Number}   $responsive  - Viewport-based size
+/// @param {Number}   $min         - Minimum font size (px)
+/// @param {Number}   $max         - Maximum font size (px)
+///                                  (optional)
+/// @param {Number}   $fallback    - Fallback for viewport-
+///                                  based units (optional)
+///
+/// @example scss - 5vw font size (with 50px fallback),
+///                 minumum of 35px and maximum of 150px
+///  @include responsive-font(5vw, 35px, 150px, 50px);
+///
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+
+  @if $fallback {
+    font-size: $fallback;
+  }
+
+  font-size: $responsive;
+}
+
+// Reset fonts for relevant elements
+.#{$layout-prefix}body {
+  @include responsive-font(3vw, 15px, 16px);
+  .#{$base-prefix}h1 {
+    @include responsive-font(3vw, 26px, 32px);
+  }
+
+  .#{$base-prefix}h2 {
+    @include responsive-font(3vw, 21px, 24px);
+  }
+
+  .#{$base-prefix}h3 {
+    @include responsive-font(3vw, 18px, 21px);
+  }
+
+  .#{$base-prefix}h4 {
+    @include responsive-font(3vw, 16px, 18px);
+  }
+
+  .#{$base-prefix}text-small {
+    @include responsive-font(3vw, 13px, 14px);
+  }
+
+  .#{$base-prefix}lead {
+    @include responsive-font(3vw, 18px, 21px);
+  }
+
+  p {
+    margin-bottom:0.8rem;
+  }
+}
+
+.#{$base-prefix}h1,
+.#{$base-prefix}h2,
+.#{$base-prefix}h3,
+.#{$base-prefix}h4 {
+  margin:0;
+}
+
+.#{$base-prefix}typography {
+  h1,h2,h3,h4,h5,h6 {
+    font-weight:600;
+    margin: 1.414rem 0 0.5rem;
+  }
+  h1 {
+    @extend .#{$base-prefix}h1;
+  }
+  h2 {
+    @extend .#{$base-prefix}h2;
+  }
+  h3 {
+    @extend .#{$base-prefix}h3;
+  }
+  h4 {
+    @extend .#{$base-prefix}h4;
+  }
+}
+
+// Custom headings
+
+.#{$base-prefix}heading-bordered {
+	padding-bottom:$global-padding / 2;
+  border-bottom: 1px solid $global-border-color;
+}
+
+.#{$base-prefix}heading-striked {
+	position: relative;
+	overflow: hidden;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		border-top: 1px solid #d6d6d6;
+		top: 50%;
+		margin-left: 10px;
+	}
+}
+
+.#{$base-prefix}heading-area {
+  margin:1.4rem 0 0.3rem 0;
+  padding-bottom:0.5rem;
+  text-transform: uppercase;
+  color:#555;
+  border-bottom:1px solid $global-border-color;
+}
+
+.#{$base-prefix}heading-content {
+  margin:0 0 0.5rem 0;
+  @include responsive-font(3vw, 30px, 36px);
+}
+
+.#{$base-prefix}link {
+  color:$color-default;
+  cursor:pointer;
+}

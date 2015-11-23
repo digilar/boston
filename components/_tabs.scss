@@ -1,0 +1,52 @@
+/*
+##Panel
+  Description
+```
+<div class="ui-tabs">
+  <a href="#" class="ui-tab ui-btn--{}"></a>
+</div>
+```
+*/
+
+.#{$component-prefix}tabs {
+  display: flex;
+  border-bottom: 1px solid $global-border-color;
+}
+
+.#{$component-prefix}tab {
+  display: inline-flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: map-deep-get($inline-sizes, "md", padding);
+}
+
+.#{$component-prefix}tab--selected {
+  margin-bottom: -1px;
+  position: relative;
+  &::before {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    content: "";
+    height: 5px;
+    background: $color-default;
+    border-radius: $global-rounded;
+  }
+}
+
+.#{$component-prefix}tab-pane {
+  display: none;
+}
+
+.#{$component-prefix}tab-pane--selected {
+  display: block;
+}
+
+.#{$component-prefix}tabs-bordered {
+  @extend .#{$component-prefix}tabs;
+  border-bottom: 1px solid $global-border-color;
+}

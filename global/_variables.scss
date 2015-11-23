@@ -1,0 +1,120 @@
+// Common
+
+$global-radius: 3px !default;
+$global-rounded: 40px !default;
+$global-circle: 100% !default;
+$global-shadow: rgba(0,0,0,0.16) !default;
+$global-border-color:#d6d6d6 !default;
+$global-padding:1rem !default;
+$global-margin:1rem !default;
+
+// Grid
+
+$total-columns: 12 !default;
+$gutter: 1rem !default;
+
+// Rem-base
+// rem-base is set in _functions.scss
+
+// Type
+
+$font-family-base:'Open Sans', sans-serif !default;
+$line-height-base:1.5 !default;
+$font-size-base:0.85rem !default;
+$font-weight-base: 400 !default;
+$font-weight-bold: 600 !default;
+$heading-font-weight-base: 500 !default;
+
+// Breakpoints
+
+$breakpoints: (
+  xlarge  : ( 1440px ),
+  large  : ( 1200px ),
+  medium : ( 992px ),
+  small  : ( 767px ),
+  xsmall  : ( 480px )
+);
+
+$container-xs: 480px !default;
+$container-sm: 640px !default;
+$container-md: 920px !default;
+$container-lg: 1020px !default;
+
+// Prefixes
+
+$component-prefix: null !default;
+$layout-prefix: null !default;
+$grid-prefix: null !default;
+$base-prefix: null !default;
+$utility-prefix: null !default;
+
+$icon-path: "../img/svgicons/" !default;
+
+// A map to loop through word colors
+
+$text-formats: (
+  explanation: (
+    base: #d0cb07,
+    border: darken(#d0cb07, 10%),
+    hover: lighten(#d0cb07, 10%)
+  ),
+  advanced-explanation: (
+    base: #394C85,
+    border: darken(#394C85, 10%),
+    hover: lighten(#394C85, 10%)
+  ),
+  deepening: (
+    base: #64AB3D,
+    border: darken(#64AB3D, 10%),
+    hover: lighten(#64AB3D, 10%)
+  ),
+  translation: (
+    base: $color-default,
+    border: darken($color-default, 10%),
+    hover: lighten($color-default, 10%)
+  )
+);
+
+$inline-sizes: (
+  xs: (
+    padding: 0.2rem 0.4rem,
+    height: auto,
+    font-size:$font-size-base - 0.02,
+  ),
+  sm: (
+    padding: 0.36rem 0.8rem,
+    height: auto,
+    font-size:$font-size-base - 0.02,
+  ),
+  md: (
+    padding: 0.5rem 0.9rem,
+    height: auto,
+    font-size:$font-size-base,
+  ),
+  lg: (
+    padding: 1rem 2rem,
+    height: auto,
+    font-size:$font-size-base * 1.3,
+  ),
+);
+
+// Ui
+
+$sidebar-width:14rem !default;
+$toolbar-width:4rem !default;
+$header-height:4rem !default;
+$sm-nav-height:3rem !default;
+$panel-width:20rem !default;
+
+$ui: (
+  dark: (
+    base: $color-secondary,
+    dark: darken($color-secondary, 3%),
+    light: lighten($color-secondary, 5%),
+  ),
+  light: (
+    base: $color-grey,
+    dark: darken($color-grey, 10%),
+    light: #fff,
+  ),
+);

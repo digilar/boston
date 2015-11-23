@@ -1,0 +1,88 @@
+/*
+##Toolbar
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$layout-prefix}toolbar {
+  flex-basis: 4rem;
+  display: flex;
+  box-shadow: -2px 0px 12px 0px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
+  @include breakpoints(max-width,small) {
+    flex-basis: 0px;
+  }
+}
+
+.#{$layout-prefix}toolbar-icon {
+  text-align: center;
+  padding: 0.6rem 0.4rem;
+  cursor: pointer;
+  &--selected {
+    background-color: map-deep-get($ui, "light", base);
+  }
+}
+
+.#{$layout-prefix}toolbar-close {
+  cursor: pointer;
+}
+
+.#{$layout-prefix}toolbar-icon-title {
+  margin-top: 0.2rem;
+  font-size: $font-size-base - 0.1;
+}
+
+.#{$layout-prefix}toolbar-content {
+  display: none;
+  flex: 1;
+}
+
+.#{$layout-prefix}toolbar--visible {
+  flex-basis: $toolbar-width;
+}
+
+.#{$layout-prefix}toolbar--opened {
+  .#{$layout-prefix}toolbar {
+    flex-basis: 25rem;
+    @include breakpoints(max-width,small) {
+      flex-basis: 4rem;
+    }
+  }
+  @include breakpoints(max-width,large) {
+    .#{$layout-prefix}sidebar {
+      display: none !important;
+    }
+  }
+  .#{$layout-prefix}toolbar-content {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    @include breakpoints(max-width,small) {
+      position: fixed;
+      left: 0px;
+      top: $header-height;
+      right: $toolbar-width;
+      bottom: $sm-nav-height;
+      background: #fff;
+      z-index: 99;
+    }
+  }
+}
+
+.#{$layout-prefix}toolbar-icons {
+  flex-basis: 4rem;
+  border-left: 1px solid $global-border-color;
+}
+
+.#{$layout-prefix}toolbar-section {
+  display: none;
+  padding: $global-padding;
+  flex: 1;
+}
+
+.#{$layout-prefix}toolbar-section--visible {
+  display: block;
+}

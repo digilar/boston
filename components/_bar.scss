@@ -1,0 +1,59 @@
+/*
+##Bar
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$component-prefix}bar {
+  display: flex;
+  @extend %scrollable-content;
+  flex-direction: column;
+  position: relative;
+  @include breakpoints(max-width,small) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    .ui-bar-item {
+      flex-basis: 33%;
+    }
+  }
+}
+
+.#{$component-prefix}bar--horizontal {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  .#{$component-prefix}bar-item {
+    margin-right: $global-margin;
+  }
+  @include breakpoints(max-width,small) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    .#{$component-prefix}bar-item {
+      flex-basis: 33%;
+      margin: 0;
+      margin-bottom: $global-margin;
+    }
+  }
+}
+
+.#{$component-prefix}bar-item {
+  display: flex;
+  padding: 0 $global-padding;
+  margin-top: $global-margin * 1.5;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.#{$component-prefix}bar-item--active {
+  color: $color-primary;
+}
+
+.#{$component-prefix}bar-nav-item {
+  margin: 0 0 0 $global-margin / 3;
+}
+
+.#{$component-prefix}bar-icon {
+  margin-bottom: $global-margin / 3;
+}

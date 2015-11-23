@@ -1,0 +1,50 @@
+.#{$component-prefix}tooltip-container {
+  position: relative;
+}
+
+.#{$component-prefix}tooltip {
+  position: absolute;
+  background: $color-blue;
+  color: #fff;
+  display: none;
+  border-radius: $global-radius;
+  padding: $global-padding;
+  z-index: 1;
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.3);
+  min-width: 220px;
+  &--topright {
+    @include css-arrow(topright, $color-blue, 0.8rem);
+  }
+  &--right {
+    @include css-arrow(right, $color-blue, 0.8rem);
+  }
+  &--topleft {
+    @include css-arrow(topleft, $color-blue, 0.8rem);
+  }
+  &--left {
+    @include css-arrow(left, $color-blue, 0.8rem);
+  }
+  &--top {
+    @include css-arrow(top, $color-blue, 0.8rem);
+  }
+  &--bottom {
+    @include css-arrow(bottom, $color-blue, 0.8rem);
+  }
+  &--bottomleft {
+    @include css-arrow(bottomleft, $color-blue, 0.8rem);
+  }
+}
+
+.#{$component-prefix}tooltip--visible {
+  display: block;
+}
+
+.#{$component-prefix}tooltip-title {
+  font-weight: $font-weight-bold;
+  margin-bottom: 0.8rem;
+}
+
+.#{$component-prefix}tooltip-close {
+  float: right;
+  cursor: pointer;
+}

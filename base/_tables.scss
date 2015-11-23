@@ -1,0 +1,49 @@
+/*
+###Tables
+  Description
+```
+Markup
+```
+*/
+.#{$base-prefix}table {
+  margin-bottom: $global-margin;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align:left;
+  width:100%;
+  th {
+    font-weight:bold;
+  }
+  td,th {
+    padding:$global-padding;
+  }
+  td {
+    border-top:1px solid $global-border-color;
+  }
+  @include breakpoints(max-width,small) {
+		overflow-x: auto;
+		display: block;
+    width: 100%;
+  }
+}
+
+
+.#{$base-prefix}table--bordered {
+  @extend .#{$base-prefix}table;
+  th {
+    background-color:$color-default;
+    border:1px solid $color-default;
+    color:#fff;
+    font-weight:bold;
+  }
+  td,th {
+    padding:$global-padding / 1.5;
+  }
+  td {
+    border-right:1px solid $global-border-color;
+    border-bottom:1px solid $global-border-color;
+    &:first-child {
+      border-left:1px solid $global-border-color;
+    }
+  }
+}

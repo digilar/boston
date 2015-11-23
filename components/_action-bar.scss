@@ -1,0 +1,68 @@
+/*
+##Icon bar
+  Description
+```
+<div class="ui-sm-nav ui-action-bar">
+  <div class="ui-action-bar-area--left">
+    content
+  </div>
+  <div class="ui-action-bar-area--center">
+    content
+  </div>
+  <div class="ui-action-bar-area--right">
+    content
+  </div>
+</div>
+```
+*/
+
+.#{$component-prefix}action-bar {
+  display: flex;
+  flex: 1;
+}
+
+.#{$component-prefix}action-bar-area {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  &-left {
+    justify-content: flex-start;
+    @extend .#{$component-prefix}action-bar-area;
+    > * {
+      margin-right: $global-margin / 3;
+    }
+  }
+  &-center {
+    justify-content: center;
+    @extend .#{$component-prefix}action-bar-area;
+    > * {
+      margin: 0 $global-margin / 4;
+    }
+  }
+  &-right {
+    justify-content: flex-end;
+    @extend .#{$component-prefix}action-bar-area;
+    > * {
+      margin-right: $global-margin / 3;
+    }
+  }
+}
+
+.#{$component-prefix}action-bar-item {
+  display: flex;
+  padding: 0.5rem 0;
+  align-items: center;
+  font-size: $font-size-base * 0.9;
+  .#{$component-prefix}action-bar-icon {
+    margin-right: $global-margin / 3;
+  }
+}
+
+.#{$component-prefix}action-bar-item-vertical {
+  @extend .#{$component-prefix}action-bar-item;
+  flex-direction: column;
+}
+
+.#{$component-prefix}action-bar-icon {
+  padding: $global-padding / 2;
+}

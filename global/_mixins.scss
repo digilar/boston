@@ -1,0 +1,232 @@
+// Responsive image
+//
+// Keep images from scaling beyond the width of their parents.
+
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%;
+  height: auto;
+}
+
+%img-responsive { @include img-responsive }
+.img-responsive { @include img-responsive }
+
+// Scrollable block
+
+%scrollable-content {
+  overflow: scroll;
+  min-height: 0;
+  min-width: 0;
+  // Add scrolling with inertia
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+%scrollable-content-x {
+  overflow-y: visible;
+  overflow-x: scroll;
+  min-height: auto;
+  min-width: auto;
+  // Add scrolling with inertia
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+// Breakpoints
+// -------------------------
+
+@mixin breakpoints($value,$name) {
+  // Prints a media query based on the value
+  @media (#{$value}:#{inspect(map-get($breakpoints, $name))}) {
+    @content;
+  }
+}
+
+// scrollhint
+
+@mixin scrollhint() {
+  @include breakpoints(max-width, small) {
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      border-radius: $global-rounded;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+      margin-left: -30px;
+      margin-top: -32px;
+      content: "";
+      background: #fff url(/img/svgicons/scroll.svg) center center no-repeat;
+    }
+  }
+}
+
+// Clearfix
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+%clearfix { @include clearfix(); }
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin word-wrap($wrap: break-word) {
+  overflow-wrap: $wrap;
+  word-wrap: $wrap;
+
+  @if $wrap == break-word {
+    word-break: break-all;
+  } @else {
+    word-break: $wrap;
+  }
+}
+
+// Gradient
+@function convert-angle($value, $unit) {
+  $convertable-units: deg grad turn rad;
+  $conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg);
+  @if index($convertable-units, unit($value)) and index($convertable-units, $unit) {
+    @return $value
+             / nth($conversion-factors, index($convertable-units, unit($value)))
+             * nth($conversion-factors, index($convertable-units, $unit));
+  }
+
+  @warn "Cannot convert `#{unit($value)}` to `#{$unit}`.";
+}
+
+@function is-direction($value) {
+  $is-direction: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+  $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+  @return $is-direction or $is-angle;
+}
+
+/// Convert a direction to legacy syntax
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+    @warn "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be an angle or a direction";
+  }
+
+  $conversion-map: (
+    to top          : bottom,
+    to top right    : bottom left,
+    to right top    : left bottom,
+    to right        : left,
+    to bottom right : top left,
+    to right bottom : left top,
+    to bottom       : top,
+    to bottom left  : top right,
+    to left bottom  : right top,
+    to left         : right,
+    to left top     : right bottom,
+    to top left     : bottom right
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - convert-angle($value, 'deg');
+}
+
+@mixin css-arrow($arrow-position, $arrow-color, $arrow-size) {
+  &:after {
+    position: absolute;
+    border: solid transparent;
+    content: " ";
+    top: auto;
+    left: auto;
+    height: 0;
+    width: 0;
+    margin: 0;
+    border-color: transparent;
+    border-width: $arrow-size;
+    pointer-events: none;
+  }
+  @if $arrow-position == "top" {
+    &:after {
+      bottom: 100%;
+      border-bottom-color: $arrow-color;
+      margin-left: (-$arrow-size);
+      left: 50%;
+    }
+  }
+  @if $arrow-position == "topright" {
+    &:after {
+      left: 100%;
+      border-left-color: $arrow-color;
+      margin-top: (-$arrow-size);
+      top: 20%;
+    }
+  }
+  @if $arrow-position == "right" {
+    &:after {
+      left: 100%;
+      border-left-color: $arrow-color;
+      margin-top: (-$arrow-size);
+      top: 50%;
+    }
+  }
+  @if $arrow-position == "bottom" {
+    &:after {
+      top: 100%;
+      border-top-color: $arrow-color;
+      margin-left: (-$arrow-size);
+      left: 50%;
+    }
+  }
+  @if $arrow-position == "bottomleft" {
+    &:after {
+      top: 100%;
+      border-top-color: $arrow-color;
+      margin-left: (-$arrow-size);
+      left: 30px;
+    }
+  }
+  @if $arrow-position == "bottomright" {
+    &:after {
+      top: 100%;
+      border-top-color: $arrow-color;
+      margin-left: (-$arrow-size);
+      right: 30px;
+    }
+  }
+  @if $arrow-position == "topleft" {
+    &:after {
+      right: 100%;
+      border-right-color: $arrow-color;
+      margin-top: (-$arrow-size);
+      top: 20%;
+    }
+  }
+  @if $arrow-position == "left" {
+    &:after {
+      right: 100%;
+      border-right-color: $arrow-color;
+      margin-top: (-$arrow-size);
+      top: 50%;
+    }
+  }
+}

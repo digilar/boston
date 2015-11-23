@@ -1,0 +1,277 @@
+// Default
+
+.#{$component-prefix}btn {
+  display: inline-flex;
+  border-radius: $global-radius;
+  border: 1px solid transparent;
+  align-items: center;
+  padding: map-deep-get($inline-sizes, "sm", padding);
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  height: auto;
+  // keeps buttons from filling flex container
+  align-self: flex-start;
+  &:active {
+    top: 1px;
+  }
+}
+
+.#{$component-prefix}btn-small {
+  @extend .#{$component-prefix}btn;
+  padding: map-deep-get($inline-sizes, "xs", padding);
+  font-size: map-deep-get($inline-sizes, "xs", font-size);
+}
+
+.#{$component-prefix}btn-large {
+  @extend .#{$component-prefix}btn;
+  padding: map-deep-get($inline-sizes, "lg", padding);
+  font-size: map-deep-get($inline-sizes, "lg", font-size);
+}
+
+.#{$component-prefix}btn-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  position: relative;
+  @include scrollhint();
+}
+
+.#{$component-prefix}btn-row-item {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  flex-direction: column;
+  padding: $global-padding / 2;
+  min-width: 27vw;
+  position: relative;
+  [class*="digicon-"] {
+    margin-bottom: $global-margin / 3;
+  }
+  @include breakpoints(min-width, small) {
+    min-width: rem-calc(100px);
+  }
+  [class*="ui-ping"]  {
+    position: absolute;
+    top: 0;
+    right: rem-calc(20px);
+  }
+}
+
+.#{$component-prefix}btn-row-title {
+  margin-top: $global-margin / 2;
+}
+
+.#{$component-prefix}btn-row-vertical {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  position: relative;
+}
+
+/*
+  ###Button Colors
+  Basic UI button and with different color and states
+    - Default
+    - Primary
+    - Secondary
+    - Success
+  ```
+  <button class="ui-btn--{color}">Button</button>
+  ```
+*/
+
+@each $name, $palette in $colors {
+.#{$component-prefix}btn-#{$name} {
+    @extend .#{$component-prefix}btn;
+    background: palette($name);
+    color: #fff;
+  }
+}
+
+/*
+  ###Rounded button
+  Append the class to a button
+  ```
+  <button class="ui-btn-rounded">Button</button>
+  ```
+*/
+
+.#{$component-prefix}btn-rounded {
+  border-radius: $global-rounded;
+}
+
+/*
+  ##Button expand
+  The button stretches to the parent container width
+  ```
+  <button class="ui-btn--expand">Button</button>
+  ```
+*/
+
+.#{$component-prefix}btn-expand {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+/*
+  ##Button link
+  Without styling
+  ```
+  <button class="ui-btn-link">Button</button>
+  ```
+*/
+
+.#{$component-prefix}btn-link {
+  background: none;
+  color: inherit;
+}
+
+/*
+  ##Button border bottom
+  Button with bordered bottom. Usage: tabbable inline navigation
+  ```
+  <button class="ui-btn-bborder">Button</button>
+  ```
+
+*/
+
+.#{$component-prefix}btn-bborder {
+  @extend .#{$component-prefix}btn;
+  background: none;
+  color: inherit;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 3px solid $global-border-color;
+}
+
+.#{$component-prefix}btn-bborder--selected {
+  border-bottom: 3px solid map-deep-get($ui,"dark",base);
+}
+
+.#{$component-prefix}btn-unbordered {
+  @extend .#{$component-prefix}btn;
+  background: #fff;
+  border: 1px solid transparent;
+  color: #333;
+  &:active {
+    cursor: pointer;
+    border: 1px solid $color-default;
+  }
+}
+
+/*
+  ##Button outline
+
+  <button class="ui-btn-outline">Button</button>
+*/
+
+.#{$component-prefix}btn-outline {
+  @extend .#{$component-prefix}btn;
+  background: #fff;
+  border: 1px solid $global-border-color;
+  color: #333;
+  &:active {
+    cursor: pointer;
+    border: 1px solid $color-default;
+  }
+}
+
+.#{$component-prefix}btn-outline--inverted {
+  @extend .#{$component-prefix}btn;
+  border: 1px solid #fff;
+  color: #fff;
+  &:active {
+    cursor: pointer;
+    border: 1px solid $color-default;
+  }
+}
+
+/*
+  ###Active state
+  Append the class to a button
+  ```
+  <button class="ui-btn--rounded">Button</button>
+  ```
+*/
+
+.#{$component-prefix}btn--selected {
+  background: #fff;
+  border: 1px solid darken($color-blue,10%);
+  box-shadow: 0 0 6px 0 rgba($color-blue,0.5);
+  color: #333;
+}
+
+// Button tab
+
+.#{$component-prefix}btn-tabs {
+  display: flex;
+  align-items: stretch;
+}
+
+.#{$component-prefix}btn-tab {
+  display: flex;
+  align-items: center;
+  padding: map-deep-get($inline-sizes, "sm", padding);
+  border-top: 1px solid $global-border-color;
+  border-bottom: 1px solid $global-border-color;
+  border-right: 1px solid $global-border-color;
+  transition: all 200ms ease-in;
+  &:last-child {
+    border-radius: 0 $global-radius $global-radius 0;
+  }
+  &:first-child {
+    border-radius: $global-radius 0 0 $global-radius;
+    border-left: 1px solid $global-border-color;
+  }
+}
+
+.#{$component-prefix}btn-tab--selected {
+  background: $color-default;
+  border: 1px solid $color-default;
+  color: #fff;
+  &:last-child {
+    border-right: 1px solid $color-default;
+  }
+  &:first-child {
+    border-left: 1px solid $color-default;
+  }
+}
+
+.#{$component-prefix}btn-group-horizontal {
+  display: flex;
+  [class*="btn-"] {
+    @include text-overflow;
+    margin-right: $global-margin / 3;
+  }
+}
+
+.#{$component-prefix}btn-group-vertical {
+  display: flex;
+  flex-direction: column;
+  [class*="btn-"] {
+    @include text-overflow;
+    margin-top: $global-margin / 3;
+  }
+}
+
+// Buttons with icons
+.#{$component-prefix}group-icons {
+  display: flex;
+  flex-direction: row;
+  [class*="ui-btn"] {
+    margin-right: $global-margin / 3;
+  }
+}
+
+.#{$component-prefix}group-icon {
+  margin-right: $global-margin / 2;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.#{$component-prefix}group-icontext {
+  margin: 0 $global-margin / 3;
+}

@@ -1,0 +1,41 @@
+/*
+##Notification
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$component-prefix}notification-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  max-width: rem-calc(420px);
+  min-width: rem-calc(320px);
+  margin-top: $global-margin;
+}
+
+.#{$component-prefix}notification {
+  background: #fff;
+  box-shadow: 0 0 4px 0 $global-shadow;
+  padding: $global-padding;
+}
+
+@each $name, $palette in $colors {
+.#{$component-prefix}notification--#{$name} {
+    @extend .#{$component-prefix}notification;
+    border-left: 4px solid palette($name);
+  }
+}
+
+.#{$component-prefix}notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.#{$component-prefix}notification-heading {
+  font-weight: $font-weight-bold;
+}

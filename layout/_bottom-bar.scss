@@ -1,0 +1,24 @@
+/*
+##Bottom bar
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$layout-prefix}bottombar {
+  padding: $global-padding / 2 $global-padding;
+  background-color: map-deep-get($ui, "light", light);
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  z-index: 2;
+  min-height: 3rem;
+  flex-wrap: nowrap;
+  border-top: 1px solid $global-border-color;
+}
+
+.#{$layout-prefix}bottombar + .#{$layout-prefix}bottombar {
+  border-bottom: 1px solid $global-border-color;
+}

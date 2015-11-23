@@ -1,0 +1,624 @@
+@mixin icon-size ($width,$height) {
+  width:$width;
+  height:$height;
+}
+
+$icon-size:24px;
+
+[digicon] {
+  width:$icon-size;
+  height:$icon-size;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+[digicon~="scale"] {
+  background-size: 100% 100%;
+}
+
+[digicon~="rounded--selected"] {
+  border-radius: 100%;
+  box-shadow:0 0 0 3px rgba(0,0,0,0.1);
+}
+
+[digicon~="boxed--selected"] {
+  box-shadow:0 0 0 3px rgba(0,0,0,0.2);
+}
+
+.digicon-text {
+  display: inline-flex;
+  align-items: center;
+  margin-right:$global-margin / 2;
+  .digicon {
+    flex-shrink:0;
+  }
+}
+
+.digicon-text--vertical {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  .digicon-content {
+    margin-top:$global-margin / 2;
+  }
+}
+
+.digicon-content {
+  margin:0 $global-margin / 2;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Logo
+
+[digicon~="logo"] {
+  width:40px;
+  height:22px;
+  background-image: url(#{$icon-path}logo.svg);
+}
+
+// Avatar
+
+[digicon~="avatar"] {
+  background-image: url(#{$icon-path}avatar.svg);
+}
+
+[digicon~="teacher"] {
+  background-image: url(#{$icon-path}teacher.svg);
+}
+
+[digicon~="teacher-white"] {
+  background-image: url(#{$icon-path}teacher-white.svg);
+}
+
+// Specials
+
+[digicon~="apps"] {
+  background-image: url(#{$icon-path}apps.svg);
+}
+
+[digicon~="continue"] {
+  background-image: url(#{$icon-path}continue.svg);
+}
+
+[digicon~="continue-white"] {
+  background-image: url(#{$icon-path}continue-white.svg);
+}
+
+[digicon~="dashboard"] {
+  background-image: url(#{$icon-path}homescreen.svg);
+}
+
+[digicon~="messages"] {
+  background-image: url(#{$icon-path}dashboard-message.svg);
+}
+
+[digicon~="teacher"] {
+  background-image: url(#{$icon-path}dashboard-teacher.svg);
+}
+
+[digicon~="stats"] {
+  background-image: url(#{$icon-path}dashboard-statistics.svg);
+}
+
+// States
+
+[digicon~="assignment"] {
+  background-image: url(#{$icon-path}assignment.svg);
+}
+
+[digicon~="assignment-white"] {
+  background-image: url(#{$icon-path}assignment-white.svg);
+}
+
+[digicon~="assignment-audited"]{
+  background-image: url(#{$icon-path}audited.svg);
+}
+
+[digicon~="assignment-done"] {
+  background-image: url(#{$icon-path}done.svg);
+}
+
+[digicon~="assignment-turnedin"] {
+  background-image: url(#{$icon-path}turnedin.svg);
+}
+
+[digicon~="assignment-started"] {
+  background-image: url(#{$icon-path}started.svg);
+}
+
+[digicon~="assignment-notstarted"]{
+  background-image: url(#{$icon-path}notstarted.svg);
+}
+
+[digicon~="assignment-correct"] {
+  background-image: url(#{$icon-path}correct.svg);
+}
+
+[digicon~="assignment-wrong"] {
+  background-image: url(#{$icon-path}error.svg);
+}
+
+// Media
+
+[digicon~="player-play"] {
+  background-image: url(#{$icon-path}player-play.svg);
+}
+
+[digicon~="player-pause"] {
+  background-image: url(#{$icon-path}player-pause.svg);
+}
+
+[digicon~="player-forward"] {
+  background-image: url(#{$icon-path}player-forward.svg);
+}
+
+[digicon~="player-rewind"] {
+  background-image: url(#{$icon-path}player-rewind.svg);
+}
+
+[digicon~="play"] {
+  background-image: url(#{$icon-path}play.svg);
+}
+
+[digicon~="play-white"] {
+  background-image: url(#{$icon-path}play-white.svg);
+}
+[digicon~="volume"] {
+  background-image: url(#{$icon-path}volume.svg);
+}
+
+[digicon~="volume-white"] {
+  background-image: url(#{$icon-path}volume-white.svg);
+}
+[digicon~="related"] {
+  background-image: url(#{$icon-path}related.svg);
+}
+
+[digicon~="related-white"] {
+  background-image: url(#{$icon-path}related-white.svg);
+}
+
+// Directions
+
+[digicon~="arrow-left"] {
+  background-image: url(#{$icon-path}arrow-left.svg);
+}
+
+[digicon~="arrow-left-white"] {
+  background-image: url(#{$icon-path}arrow-left-white.svg);
+}
+
+[digicon~="arrow-right"] {
+  background-image: url(#{$icon-path}arrow-right.svg);
+}
+
+[digicon~="arrow-right-white"]{
+  background-image: url(#{$icon-path}arrow-right-white.svg);
+}
+
+[digicon~="arrow-up"] {
+  background-image: url(#{$icon-path}arrow-up.svg);
+}
+
+[digicon~="arrow-up-white"] {
+  background-image: url(#{$icon-path}arrow-up-white.svg);
+}
+
+[digicon~="arrow-down"] {
+  background-image: url(#{$icon-path}arrow-down.svg);
+}
+
+[digicon~="arrow-down-white"] {
+  background-image: url(#{$icon-path}arrow-down-white.svg);
+}
+
+[digicon~="chevron-left"] {
+  background-image: url(#{$icon-path}chevron-left.svg);
+}
+
+[digicon~="chevron-right"] {
+  background-image: url(#{$icon-path}chevron-right.svg);
+}
+
+[digicon~="chevron-up"] {
+  background-image: url(#{$icon-path}chevron-up.svg);
+}
+
+[digicon~="chevron-up-white"] {
+  background-image: url(#{$icon-path}chevron-up-white.svg);
+}
+
+[digicon~="chevron-down"] {
+  background-image: url(#{$icon-path}chevron-down.svg);
+}
+
+[digicon~="chevron-down-white"] {
+  background-image: url(#{$icon-path}chevron-down-white.svg);
+}
+
+[digicon~="digicon-list-arrow"]{
+  background-image: url(#{$icon-path}list-arrow.svg);
+}
+
+// Common
+
+[digicon~="help"] {
+  background-image: url(#{$icon-path}help.svg);
+}
+
+[digicon~="help-white"] {
+  background-image: url(#{$icon-path}help-white.svg);
+}
+
+// File icon
+
+[digicon~="file-video"] {
+  background-image: url(#{$icon-path}file-video.svg);
+}
+
+[digicon~="file-video-white"] {
+  background-image: url(#{$icon-path}file-video-white.svg);
+}
+
+[digicon~="file-image"] {
+  background-image: url(#{$icon-path}file-image.svg);
+}
+
+[digicon~="file-image-multiple"] {
+  background-image: url(#{$icon-path}file-image-multiple.svg);
+}
+
+[digicon~="file-voice"] {
+  background-image: url(#{$icon-path}file-voice.svg);
+}
+
+[digicon~="file-voice-white"] {
+  background-image: url(#{$icon-path}file-voice-white.svg);
+}
+
+[digicon~="file-document"] {
+  background-image: url(#{$icon-path}file-document.svg);
+}
+
+// UI
+[digicon~="portfolio"] {
+  background-image: url(#{$icon-path}portfolio.svg);
+}
+
+[digicon~="portfolio-white"] {
+  background-image: url(#{$icon-path}portfolio-white.svg);
+}
+
+[digicon~="support"] {
+  background-image: url(#{$icon-path}support.svg);
+}
+
+[digicon~="support-white"] {
+  background-image: url(#{$icon-path}support-white.svg);
+}
+
+[digicon~="share"] {
+  background-image: url(#{$icon-path}share.svg);
+}
+
+[digicon~="list"] {
+  background-image: url(#{$icon-path}wordlists.svg);
+}
+
+[digicon~="trash"] {
+  background-image: url(#{$icon-path}trash.svg);
+}
+
+[digicon~="download"] {
+  background-image: url(#{$icon-path}download.svg);
+}
+
+[digicon~="cloud-down"] {
+  background-image: url(#{$icon-path}cloud-down.svg);
+}
+
+[digicon~="cloud-up"] {
+  background-image: url(#{$icon-path}cloud-up.svg);
+}
+
+[digicon~="sidebar"] {
+  background-image: url(#{$icon-path}sidebar.svg);
+}
+
+[digicon~="sidebar-white"] {
+  background-image: url(#{$icon-path}sidebar-white.svg);
+}
+
+[digicon~="tools"] {
+  background-image: url(#{$icon-path}tools.svg);
+}
+
+[digicon~="tools-white"] {
+  background-image: url(#{$icon-path}tools-white.svg);
+}
+
+[digicon~="flow-nav"] {
+  background-image: url(#{$icon-path}flownav.svg);
+}
+
+[digicon~="flow-nav-white"] {
+  background-image: url(#{$icon-path}flownav-white.svg);
+}
+
+[digicon~="history"] {
+  background-image: url(#{$icon-path}history.svg);
+}
+
+[digicon~="messages"] {
+  background-image: url(#{$icon-path}messages.svg);
+}
+
+[digicon~="settings"] {
+  background-image: url(#{$icon-path}settings.svg);
+}
+
+[digicon~="settings-white"] {
+  background-image: url(#{$icon-path}settings-white.svg);
+}
+
+[digicon~="admin"] {
+  background-image: url(#{$icon-path}admin.svg);
+}
+
+[digicon~="admin-white"] {
+  background-image: url(#{$icon-path}admin-white.svg);
+}
+
+[digicon~="mouse"]{
+  background-image: url(#{$icon-path}mouse.svg);
+}
+
+[digicon~="scroll-white"] {
+  background-image: url(#{$icon-path}scroll.svg);
+}
+
+[digicon~="hamburger"] {
+  background-image: url(#{$icon-path}hamburger.svg);
+}
+
+[digicon~="hamburger-white"]{
+  background-image: url(#{$icon-path}hamburger-white.svg);
+}
+
+[digicon~="login"] {
+  background-image: url(#{$icon-path}login.svg);
+}
+
+[digicon~="logout"] {
+  background-image: url(#{$icon-path}logout.svg);
+}
+
+[digicon~="account"] {
+  background-image: url(#{$icon-path}account.svg);
+}
+
+[digicon~="account-white"] {
+  background-image: url(#{$icon-path}account-white.svg);
+}
+
+[digicon~="clock"] {
+  background-image: url(#{$icon-path}clock.svg);
+}
+
+[digicon~="resize"] {
+  background-image: url(#{$icon-path}resize.svg);
+}
+
+[digicon~="resize-white"]{
+  background-image: url(#{$icon-path}resize-white.svg);
+}
+
+[digicon~="drag"] {
+  background-image: url(#{$icon-path}drag.svg);
+}
+
+[digicon~="drag-white"] {
+  background-image: url(#{$icon-path}drag-white.svg);
+}
+
+[digicon~="sort"] {
+  background-image: url(#{$icon-path}sort.svg);
+}
+
+[digicon~="sort-white"] {
+  background-image: url(#{$icon-path}sort-white.svg);
+}
+
+[digicon~="grid"]{
+  background-image: url(#{$icon-path}grid.svg);
+}
+
+[digicon~="grid-white"] {
+  background-image: url(#{$icon-path}grid-white.svg);
+}
+
+[digicon~="magnifier"] {
+  background-image: url(#{$icon-path}magnifier.svg);
+}
+
+[digicon~="magnifier-white"] {
+  background-image: url(#{$icon-path}magnifier-white.svg);
+}
+
+[digicon~="palette"] {
+  background-image: url(#{$icon-path}palette.svg);
+}
+
+[digicon~="text-settings"] {
+  background-image: url(#{$icon-path}text-settings.svg);
+}
+
+[digicon~="read"] {
+  background-image: url(#{$icon-path}read.svg);
+}
+
+[digicon~="read-white"] {
+  background-image: url(#{$icon-path}read-white.svg);
+}
+
+[digicon~="animation"] {
+  background-image: url(#{$icon-path}animation.svg);
+}
+
+[digicon~="help-ruler"] {
+  background-image: url(#{$icon-path}help-ruler.svg);
+}
+
+[digicon~="eye"] {
+  background-image: url(#{$icon-path}eye.svg);
+}
+
+[digicon~="edit"] {
+  background-image: url(#{$icon-path}edit.svg);
+}
+
+[digicon~="close"] {
+  background-image: url(#{$icon-path}close.svg);
+}
+
+[digicon~="close-white"] {
+  background-image: url(#{$icon-path}close-white.svg);
+}
+
+[digicon~="plus"] {
+  background-image: url(#{$icon-path}plus.svg);
+}
+
+[digicon~="minus"] {
+  background-image: url(#{$icon-path}minus.svg);
+}
+
+[digicon~="group"] {
+  background-image: url(#{$icon-path}groups.svg);
+}
+
+[digicon~="create-excercise"] {
+  background-image: url(#{$icon-path}create-excercise.svg);
+}
+
+[digicon~="bars"] {
+  background-image: url(#{$icon-path}bars.svg);
+}
+
+// tools
+
+[digicon~="intro"] {
+  background-image: url(#{$icon-path}intro.svg);
+}
+
+[digicon~="wordlists"] {
+  background-image: url(#{$icon-path}wordlists.svg);
+}
+
+[digicon~="scissor"] {
+  background-image: url(#{$icon-path}scissor.svg);
+}
+
+[digicon~="notes"] {
+  background-image: url(#{$icon-path}notes.svg);
+}
+
+[digicon~="quiz"] {
+  background-image: url(#{$icon-path}quiz.svg);
+}
+
+[digicon~="instud"] {
+  background-image: url(#{$icon-path}instud.svg);
+}
+
+[digicon~="assignment"] {
+  background-image: url(#{$icon-path}assignment.svg);
+}
+
+[digicon~="help"] {
+  background-image: url(#{$icon-path}help.svg);
+}
+
+// Subject icon-size
+
+[digicon~="sub-sh"] {
+  background-image: url(#{$icon-path}sub-sh.svg);
+}
+
+[digicon~="sub-re"] {
+  background-image: url(#{$icon-path}sub-re.svg);
+}
+
+[digicon~="sub-hi"] {
+  background-image: url(#{$icon-path}sub-hi.svg);
+}
+
+[digicon~="sub-sv"]{
+  background-image: url(#{$icon-path}sub-sv.svg);
+}
+
+[digicon~="sub-en"] {
+  background-image: url(#{$icon-path}sub-en.svg);
+}
+
+[digicon~="library-rounded"] {
+  background-image: url(#{$icon-path}library-rounded.svg);
+}
+
+[digicon~="extramaterial-rounded"] {
+  background-image: url(#{$icon-path}extramaterial-rounded.svg);
+}
+
+[digicon~="assignments-rounded"] {
+  background-image: url(#{$icon-path}assignments-rounded.svg);
+}
+
+[digicon~="continue-rounded"] {
+  background-image: url(#{$icon-path}continue-rounded.svg);
+}
+
+[digicon~="document-rounded"] {
+  background-image: url(#{$icon-path}document-rounded.svg);
+}
+
+[digicon~="settings-rounded"] {
+  background-image: url(#{$icon-path}settings-rounded.svg);
+}
+
+[digicon~="portfolio-rounded"] {
+  background-image: url(#{$icon-path}portfolio-rounded.svg);
+}
+
+[digicon~="admin-rounded"] {
+  background-image: url(#{$icon-path}admin-rounded.svg);
+}
+
+[digicon~="support-rounded"]{
+  background-image: url(#{$icon-path}support-rounded.svg);
+}
+
+// Flags
+
+[digicon~="f-sweden"] {
+  background-image: url(/assets/flags/sweden.svg);
+}
+
+[digicon~="f-uk"] {
+  background-image: url(/assets/flags/uk.svg);
+}
+
+[digicon~="small"] {
+  @include icon-size(16px,16px);
+  @extend [digicon~="scale"]
+}
+
+[digicon~="large"] {
+  @include icon-size(48px,48px);
+  @extend [digicon~="scale"]
+}

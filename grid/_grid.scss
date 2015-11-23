@@ -1,0 +1,48 @@
+.#{$grid-prefix}grid {
+  display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	margin: 0px (-$gutter);
+}
+
+[class*="#{$grid-prefix}col-"] {
+	padding: 0 $gutter;
+	margin-bottom: $gutter;
+	flex: 1 1 auto;
+}
+
+@function grid-calc($colNumber, $totalColumns) {
+  $result: percentage($colNumber / $totalColumns);
+  @if $result == 0% { $result: 0; }
+  @return $result;
+}
+
+@mixin grid-column($columns) {
+  flex-basis: grid-calc($columns, $total-columns);
+	max-width: grid-calc($columns, $total-columns);
+}
+
+@mixin grid-html-classes($size) {
+	@for $i from 1 through $total-columns {
+    .#{$grid-prefix}col-#{$size}--#{$i} {
+			@include grid-column($columns:$i);
+		}
+  }
+}
+
+// generate default grid classes
+
+@for $i from 1 through $total-columns {
+	.#{$grid-prefix}col--#{$i} {
+		@include grid-column($columns:$i);
+	}
+}
+
+// create cols for each breakpoint
+
+@each $key, $value in $breakpoints {
+	$value: nth($key, 1);
+	@include breakpoints(max-width,$value) {
+		@include grid-html-classes($value);
+	}
+}

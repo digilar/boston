@@ -1,0 +1,47 @@
+/*
+##Accordion
+  Description
+```
+Markup
+```
+*/
+
+/*
+##Accordion
+  Description
+```
+Markup
+```
+*/
+
+.#{$component-prefix}accordion-item {
+  border-bottom: 1px solid $global-border-color;
+}
+
+.#{$component-prefix}accordion-header {
+  padding: $global-padding;
+  background: url(/img/svgicons/chevron-down.svg) no-repeat right 1rem center;
+  display: flex;
+  cursor: pointer;
+}
+
+.#{$component-prefix}accordion-header-item {
+  background:none;
+  justify-content: space-between;
+}
+
+.#{$component-prefix}accordion-item--opened {
+  .#{$component-prefix}accordion-header {
+    background: url(/img/svgicons/chevron-up.svg) no-repeat right 1rem center;
+  }
+  .#{$component-prefix}accordion-content {
+    display: block;
+  }
+}
+
+.#{$component-prefix}accordion-content {
+  border-top: 2px solid $color-blue;
+  background: $color-grey;
+  display: none;
+  padding: $global-padding;
+}

@@ -1,0 +1,26 @@
+/*
+##Alerts
+  Description
+```
+Markup
+```
+*/
+%#{$component-prefix}alert {
+  padding: $global-padding/ 2 $global-padding;
+  border-width: 1px;
+  border-left-width: rem-calc(5px);
+  border-style: solid;
+  background-color: $color-default;
+  border-radius: $global-radius;
+  vertical-align: middle;
+}
+
+@each $name, $palette in $colors {
+  .#{$component-prefix}alert-#{$name} {
+    @extend %#{$component-prefix}alert;
+    background:  palette($name);
+    border-color: palette($name,base);
+    border-left-color: palette($name,dark);
+    color:  palette($name,textcolor);
+  }
+}

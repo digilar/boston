@@ -1,0 +1,17 @@
+.#{$component-prefix}stats-bar {
+  display: inline-block;
+  height: 6px;
+  background-color: $color-grey;
+  width: 100%;
+  border-radius: $global-rounded;
+  position: relative;
+}
+
+.#{$component-prefix}stats-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: $global-rounded;
+  background: $color-default;
+}

@@ -1,0 +1,51 @@
+// returns all colors in $colors and can be used as palette($name);
+@function palette($palette, $tone: "base") {
+  @return map-get(map-get($colors, $palette), $tone);
+}
+
+// returns all complementary colors in $complementary and can be used as palette($name);
+@function complementarypalette($complementarypalette, $tone: "base") {
+  @return map-get(map-get($complementary, $complementarypalette), $tone);
+}
+
+// returns all inline sizes in $inline-size and can be used as inline-size($name);
+@function inline-size($inline-size, $setting) {
+  @return map-get(map-get($inline-sizes, $inline-size), $setting);
+}
+
+// Get nested maps
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+/// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+/// @param {Number} $num - Number to strip unit from.
+/// @returns {Number} The same number, sans unit.
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+$rem-base: 16px !default;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}

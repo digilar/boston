@@ -1,0 +1,23 @@
+/*
+##Small screen navigation
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$layout-prefix}sm-nav {
+  display: flex;
+  align-items: center;
+  padding: 0.1rem $global-padding / 2;
+  color: #fff;
+  height: $sm-nav-height;
+  @include breakpoints(min-width, small) {
+    display: none;
+  }
+  @include breakpoints(max-width,small) {
+    flex: 0 1 auto;
+    display: flex;
+  }
+  background: map-deep-get($ui,"dark",dark);
+}

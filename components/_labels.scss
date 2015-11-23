@@ -1,0 +1,64 @@
+/*
+###Badges
+  Description
+```
+Markup
+```
+*/
+%#{$component-prefix}badge {
+  padding: 0.1rem 0.6rem;
+  display: inline-block;
+  background-color: $color-default;
+  border-radius: $global-radius;
+}
+
+.#{$component-prefix}badge-rounded {
+  @extend %#{$component-prefix}badge;
+  border-radius: $global-rounded;
+}
+
+.#{$component-prefix}badge-circle {
+  @extend %#{$component-prefix}badge;
+  border-radius: $global-circle;
+}
+
+.#{$component-prefix}badge-outline {
+  @extend %#{$component-prefix}badge;
+  background: #fff;
+  border: 1px solid $global-border-color;
+}
+
+@each $name, $palette in $colors {
+.#{$component-prefix}badge-#{$name} {
+    @extend %#{$component-prefix}badge;
+    background-color: palette($name);
+    border-color: palette($name,dark);
+    color: palette($name,textcolor);
+  }
+}
+
+.#{$component-prefix}badge-topright {
+  position: absolute;
+  top: $global-margin;
+  right: $global-margin;
+}
+
+
+.#{$component-prefix}badge-small {
+  padding: 0.08rem 0.5rem;
+  font-size: $font-size-base * 0.9;
+}
+
+.#{$component-prefix}tick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: $global-rounded;
+  box-shadow: 0 0 5px 0 $global-shadow;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #fff;
+}

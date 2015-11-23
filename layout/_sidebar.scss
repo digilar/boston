@@ -1,0 +1,65 @@
+/*
+##Sidebar
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$layout-prefix}sidebar {
+  display: flex;
+  flex-direction: column;
+  background: map-deep-get($ui, "light", light);
+  flex-basis: $sidebar-width;
+  border-right: 1px solid $global-border-color;
+  position: relative;
+  z-index: 3;
+  @include breakpoints(max-width,small) {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+  }
+}
+
+.#{$layout-prefix}sidebar--visible {
+  display: flex;
+}
+
+.#{$layout-prefix}sidebar--shrink {
+  @extend .flex-shrink;
+  flex-basis: auto;
+}
+
+/*
+Markup: <div class="ui-sub-sidebar"></div>
+Comment: Third level navigation
+*/
+
+.#{$layout-prefix}sub-sidebar {
+  display: flex;
+  background: map-deep-get($ui, "light", light);
+  width: $sidebar-width;
+  position: relative;
+  border-right: 1px solid $global-border-color;
+  position: relative;
+  flex-direction: column;
+  z-index: 2;
+  @include breakpoints(max-width,xsmall) {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    width: auto;
+    display: none;
+    z-index: 9999;
+  }
+}
+
+.#{$layout-prefix}sub-sidebar--visible {
+  display: block;
+}

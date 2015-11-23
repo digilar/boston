@@ -1,0 +1,257 @@
+/*
+##Helpers
+  Helper classes for the UI
+
+  Responsive embeds
+```
+<div class="embed-responsive">
+  <iframe></iframe>
+</div>
+```
+
+__margin__
+*top
+*bottom
+*y
+*x
+*none
+
+    <div class="margin-{value}"></div>
+*/
+
+// Responsive embeds
+
+.#{$utility-prefix}embed-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.#{$utility-prefix}absolute--center {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+}
+
+.#{$utility-prefix}text-overflow {
+  @include text-overflow;
+}
+
+// Background colors
+@each $name, $complementarypalette in $complementary {
+.bg-color--#{$name} {
+    background: complementarypalette($name);
+  }
+}
+
+// Text colors
+@each $name, $complementarypalette in $complementary {
+.text-color--#{$name} {
+    color: complementarypalette($name);
+  }
+}
+
+// Positions
+
+.#{$utility-prefix}relative {
+  position: relative;
+}
+
+.#{$utility-prefix}p0  { padding: 0 }
+
+.#{$utility-prefix}p1  { padding:       $global-padding }
+.#{$utility-prefix}py1 { padding-top:   $global-padding; padding-bottom: $global-padding }
+.#{$utility-prefix}px1 { padding-left:  $global-padding; padding-right:  $global-padding }
+
+.#{$utility-prefix}p2  { padding:       $global-padding * 2 }
+.#{$utility-prefix}py2 { padding-top:   $global-padding * 2; padding-bottom: $global-padding * 2 }
+.#{$utility-prefix}px2 { padding-left:  $global-padding * 2; padding-right:  $global-padding * 2 }
+
+.#{$utility-prefix}p3  { padding:       $global-padding * 3 }
+.#{$utility-prefix}py3 { padding-top:   $global-padding * 3; padding-bottom: $global-padding * 3 }
+.#{$utility-prefix}px3 { padding-left:  $global-padding * 3; padding-right:  $global-padding * 3 }
+
+.#{$utility-prefix}pb1  { padding-bottom: $global-padding }
+.#{$utility-prefix}pb2  { padding-bottom: $global-padding * 2 }
+.#{$utility-prefix}pb3  { padding-bottom: $global-padding * 3 }
+
+.#{$utility-prefix}pt1  { padding-bottom: $global-padding }
+.#{$utility-prefix}pt2  { padding-bottom: $global-padding * 2 }
+.#{$utility-prefix}pt3  { padding-bottom: $global-padding * 3 }
+
+// margin
+
+.#{$utility-prefix}m0  { margin:        0 }
+.#{$utility-prefix}mt0 { margin-top:    0 }
+.#{$utility-prefix}mr0 { margin-right:  0 }
+.#{$utility-prefix}mb0 { margin-bottom: 0 }
+.#{$utility-prefix}ml0 { margin-left:   0 }
+
+.#{$utility-prefix}m1  { margin:        $global-margin; }
+.#{$utility-prefix}mt1 { margin-top:    $global-margin; }
+.#{$utility-prefix}mr1 { margin-right:  $global-margin; }
+.#{$utility-prefix}mb1 { margin-bottom: $global-margin; }
+.#{$utility-prefix}ml1 { margin-left:   $global-margin; }
+
+.#{$utility-prefix}m2  { margin:        $global-margin * 2; }
+.#{$utility-prefix}mt2 { margin-top:    $global-margin * 2; }
+.#{$utility-prefix}mr2 { margin-right:  $global-margin * 2; }
+.#{$utility-prefix}mb2 { margin-bottom: $global-margin * 2; }
+.#{$utility-prefix}ml2 { margin-left:   $global-margin * 2; }
+
+.#{$utility-prefix}m3  { margin:        $global-margin * 3; }
+.#{$utility-prefix}mt3 { margin-top:    $global-margin * 3; }
+.#{$utility-prefix}mr3 { margin-right:  $global-margin * 3; }
+.#{$utility-prefix}mb3 { margin-bottom: $global-margin * 3; }
+.#{$utility-prefix}ml3 { margin-left:   $global-margin * 3; }
+
+.#{$utility-prefix}mx1 { margin-left: $global-margin; margin-right: $global-margin; }
+.#{$utility-prefix}mx2 { margin-left: $global-margin * 2; margin-right: $global-margin * 2; }
+.#{$utility-prefix}mx3 { margin-left: $global-margin * 3; margin-right: $global-margin * 3; }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+// Nudging
+
+.#{$utility-prefix}nl1 { margin-left: $global-margin / 3; }
+.#{$utility-prefix}nr1 { margin-right: $global-margin / 3; }
+.#{$utility-prefix}nt1 { margin-top: $global-margin / 3; }
+.#{$utility-prefix}nb1 { margin-bottom: $global-margin / 3; }
+
+// Alignments
+.#{$utility-prefix}pull-right   { float: right; }
+.#{$utility-prefix}pull-left    { float: left; }
+.#{$utility-prefix}text-center  { text-align: center; }
+.#{$utility-prefix}text-left    { text-align: left; }
+.#{$utility-prefix}text-right   { text-align: right; }
+
+// Hide but show for screen readers
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.#{$utility-prefix}disabled     { opacity: 0.6; cursor: not-allowed; }
+.#{$utility-prefix}dimmed       { opacity: 0.5; }
+.#{$utility-prefix}hidden       { display: none; }
+.#{$utility-prefix}visible      { display: block; }
+
+.#{$utility-prefix}inline-block { display: inline-block; }
+.#{$utility-prefix}inline       { display: inline; }
+.#{$utility-prefix}block        { display: block; }
+.#{$utility-prefix}table        { display: table }
+.#{$utility-prefix}table-cell   { display: table-cell }
+
+// Pointer
+
+.#{$utility-prefix}pointer-events-none    { pointer-events: none; }
+.#{$utility-prefix}cursor-pointer         { cursor: pointer; }
+.#{$utility-prefix}cursor-not-allowed     { cursor: not-allowed; }
+
+@each $key, $value in $breakpoints {
+	$value: nth($key, 1);
+	@include breakpoints(max-width,$value) {
+		.hide-#{$value} {
+      display: none;
+    }
+	}
+}
+
+@each $key, $value in $breakpoints {
+	$value: nth($key, 1);
+	@include breakpoints(max-width,$value) {
+		.show-#{$value} {
+      display: block;
+    }
+	}
+}
+
+// Flex classes
+
+.flex { display: flex; backface-visibility: hidden; }
+
+.flex-column  { flex-direction: column; }
+.flex-wrap    { flex-wrap: wrap; }
+
+.flex-center   { align-items: center; }
+.flex-baseline { align-items: baseline; }
+.flex-stretch  { align-items: stretch; }
+.flex-start    { align-items: flex-start; }
+.flex-end      { align-items: flex-end; }
+
+.flex-justify  { justify-content: space-between; }
+
+ // 1. Fix for Chrome 44 bug. https: //code.google.com/p/chromium/issues/detail?id=506893
+
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0; /* 1 */
+  min-height: 0; /* 1 */
+}
+
+.flex-grow    { flex: 1 0 auto }
+.flex-shrink  { flex: 0 0 auto; }
+.flex-expand  { flex: 1 1 auto; }
+.flex-none    { flex: none }
+
+.flex-first   { order: -1 }
+.flex-last    { order: 99999 }
+
+.flex-wrap    { flex-wrap: wrap; }
+.flex-nowrap  { flex-wrap: no-wrap; }
+
+.flex-centering {
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.justify-space-between  { justify-content: space-between; }
+.justify-space-around   { justify-content: space-around; }
+.justify-center         { justify-content: center; }
+.justify-flex-end       { justify-content: flex-end; }
+.justify-flex-start     { justify-content: flex-end; }
+
+// Borders
+
+.#{$utility-prefix}b0  { border:        0 }
+.#{$utility-prefix}bt0 { border-top:    0 }
+.#{$utility-prefix}br0 { border-right:  0 }
+.#{$utility-prefix}bb0 { border-bottom: 0 }
+.#{$utility-prefix}bl0 { border-left:   0 }
+
+.#{$utility-prefix}b1  { border:        1px solid $global-border-color; }
+.#{$utility-prefix}bt1 { border-top:    1px solid $global-border-color; }
+.#{$utility-prefix}br1 { border-right:  1px solid $global-border-color; }
+.#{$utility-prefix}bb1 { border-bottom: 1px solid $global-border-color; }
+.#{$utility-prefix}bl1 { border-left:   1px solid $global-border-color; }
+
+// Border radius
+.#{$utility-prefix}br0 { border-radius: none }
+.#{$utility-prefix}br  { border-radius: $global-radius; }
+.#{$utility-prefix}bry { border-radius: $global-radius; }
+.#{$utility-prefix}brx { border-radius: $global-radius; }
+
+// Shadow
+.shadow { box-shadow: 0 0 6px 0 $global-shadow; }
+.shadow-inset { box-shadow: inset 0 0 6px 0 $global-shadow; }

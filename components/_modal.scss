@@ -1,0 +1,78 @@
+/*
+##Modal
+  Description
+```
+<button class="ui-btn--{color}">Code</button>
+```
+*/
+
+.#{$component-prefix}modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  z-index: 999;
+  padding: $global-padding;
+  @extend %scrollable-content;
+  transition: all 400ms ease-in-out;
+  pointer-events: none;
+}
+
+.#{$component-prefix}-close {
+  background: url(../img/svgicons/close.svg) no-repeat center center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.#{$component-prefix}modal-overlay--visible {
+  visibility: visible;
+  background: rgba(65,35,65,0.8);
+  pointer-events: auto;
+}
+
+.#{$component-prefix}modal-overlay--out {
+  z-index: -1;
+  visibility: hidden;
+}
+
+.#{$component-prefix}modal-body {
+  // Animation in
+  background: #fff;
+  flex-direction: column;
+  box-shadow: 0 0 20px 0 $global-shadow;
+  max-width: 500px;
+  margin: 3rem auto 5rem auto;
+  border-radius: $global-radius;
+}
+
+.#{$component-prefix}modal-overlay--out .modal-body {
+ // Animation out
+}
+
+.#{$component-prefix}modal-media {
+  flex: 1;
+}
+
+.#{$component-prefix}modal-content {
+  padding: $global-padding $global-padding *2;
+  @include breakpoints(max-width,small) {
+    padding: $global-padding;
+  }
+}
+
+.#{$component-prefix}modal-title {
+  margin: 0;
+}
+
+.#{$component-prefix}modal-footer {
+  border-top: 1px solid $global-border-color;
+  padding: $global-padding $global-padding *2 $global-padding $global-padding *2;
+  @include breakpoints(max-width,small) {
+    padding: $global-padding;
+  }
+}
