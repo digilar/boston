@@ -222,8 +222,16 @@ $icon-size:24px;
   background-image: url(#{$icon-path}chevron-left.svg);
 }
 
+[digicon~="chevron-left-white"] {
+  background-image: url(#{$icon-path}chevron-left-white.svg);
+}
+
 [digicon~="chevron-right"] {
   background-image: url(#{$icon-path}chevron-right.svg);
+}
+
+[digicon~="chevron-right-white"] {
+  background-image: url(#{$icon-path}chevron-right-white.svg);
 }
 
 [digicon~="chevron-up"] {

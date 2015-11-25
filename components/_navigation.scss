@@ -18,6 +18,7 @@
 
 .#{$component-prefix}nav-heading {
   padding: ($global-padding / 1.5) 0 0 0;
+  font-weight: $font-weight-bold;
   flex-shrink: 0;
   text-transform: uppercase;
 }
@@ -44,8 +45,12 @@
 
 .#{$component-prefix}nav-dots {
   // Hide sub levels
-  .#{$component-prefix}nav-item #{$component-prefix}nav {
+  .#{$component-prefix}nav-item .#{$component-prefix}nav {
     display: none;
+  }
+  // Show current items sub levels
+  .#{$component-prefix}nav-item--selected .#{$component-prefix}nav {
+    display: block;
   }
   // Show sub levels when parent is selected
   .#{$component-prefix}nav-item--opened #{$component-prefix}nav {

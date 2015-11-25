@@ -56,7 +56,7 @@ Markup
     display: block;
     padding: ($global-padding / 1.5) $global-padding;
     &:hover {
-      background-color: map-deep-get($ui, "light", base);
+      color: $color-primary;
     }
 
   }

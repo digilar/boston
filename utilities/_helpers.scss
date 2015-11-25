@@ -126,10 +126,10 @@ __margin__
 
 // Nudging
 
-.#{$utility-prefix}nl1 { margin-left: $global-margin / 3; }
-.#{$utility-prefix}nr1 { margin-right: $global-margin / 3; }
-.#{$utility-prefix}nt1 { margin-top: $global-margin / 3; }
-.#{$utility-prefix}nb1 { margin-bottom: $global-margin / 3; }
+.#{$utility-prefix}nl1 { margin-left: $global-margin / 2; }
+.#{$utility-prefix}nr1 { margin-right: $global-margin / 2; }
+.#{$utility-prefix}nt1 { margin-top: $global-margin / 2; }
+.#{$utility-prefix}nb1 { margin-bottom: $global-margin / 2; }
 
 // Alignments
 .#{$utility-prefix}pull-right   { float: right; }

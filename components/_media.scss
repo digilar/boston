@@ -45,6 +45,23 @@
   }
 }
 
+// Wrapper class for positioning
+
+.#{$component-prefix}img-figure--align-right {
+  float: right;
+  margin: 0 0 $global-margin $global-margin;
+}
+
+.#{$component-prefix}img-figure--align-left {
+  float: left;
+  margin: 0 $global-margin $global-margin 0;
+}
+
+.#{$component-prefix}img-figure--align-center {
+  margin:0 auto $global-margin auto;
+  display: block;
+}
+
 .#{$component-prefix}img-portrait {
   box-shadow:  0px 0px 4px 0px rgba(0,0,0,0.15);
   padding:  $global-padding;
@@ -73,7 +90,8 @@
 
 .#{$component-prefix}img-caption {
   font-size:  $font-size-base * 0.95;
-  margin: $global-margin 0 0 0;
+  margin: $global-margin / 2 0;
+  text-align: left;
 }
 
 .#{$component-prefix}img-gallery {
@@ -101,7 +119,7 @@
   right: 20px;
 }
 
-.#{$component-prefix}video {
+.#{$component-prefix}video-portrait {
   box-shadow:  0px 0px 4px 0px rgba(0,0,0,0.15);
   padding:  $global-padding;
   position:  relative;
