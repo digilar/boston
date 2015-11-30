@@ -164,7 +164,9 @@ __margin__
 // Pointer
 
 .#{$utility-prefix}pointer-events-none    { pointer-events: none; }
+.#{$utility-prefix}pointer-events-all    { pointer-events: all; }
 .#{$utility-prefix}cursor-pointer         { cursor: pointer; }
+.#{$utility-prefix}cursor-default         { cursor: auto; }
 .#{$utility-prefix}cursor-not-allowed     { cursor: not-allowed; }
 
 @each $key, $value in $breakpoints {
@@ -188,6 +190,7 @@ __margin__
 // Flex classes
 
 .flex { display: flex; backface-visibility: hidden; }
+.flex-inline { display: inline-flex; backface-visibility: hidden; }
 
 .flex-column  { flex-direction: column; }
 .flex-wrap    { flex-wrap: wrap; }

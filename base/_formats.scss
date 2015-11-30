@@ -6,6 +6,14 @@ Markup
 ```
 */
 
+.#{$base-prefix}underlined-link {
+  display: inline-block;
+  border-bottom: 2px solid $color-grey;
+  .#{$base-prefix}text-formats & {
+    border-bottom: 2px solid $color-blue;
+  }
+}
+
 .#{$base-prefix}summary {
   border-left: 4px solid $color-blue;
   padding: $global-padding;

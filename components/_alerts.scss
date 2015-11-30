@@ -6,7 +6,7 @@ Markup
 ```
 */
 %#{$component-prefix}alert {
-  padding: $global-padding/ 2 $global-padding;
+  padding: map-deep-get($inline-sizes, "sm", padding);
   border-width: 1px;
   border-left-width: rem-calc(5px);
   border-style: solid;

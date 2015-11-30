@@ -55,6 +55,10 @@ Markup
   }
 }
 
+.#{$base-prefix}form-input-lg {
+  padding: map-deep-get($inline-sizes, "lg", padding);
+}
+
 textarea.#{$base-prefix}form-input {
   overflow: auto;
   height: auto;

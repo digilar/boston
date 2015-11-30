@@ -7,13 +7,15 @@
 */
 
 .#{$layout-prefix}toolbar {
-  flex-basis: 4rem;
+  flex-basis: 25rem;
+  margin-right:-21rem;
   display: flex;
   box-shadow: -2px 0px 12px 0px rgba(0,0,0,0.2);
   position: relative;
   z-index: 2;
+  transition: margin-right 250ms ease;
   @include breakpoints(max-width,small) {
-    flex-basis: 0px;
+    margin-right: -25rem;
   }
 }
 
@@ -46,18 +48,44 @@
 
 .#{$layout-prefix}toolbar--opened {
   .#{$layout-prefix}toolbar {
-    flex-basis: 25rem;
+    margin-right: 0;
     @include breakpoints(max-width,small) {
-      flex-basis: 4rem;
+      margin-right: -21px;
     }
   }
   @include breakpoints(max-width,large) {
     .#{$layout-prefix}sidebar {
-      display: none !important;
+      margin-left: -13rem;
+      box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: margin-left 100ms ease-in;
+      position: relative;
+      background-image: url(#{$icon-path}chevron-right.svg);
+      background-repeat: no-repeat;
+      background-position: right 2px center;
+      background-size: 12px 12px;
+      &:after {
+        content: "";
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0px;
+        background-image: url(#{$icon-path}chevron-right.svg);
+        background-repeat: no-repeat;
+        background-position: right 2px center;
+        background-size: 12px 12px;
+        background-color: rgba($color-blue,0.3);
+        border-right: 1px solid rgba($color-blue, 0.8);
+        animation: fadeOut 4s ease-in-out 1 forwards;
+      }
+      &:hover {
+        background-color: rgba($color-blue,0.3);
+        border-right: 1px solid rgba($color-blue, 0.8);
+      }
     }
   }
   .#{$layout-prefix}toolbar-content {
-    display: block;
     display: flex;
     flex-direction: column;
     @include breakpoints(max-width,small) {
@@ -74,7 +102,7 @@
 
 .#{$layout-prefix}toolbar-icons {
   flex-basis: 4rem;
-  border-left: 1px solid $global-border-color;
+  border-right: 1px solid $global-border-color;
 }
 
 .#{$layout-prefix}toolbar-section {
