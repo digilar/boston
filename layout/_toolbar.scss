@@ -19,6 +19,10 @@
   }
 }
 
+.#{$layout-prefix}toolbar-close {
+  display: none;
+}
+
 .#{$layout-prefix}toolbar-icon {
   text-align: center;
   padding: 0.6rem 0.4rem;
@@ -26,6 +30,11 @@
   &--selected {
     background-color: map-deep-get($ui, "light", base);
   }
+}
+
+.#{$layout-prefix}toolbar-icons {
+  flex-basis: 4rem;
+  border-right: 1px solid $global-border-color;
 }
 
 .#{$layout-prefix}toolbar-close {
@@ -40,6 +49,8 @@
 .#{$layout-prefix}toolbar-content {
   display: none;
   flex: 1;
+  background: $color-grey;
+  animation-duration: 300ms;
 }
 
 .#{$layout-prefix}toolbar--visible {
@@ -47,10 +58,31 @@
 }
 
 .#{$layout-prefix}toolbar--opened {
+  .#{$layout-prefix}toolbar-close {
+    display: block;
+  }
+  .#{$layout-prefix}toolbar-open {
+    display: none;
+  }
+  @include breakpoints(max-width, small) {
+    .#{$layout-prefix}toolbar-icons {
+      border-left: 1px solid $global-border-color;
+      border-right: 0;
+      order: 2;
+    }
+    .#{$layout-prefix}toolbar-content {
+      order: 1;
+    }
+  }
   .#{$layout-prefix}toolbar {
     margin-right: 0;
-    @include breakpoints(max-width,small) {
-      margin-right: -21px;
+    @include breakpoints(max-width, small) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: #fff;
     }
   }
   @include breakpoints(max-width,large) {
@@ -64,13 +96,14 @@
       background-repeat: no-repeat;
       background-position: right 2px center;
       background-size: 12px 12px;
-      &:after {
+      &:before {
         content: "";
         position: absolute;
         top:0;
         bottom:0;
         left:0;
         right:0px;
+        z-index: 99;
         background-image: url(#{$icon-path}chevron-right.svg);
         background-repeat: no-repeat;
         background-position: right 2px center;
@@ -80,7 +113,6 @@
         animation: fadeOut 4s ease-in-out 1 forwards;
       }
       &:hover {
-        background-color: rgba($color-blue,0.3);
         border-right: 1px solid rgba($color-blue, 0.8);
       }
     }
@@ -88,21 +120,7 @@
   .#{$layout-prefix}toolbar-content {
     display: flex;
     flex-direction: column;
-    @include breakpoints(max-width,small) {
-      position: fixed;
-      left: 0px;
-      top: $header-height;
-      right: $toolbar-width;
-      bottom: $sm-nav-height;
-      background: #fff;
-      z-index: 99;
-    }
   }
-}
-
-.#{$layout-prefix}toolbar-icons {
-  flex-basis: 4rem;
-  border-right: 1px solid $global-border-color;
 }
 
 .#{$layout-prefix}toolbar-section {
