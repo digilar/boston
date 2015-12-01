@@ -213,7 +213,10 @@
 .#{$component-prefix}btn-tab {
   display: flex;
   align-items: center;
+  flex: 1;
+  justify-content: center;
   padding: map-deep-get($inline-sizes, "sm", padding);
+  background: #fff;
   border-top: 1px solid $global-border-color;
   border-bottom: 1px solid $global-border-color;
   border-right: 1px solid $global-border-color;
@@ -241,9 +244,8 @@
 
 .#{$component-prefix}btn-group-horizontal {
   display: flex;
-  [class*="btn-"] {
+  [class*="btn"] {
     @include text-overflow;
-    margin-right: $global-margin / 3;
   }
 }
 
