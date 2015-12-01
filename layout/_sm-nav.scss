@@ -9,9 +9,8 @@
 .#{$layout-prefix}sm-nav {
   display: flex;
   align-items: center;
-  padding: 0.1rem $global-padding / 2;
   color: #fff;
-  height: $sm-nav-height;
+  min-height: $sm-nav-height;
   @include breakpoints(min-width, small) {
     display: none;
   }
