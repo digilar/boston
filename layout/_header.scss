@@ -6,6 +6,13 @@
 ```
 */
 
+.#{$layout-prefix}logo {
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  background: darken($color-secondary, 5%);
+}
+
 .#{$layout-prefix}toggle-mobile-nav {
   display: none;
   @include breakpoints(max-width,medium) {
@@ -92,16 +99,33 @@
 
 .#{$layout-prefix}header-tool {
   padding: $global-padding / 3;
+  border-radius: $global-radius;
+}
+
+.#{$layout-prefix}header-tool--selected {
+  padding: $global-padding / 3;
+  background-color: lighten($color-secondary, 10%);
 }
 
 .#{$layout-prefix}header-settings {
   display: flex;
   height: $header-height;
   padding: $global-padding / 2 $global-padding;
-  background: map-deep-get($ui,"dark",light);
+  background: lighten($color-secondary, 5%);
   align-items: center;
   position: relative;
   cursor: pointer;
+}
+
+.#{$layout-prefix}header-settings--selected {
+  background: lighten($color-secondary, 10%);
+}
+
+.#{$layout-prefix}header-settings-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
 }
 
 .#{$layout-prefix}mobile-nav {
