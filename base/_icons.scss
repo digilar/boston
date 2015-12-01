@@ -343,11 +343,11 @@ $icon-size:24px;
   background-image: url(#{$icon-path}sidebar-white.svg);
 }
 
-[digicon~="tools"] {
+[digicon~="toolbar"] {
   background-image: url(#{$icon-path}tools.svg);
 }
 
-[digicon~="tools-white"] {
+[digicon~="toolbar-white"] {
   background-image: url(#{$icon-path}tools-white.svg);
 }
 
@@ -463,6 +463,14 @@ $icon-size:24px;
   background-image: url(#{$icon-path}palette.svg);
 }
 
+[digicon~="invert"] {
+  background-image: url(#{$icon-path}invert.svg);
+}
+
+[digicon~="fill"] {
+  background-image: url(#{$icon-path}fill.svg);
+}
+
 [digicon~="text-settings"] {
   background-image: url(#{$icon-path}text-settings.svg);
 }
@@ -485,6 +493,10 @@ $icon-size:24px;
 
 [digicon~="eye"] {
   background-image: url(#{$icon-path}eye.svg);
+}
+
+[digicon~="listen"] {
+  background-image: url(#{$icon-path}listen.svg);
 }
 
 [digicon~="edit"] {
