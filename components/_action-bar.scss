@@ -43,19 +43,20 @@
     justify-content: flex-end;
     @extend .#{$component-prefix}action-bar-area;
     > * {
-      margin-right: $global-margin / 3;
+      margin-left: $global-margin / 3;
     }
   }
 }
 
 .#{$component-prefix}action-bar-item {
   display: flex;
-  padding: 0.5rem 0;
+  padding: 0.8rem $global-padding;
   align-items: center;
   font-size: $font-size-base * 0.9;
-  .#{$component-prefix}action-bar-icon {
-    margin-right: $global-margin / 3;
-  }
+}
+
+.#{$component-prefix}action-bar-item--selected {
+  background-color: lighten($color-purple,10%);
 }
 
 .#{$component-prefix}action-bar-item-vertical {
