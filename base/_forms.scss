@@ -197,7 +197,7 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
   height: 23px;
   display: block;
   z-index: 1;
-  background: url('data: image/svg+xml,<svg width="16" height="12" viewBox="0 0 16 12" xmlns="http: //www.w3.org/2000/svg"><path d="M13.439 1.09c.414-.367 1.059-.328 1.431.076l.413.448c.377.409.36 1.037-.048 1.413l-8.925 8.217c-.403.371-1.036.347-1.412-.054l-3.773-4.018c-.377-.401-.372-1.062 0-1.467l.413-.448c.377-.409.993-.413 1.37-.015l2.671 2.816 7.858-6.969z" fill="#7AB23D"/></svg>') no-repeat center center;
+  background: url('data: image/svg+xml,<svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><path d="M13.439 1.09c.414-.367 1.059-.328 1.431.076l.413.448c.377.409.36 1.037-.048 1.413l-8.925 8.217c-.403.371-1.036.347-1.412-.054l-3.773-4.018c-.377-.401-.372-1.062 0-1.467l.413-.448c.377-.409.993-.413 1.37-.015l2.671 2.816 7.858-6.969z" fill="#7AB23D"/></svg>') no-repeat center center;
   transition: all .3s ease;
   transform: scale(0);
   opacity: 0;
@@ -469,8 +469,9 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
 }
 
 .#{$base-prefix}form-selects::after {
-  @extend .digicon-chevron-down-white;
+  background-image: url(#{$icon-path}chevron-down-white.svg);
   background-position: left center;
+  background-repeat: no-repeat;
   content: "";
   position: absolute;
   top: 0;
