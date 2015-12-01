@@ -6,11 +6,19 @@ Markup
 ```
 */
 
+.dark-background {
+  background: #000;
+  color: #fff;
+}
+
 .#{$base-prefix}underlined-link {
   display: inline-block;
   border-bottom: 2px solid $color-grey;
-  .#{$base-prefix}text-formats & {
+  .#{$base-prefix}highlighted-words & {
     border-bottom: 2px solid $color-blue;
+  }
+  .#{$base-prefix}dark-background & {
+    color: #333;
   }
 }
 
@@ -18,12 +26,15 @@ Markup
   border-left: 4px solid $color-blue;
   padding: $global-padding;
   margin-bottom:$global-margin;
-  .#{$base-prefix}text-formats & {
+  .#{$base-prefix}highlighted-words & {
     background: $color-lightblue;
     border-left: 4px solid $color-blue;
     > a {
       color: lighten($color-blue,10%);
     }
+  }
+  .#{$base-prefix}dark-background & {
+    color: #333;
   }
 }
 
@@ -31,11 +42,14 @@ Markup
   border-left: 4px solid $color-brown;
   padding: $global-padding;
   margin-bottom:$global-margin;
-  .#{$base-prefix}text-formats & {
+  .#{$base-prefix}highlighted-words & {
     background: $color-lightbrown;
     > a {
       color: darken($color-brown,10%);
     }
+  }
+  .#{$base-prefix}dark-background & {
+    color: #333;
   }
 }
 
@@ -50,15 +64,22 @@ Markup
 }
 
 .#{$base-prefix}extended-explanation {
-  .#{$base-prefix}text-formats & {
+  .#{$base-prefix}highlighted-words & {
     background: $color-lightyellow;
     border-bottom: 2px solid $color-yellow;
+  }
+  .#{$base-prefix}dark-background & {
+    color: #333;
   }
 }
 
 .#{$base-prefix}deep-dive {
-  .#{$base-prefix}text-formats & {
+  .#{$base-prefix}highlighted-words & {
     background: $color-lightgreen;
     border-bottom: 2px solid $color-green;
+  }
+  .#{$base-prefix}dark-background & {
+    background: darken($color-lightgreen,10%);
+    color: #333;
   }
 }
