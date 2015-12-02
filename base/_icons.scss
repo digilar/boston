@@ -344,11 +344,19 @@ $icon-size:24px;
 }
 
 [digicon~="toolbar"] {
-  background-image: url(#{$icon-path}tools.svg);
+  background-image: url(#{$icon-path}toolbar.svg);
 }
 
 [digicon~="toolbar-white"] {
-  background-image: url(#{$icon-path}tools-white.svg);
+  background-image: url(#{$icon-path}toolbar-white.svg);
+}
+
+[digicon~="toolbar-close"] {
+  background-image: url(#{$icon-path}toolbar-close.svg);
+}
+
+[digicon~="toolbar-close-white"] {
+  background-image: url(#{$icon-path}toolbar-close-white.svg);
 }
 
 [digicon~="flow-nav"] {
@@ -365,6 +373,10 @@ $icon-size:24px;
 
 [digicon~="messages"] {
   background-image: url(#{$icon-path}messages.svg);
+}
+
+[digicon~="tweak"] {
+  background-image: url(#{$icon-path}tweak.svg);
 }
 
 [digicon~="settings"] {
@@ -461,6 +473,10 @@ $icon-size:24px;
 
 [digicon~="palette"] {
   background-image: url(#{$icon-path}palette.svg);
+}
+
+[digicon~="read-help"] {
+  background-image: url(#{$icon-path}read-help.svg);
 }
 
 [digicon~="invert"] {
