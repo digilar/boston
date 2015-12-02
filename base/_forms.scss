@@ -441,12 +441,14 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
 
 .#{$base-prefix}form-selects {
   border-radius: $global-radius;
-  background-color: #f2f2f2;
-  color: #fff;
+  background-color: #fff;
+  border:1px solid $global-border-color;
+  position: relative;
+  display: inline-block;
   &:after,
   &::after,
   select {
-    background-color: $color-default;
+    background-color: #fff;
   }
 }
 
@@ -462,14 +464,8 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   padding: map-deep-get($inline-sizes, "sm", padding);
 }
 
-.#{$base-prefix}form-selects {
-  position: relative;
-  display: inline-block;
-  border: 0;
-}
-
 .#{$base-prefix}form-selects::after {
-  background-image: url(#{$icon-path}chevron-down-white.svg);
+  background-image: url(#{$icon-path}chevron-down.svg);
   background-position: left center;
   background-repeat: no-repeat;
   content: "";
@@ -496,7 +492,6 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   border-radius: $global-radius;
   @include breakpoints(max-width, small) {
     font-size: 16px;
-    line-height: 1;
   }
 }
 
