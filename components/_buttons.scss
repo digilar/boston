@@ -10,8 +10,6 @@
   cursor: pointer;
   position: relative;
   height: auto;
-  // keeps buttons from filling flex container
-  align-self: flex-start;
   &:active {
     top: 1px;
   }
