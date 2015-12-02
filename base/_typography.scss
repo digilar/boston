@@ -121,7 +121,6 @@
   margin:1.4rem 0 0.3rem 0;
   padding-bottom:0.5rem;
   text-transform: uppercase;
-  color:#555;
   border-bottom:1px solid $global-border-color;
 }
 
@@ -133,4 +132,28 @@
 .#{$base-prefix}link {
   color:$color-default;
   cursor:pointer;
+}
+
+.#{$base-prefix}blockquote {
+  margin: 0 0 $global-margin 0;
+  padding: $global-padding $global-padding $global-padding $global-padding * 2;
+  quotes: "\201C""\201D""\2018""\2019";
+  position: relative;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: $global-padding;
+    content: "";
+    background-image: url(#{$icon-path}quotes.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.#{$base-prefix}inline-quote {
+  display: inline-block;
+  &:before {
+    content:"\02014 \0020";
+  }
 }
