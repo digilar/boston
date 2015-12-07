@@ -7,15 +7,15 @@
 */
 
 .#{$layout-prefix}toolbar {
-  flex-basis: 25rem;
-  margin-right:-21rem;
+  flex-basis: $toolbar-opened;
+  margin-right: -($toolbar-opened - $toolbar-width);
   display: flex;
   box-shadow: -2px 0px 12px 0px rgba(0,0,0,0.2);
   position: relative;
   z-index: 2;
   transition: margin-right 250ms ease;
-  @include breakpoints(max-width,small) {
-    margin-right: -25rem;
+  @include breakpoints(max-width, medium) {
+    margin-right: -$toolbar-opened;
   }
 }
 
@@ -64,7 +64,7 @@
   .#{$layout-prefix}toolbar-open {
     display: none;
   }
-  @include breakpoints(max-width, small) {
+  @include breakpoints(max-width, medium) {
     .#{$layout-prefix}toolbar-icons {
       border-left: 1px solid $global-border-color;
       border-right: 0;
@@ -76,7 +76,7 @@
   }
   .#{$layout-prefix}toolbar {
     margin-right: 0;
-    @include breakpoints(max-width, small) {
+    @include breakpoints(max-width, medium) {
       position: absolute;
       top: 0;
       right: 0;
