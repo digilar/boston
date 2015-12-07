@@ -28,10 +28,11 @@ $heading-font-weight-base: 500 !default;
 // Breakpoints
 
 $breakpoints: (
+  xxlarge  : ( 1600px ),
   xlarge  : ( 1440px ),
   large  : ( 1200px ),
   medium : ( 992px ),
-  small  : ( 767px ),
+  small  : ( 768px ),
   xsmall  : ( 480px )
 );
 
