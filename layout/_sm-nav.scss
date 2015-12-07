@@ -11,10 +11,10 @@
   align-items: center;
   color: #fff;
   min-height: $sm-nav-height;
-  @include breakpoints(min-width, small) {
+  @include breakpoints(min-width, medium) {
     display: none;
   }
-  @include breakpoints(max-width,small) {
+  @include breakpoints(max-width, medium) {
     flex: 0 1 auto;
     display: flex;
   }
