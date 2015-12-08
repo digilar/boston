@@ -17,32 +17,6 @@
   background-size: 100% 100%;
 }
 
-.data-ico-text {
-  display: inline-flex;
-  align-items: center;
-  margin-right:$global-margin / 2;
-  .data-ico {
-    flex-shrink:0;
-  }
-}
-
-.data-ico-text--vertical {
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  .data-ico-content {
-    margin-top:$global-margin / 2;
-  }
-}
-
-.data-ico-content {
-  margin:0 $global-margin / 2;
-  flex-wrap: wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 // Logo
 
 [data-ico~="logo"] {
