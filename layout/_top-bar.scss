@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  min-height: 3rem;
+  min-height: $topbar-height;
   z-index: 2;
   flex-wrap: nowrap;
   border-bottom: 1px solid $global-border-color;
@@ -28,4 +28,16 @@
   &:last-child {
     margin-right: 0;
   }
+}
+
+.#{$layout-prefix}topbar--out {
+  transition: margin-top 300ms ease-in, opacity 300ms ease-in;
+  margin-top: -($topbar-height);
+  opacity: 0;
+}
+
+.#{$layout-prefix}topbar--in {
+  transition: margin-top 300ms ease-in, opacity 300ms ease-in;
+  margin-top: 0;
+  opacity: 1;
 }

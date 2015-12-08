@@ -14,11 +14,23 @@
   position: relative;
   align-items: center;
   z-index: 2;
-  min-height: 3rem;
+  min-height: $bottombar-height;
   flex-wrap: nowrap;
   border-top: 1px solid $global-border-color;
 }
 
 .#{$layout-prefix}bottombar + .#{$layout-prefix}bottombar {
   border-bottom: 1px solid $global-border-color;
+}
+
+.#{$layout-prefix}bottombar--out {
+  transition: margin-bottom 300ms ease-in, opacity 300ms ease-in;
+  margin-top: -($bottombar-height);
+  opacity: 0;
+}
+
+.#{$layout-prefix}bottombar--in {
+  transition: margin-bottom 300ms ease-in, opacity 300ms ease-in;
+  margin-top: 0;
+  opacity: 1;
 }
