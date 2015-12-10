@@ -10,7 +10,9 @@
   display: flex;
   align-items: center;
   height: $header-height;
-  background: darken($color-secondary, 5%);
+  &:hover {
+    background: darken($color-secondary, 5%);
+  }
 }
 
 .#{$layout-prefix}toggle-mobile-nav {
@@ -28,7 +30,6 @@
   z-index: 9999;
   color: #fff;
   position: relative;
-  box-shadow: 0px 1px 4px 0px $global-shadow;
 }
 
 .#{$layout-prefix}header-navigation {
@@ -111,10 +112,12 @@
   display: flex;
   height: $header-height;
   padding: $global-padding / 2 $global-padding;
-  background: lighten($color-secondary, 5%);
   align-items: center;
   position: relative;
   cursor: pointer;
+  &:hover {
+    background: lighten($color-secondary, 5%);
+  }
 }
 
 .#{$layout-prefix}header-settings--selected {
