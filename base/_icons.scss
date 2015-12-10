@@ -478,6 +478,14 @@
   background-image: url(#{$icon-path}listen.svg);
 }
 
+[data-ico~="speech-synthesis"] {
+  background-image: url(#{$icon-path}speech-synthesis.svg);
+}
+
+[data-ico~="speech-recorded"] {
+  background-image: url(#{$icon-path}speech-recorded.svg);
+}
+
 [data-ico~="edit"] {
   background-image: url(#{$icon-path}edit.svg);
 }
