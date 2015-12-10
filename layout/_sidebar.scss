@@ -28,6 +28,30 @@
   }
 }
 
+.#{$layout-prefix}sidebar--opener {
+  display: none;
+  width: 0.9rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -0.9rem;
+  z-index: 99;
+  background-image: url(#{$icon-path}chevron-right.svg);
+  background-repeat: no-repeat;
+  background-position: right 2px center;
+  background-size: 12px 12px;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.15);
+  @include fadeInLeft();
+  @include breakpoints(max-width, large) {
+    @at-root {
+      .toolbar--opened .#{$layout-prefix}sidebar--opener {
+        display: block;
+      }
+    }
+  }
+}
+
 .#{$layout-prefix}sidebar--visible {
   display: flex;
 }
