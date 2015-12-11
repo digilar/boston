@@ -52,31 +52,6 @@ $utility-prefix: null !default;
 $icon-path: "../img/svgicons/" !default;
 $icon-size: 24px !default;
 
-// A map to loop through word colors
-
-$text-formats: (
-  explanation: (
-    base: #d0cb07,
-    border: darken(#d0cb07, 10%),
-    hover: lighten(#d0cb07, 10%)
-  ),
-  advanced-explanation: (
-    base: #394C85,
-    border: darken(#394C85, 10%),
-    hover: lighten(#394C85, 10%)
-  ),
-  deepening: (
-    base: #64AB3D,
-    border: darken(#64AB3D, 10%),
-    hover: lighten(#64AB3D, 10%)
-  ),
-  translation: (
-    base: $color-default,
-    border: darken($color-default, 10%),
-    hover: lighten($color-default, 10%)
-  )
-);
-
 $inline-sizes: (
   xs: (
     padding: 0.2rem 0.4rem,
