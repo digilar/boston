@@ -6,19 +6,18 @@ Markup
 ```
 */
 
-
 .#{$component-prefix}dropdown-toggle {
   border-radius: $global-radius;
-  flex-shrink:  0;
+  flex-shrink: 0;
   margin-left: 0.3rem;
   width: 28px;
   height: 28px;
-  background-image:  url(../img/svgicons/chevron-down-white.svg);
-  background-repeat:  no-repeat;
-  background-position:  center center;
+  background-image: url(#{$icon-path}chevron-down-white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-color: lighten($color-secondary,10%);
-  position:  relative;
-  cursor:  pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .#{$component-prefix}dropdown-toggle--selected {

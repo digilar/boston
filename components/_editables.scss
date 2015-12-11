@@ -42,7 +42,7 @@ Markup
   background:#fff;
   padding:map-deep-get($inline-sizes, "sm", padding);
   padding-left:$icon-size + 10;
-  background:#fff url(/assets/digicons/drag.svg) no-repeat 5px center;
+  background:#fff url(#{$icon-path}drag.svg) no-repeat 5px center;
 
 }
 
