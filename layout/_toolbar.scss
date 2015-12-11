@@ -13,8 +13,6 @@
   box-shadow: -2px 0px 12px 0px rgba(0,0,0,0.2);
   position: relative;
   z-index: 2;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
   transition: margin-right 250ms ease;
   @include breakpoints(max-width, medium) {
     margin-right: -$toolbar-opened;
@@ -36,6 +34,8 @@
 
 .#{$layout-prefix}toolbar-icons {
   flex-basis: 4rem;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   border-right: 1px solid $global-border-color;
 }
 
@@ -51,7 +51,6 @@
 .#{$layout-prefix}toolbar-content {
   display: none;
   flex: 1;
-  background: $color-grey;
   animation-duration: 300ms;
 }
 
