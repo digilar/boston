@@ -6,8 +6,6 @@ Markup
 ```
 */
 
-$list-padding: 0.6rem;
-
 .#{$base-prefix}list-reset {
   margin:0;
   padding:0;
@@ -15,11 +13,21 @@ $list-padding: 0.6rem;
 }
 
 .#{$base-prefix}list {
-  margin:0;
+  @extend .#{$base-prefix}list-reset;
 }
 
 .#{$base-prefix}list-item {
   padding:$global-padding;
+}
+
+.#{$base-prefix}list-item-heading {
+  font-weight: 600;
+  @include responsive-font(3vw, 16px, 18px);
+}
+
+.#{$base-prefix}list-divider {
+  text-transform: uppercase;
+  padding:$global-padding / 2 $global-padding;
 }
 
 .#{$base-prefix}list-item--selected {
@@ -29,13 +37,8 @@ $list-padding: 0.6rem;
   background:#fff;
 }
 
-.#{$base-prefix}list-flex {
-  display:flex;
-  align-items: center;
-}
-
 .#{$base-prefix}list-item > ul {
-  margin:$global-margin (-$global-margin) 0 (-$global-margin);
+  margin:$global-margin (-$global-padding) 0 (-$global-padding);
   border-top:1px solid $global-border-color;
   padding-left:$global-padding;
 }
@@ -43,6 +46,13 @@ $list-padding: 0.6rem;
 .#{$base-prefix}list-item .#{$base-prefix}list-item {
   padding:$global-padding;
   border-top:1px solid $global-border-color;
+}
+
+// If flex is needed
+
+.#{$base-prefix}list-flex {
+  display:flex;
+  align-items: center;
 }
 
 .#{$base-prefix}list-content {
@@ -57,6 +67,8 @@ $list-padding: 0.6rem;
   }
 }
 
+// Bordered lists
+
 .#{$base-prefix}list-bordered {
   @extend .#{$base-prefix}list;
   li {
@@ -67,6 +79,8 @@ $list-padding: 0.6rem;
   }
 }
 
+// Unordered lists
+
 .#{$base-prefix}list-unordered {
   margin:1rem 0 1rem 1rem;
   padding:0 0 0 0.5rem;
@@ -76,6 +90,8 @@ $list-padding: 0.6rem;
   }
 }
 
+// Ordered lists
+
 .#{$base-prefix}list-ordered {
   margin:1rem 0 1rem 1rem;
   padding:0 0 0 1rem;
@@ -84,6 +100,8 @@ $list-padding: 0.6rem;
     padding:$list-padding 0 $list-padding 0.5rem;
   }
 }
+
+// Hierarchy
 
 .#{$base-prefix}list-tree-view {
   margin-left:0.7rem;
@@ -109,6 +127,8 @@ $list-padding: 0.6rem;
   border-left:1px solid $global-border-color;
 }
 
+// With arrow
+
 .#{$base-prefix}list-arrow {
   li {
     padding:$list-padding 0;
@@ -121,6 +141,8 @@ $list-padding: 0.6rem;
   }
 }
 
+// With arrow before
+
 .#{$base-prefix}list-arrow--pre {
   li {
     padding:$list-padding 0;
@@ -131,15 +153,4 @@ $list-padding: 0.6rem;
       border:0;
     }
   }
-}
-
-.#{$base-prefix}list-divider {
-  text-transform: uppercase;
-  padding:$global-padding / 2 $global-padding;
-}
-
-
-.#{$base-prefix}list-item-heading {
-  font-weight: 600;
-  @include responsive-font(3vw, 16px, 18px);
 }
