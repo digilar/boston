@@ -92,7 +92,7 @@ __margin__
 .#{$utility-prefix}pt2  { padding-bottom: $global-padding * 2 }
 .#{$utility-prefix}pt3  { padding-bottom: $global-padding * 3 }
 
-// margin
+// Margin
 
 .#{$utility-prefix}m0  { margin:        0 }
 .#{$utility-prefix}mt0 { margin-top:    0 }
@@ -138,6 +138,12 @@ __margin__
 .#{$utility-prefix}text-left    { text-align: left; }
 .#{$utility-prefix}text-right   { text-align: right; }
 
+// Border radius
+
+.#{$utility-prefix}bradius-circle   { border-radius: $global-circle }
+.#{$utility-prefix}bradius-rounded  { border-radius: $global-rounded }
+.#{$utility-prefix}bradius          { border-radius: $global-radius }
+
 // Hide but show for screen readers
 %visuallyhidden {
   margin: -1px;
@@ -180,7 +186,7 @@ __margin__
 
 @each $key, $value in $breakpoints {
 	$value: nth($key, 1);
-	@include breakpoints(max-width,$value) {
+	@include breakpoints(min-width,$value) {
 		.show-#{$value} {
       display: block;
     }
@@ -189,18 +195,18 @@ __margin__
 
 // Flex classes
 
-.flex { display: flex; backface-visibility: hidden; }
-.flex-inline { display: inline-flex; backface-visibility: hidden; }
+.flex           { display: flex; backface-visibility: hidden; }
+.flex-inline    { display: inline-flex; backface-visibility: hidden; }
 
-.flex-column  { flex-direction: column; }
-.flex-row  { flex-direction: row; }
-.flex-wrap    { flex-wrap: wrap; }
+.flex-column    { flex-direction: column; }
+.flex-row       { flex-direction: row; }
+.flex-wrap      { flex-wrap: wrap; }
 
-.flex-center   { align-items: center; }
-.flex-baseline { align-items: baseline; }
-.flex-stretch  { align-items: stretch; }
-.flex-start    { align-items: flex-start; }
-.flex-end      { align-items: flex-end; }
+.flex-center    { align-items: center; }
+.flex-baseline  { align-items: baseline; }
+.flex-stretch   { align-items: stretch; }
+.flex-start     { align-items: flex-start; }
+.flex-end       { align-items: flex-end; }
 
 .flex-justify  { justify-content: space-between; }
 
@@ -238,24 +244,33 @@ __margin__
 
 // Borders
 
-.#{$utility-prefix}b0  { border:        0 }
-.#{$utility-prefix}bt0 { border-top:    0 }
-.#{$utility-prefix}br0 { border-right:  0 }
-.#{$utility-prefix}bb0 { border-bottom: 0 }
-.#{$utility-prefix}bl0 { border-left:   0 }
+.#{$utility-prefix}b0   { border:        0 }
+.#{$utility-prefix}bt0  { border-top:    0 }
+.#{$utility-prefix}br0  { border-right:  0 }
+.#{$utility-prefix}bb0  { border-bottom: 0 }
+.#{$utility-prefix}bl0  { border-left:   0 }
 
-.#{$utility-prefix}b1  { border:        1px solid $global-border-color; }
-.#{$utility-prefix}bt1 { border-top:    1px solid $global-border-color; }
-.#{$utility-prefix}br1 { border-right:  1px solid $global-border-color; }
-.#{$utility-prefix}bb1 { border-bottom: 1px solid $global-border-color; }
-.#{$utility-prefix}bl1 { border-left:   1px solid $global-border-color; }
+.#{$utility-prefix}b1   { border:        1px solid $global-border-color; }
+.#{$utility-prefix}bt1  { border-top:    1px solid $global-border-color; }
+.#{$utility-prefix}br1  { border-right:  1px solid $global-border-color; }
+.#{$utility-prefix}bb1  { border-bottom: 1px solid $global-border-color; }
+.#{$utility-prefix}bl1  { border-left:   1px solid $global-border-color; }
 
 // Border radius
-.#{$utility-prefix}br0 { border-radius: none }
-.#{$utility-prefix}br  { border-radius: $global-radius; }
-.#{$utility-prefix}bry { border-radius: $global-radius; }
-.#{$utility-prefix}brx { border-radius: $global-radius; }
+.#{$utility-prefix}br0  { border-radius: none }
+.#{$utility-prefix}br   { border-radius: $global-radius; }
+.#{$utility-prefix}bry  { border-radius: $global-radius; }
+.#{$utility-prefix}brx  { border-radius: $global-radius; }
 
 // Shadow
-.shadow { box-shadow: 0 0 6px 0 $global-shadow; }
-.shadow-inset { box-shadow: inset 0 0 6px 0 $global-shadow; }
+.shadow                 { box-shadow: 0 0 6px 0 $global-shadow; }
+.shadow-inset           { box-shadow: inset 0 0 6px 0 $global-shadow; }
+
+// Divider
+
+.#{$utility-prefix}divider {
+  height: 1px;
+  display: block;
+  background: $global-border-color;
+  margin: $global-margin 0;
+}
