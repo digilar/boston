@@ -29,6 +29,8 @@
   align-items:  center;
 }
 
+// Images
+
 .#{$component-prefix}img-figure {
   position:  relative;
   display: inline-block;
@@ -71,6 +73,12 @@
   }
 }
 
+.#{$component-prefix}img-caption {
+  font-size:  $font-size-base * 0.95;
+  margin: $global-margin / 2 0;
+  text-align: left;
+}
+
 .#{$component-prefix}img-caption-over {
   position:  absolute;
   bottom: 0;
@@ -82,12 +90,6 @@
   padding: $global-padding;
   color: #fff;
   font-size:  $font-size-base * 0.95;
-}
-
-.#{$component-prefix}img-caption {
-  font-size:  $font-size-base * 0.95;
-  margin: $global-margin / 2 0;
-  text-align: left;
 }
 
 .#{$component-prefix}img-gallery {
