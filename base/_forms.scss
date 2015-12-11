@@ -319,17 +319,6 @@ input[type=range].#{$base-prefix}form-range {
   -webkit-appearance: none;
   width: 100%;
   margin: 5.5px 0;
-  &:after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: 35%;
-    width: 4px;
-    height: 14px;
-    border-radius: $global-radius;
-    background: $color-blue;
-    z-index: 1;
-  }
 }
 input[type=range].#{$base-prefix}form-range:focus {
   outline: none;
@@ -351,7 +340,8 @@ input[type=range].#{$base-prefix}form-range::-webkit-slider-thumb {
   background: $color-blue;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -6px;
+  margin-top: -7.5px;
+  box-sizing: border-box;
 }
 input[type=range].#{$base-prefix}form-range:focus::-webkit-slider-runnable-track {
   background: #eeeeee;
