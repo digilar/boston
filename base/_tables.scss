@@ -28,7 +28,7 @@ Markup
 }
 
 
-.#{$base-prefix}table--bordered {
+.#{$base-prefix}table-bordered {
   @extend .#{$base-prefix}table;
   th {
     background-color:$color-default;
