@@ -28,8 +28,6 @@
   @return $num / ($num * 0 + 1);
 }
 
-$rem-base: 16px !default;
-
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
