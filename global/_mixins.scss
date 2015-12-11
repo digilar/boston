@@ -14,7 +14,7 @@
 // Scrollable block
 
 %scrollable-content {
-  overflow: scroll;
+  overflow: auto;
   min-height: 0;
   min-width: 0;
   // Add scrolling with inertia
