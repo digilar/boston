@@ -103,8 +103,16 @@
   background-image: url(#{$icon-path}correct.svg);
 }
 
+[data-ico~="assignment-correct-white"] {
+  background-image: url(#{$icon-path}correct-white.svg);
+}
+
 [data-ico~="assignment-wrong"] {
   background-image: url(#{$icon-path}error.svg);
+}
+
+[data-ico~="assignment-wrong-white"] {
+  background-image: url(#{$icon-path}error-white.svg);
 }
 
 // Media
@@ -502,8 +510,16 @@
   background-image: url(#{$icon-path}plus.svg);
 }
 
+[data-ico~="plus-white"] {
+  background-image: url(#{$icon-path}plus-white.svg);
+}
+
 [data-ico~="minus"] {
   background-image: url(#{$icon-path}minus.svg);
+}
+
+[data-ico~="minus-white"] {
+  background-image: url(#{$icon-path}minus-white.svg);
 }
 
 [data-ico~="group"] {
