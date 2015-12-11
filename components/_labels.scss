@@ -12,11 +12,6 @@ Markup
   border-radius: $global-radius;
 }
 
-.#{$component-prefix}badge-rounded {
-  @extend %#{$component-prefix}badge;
-  border-radius: $global-rounded;
-}
-
 .#{$component-prefix}badge-circle {
   @extend %#{$component-prefix}badge;
   border-radius: $global-circle;
@@ -37,12 +32,17 @@ Markup
   }
 }
 
-.#{$component-prefix}badge-topright {
+.#{$component-prefix}badge-top-right {
   position: absolute;
   top: $global-margin;
   right: $global-margin;
 }
 
+.#{$component-prefix}badge-top-left {
+  position: absolute;
+  top: $global-margin;
+  right: $global-margin;
+}
 
 .#{$component-prefix}badge-small {
   padding: 0.08rem 0.5rem;
