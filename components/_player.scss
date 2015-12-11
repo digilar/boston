@@ -11,7 +11,25 @@
   position: relative;
 }
 
+.#{$component-prefix}player--loading {
+  .#{$component-prefix}player-controls,
+  .#{$component-prefix}player-time-controls {
+    display: none;
+  }
+  .#{$component-prefix}player-loading {
+    display: block;
+  }
+}
+
+.#{$component-prefix}player--speech-synthesis {
+  .#{$component-prefix}player-backward,
+  .#{$component-prefix}player-forward {
+    display: none;
+  }
+}
+
 .#{$component-prefix}player-controls,
+.#{$component-prefix}player-time-controls,
 .#{$component-prefix}player-backward,
 .#{$component-prefix}player-forward,
 .#{$component-prefix}player-pauseplay,
@@ -20,6 +38,10 @@
   padding: 0 0.3rem;
   vertical-align: middle;
   cursor: pointer;
+}
+
+.#{$component-prefix}player-time-controls {
+	padding: 0;
 }
 
 .#{$component-prefix}player-backward,
@@ -50,4 +72,14 @@
   bottom: 0;
   border-radius: $global-rounded;
   background: $color-default;
+}
+
+.#{$component-prefix}player-loading {
+  display: none;
+}
+
+.#{$component-prefix}player-sound-players {
+  position: absolute;
+  top: 500px;
+  display: none;
 }
