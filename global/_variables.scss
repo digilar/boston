@@ -49,6 +49,7 @@ $layout-prefix: null !default;
 $grid-prefix: null !default;
 $base-prefix: null !default;
 $utility-prefix: null !default;
+$animation-prefix: null !default;
 
 $icon-path: "../img/svgicons/" !default;
 $icon-size: 24px !default;
@@ -99,3 +100,8 @@ $ui: (
     light: #fff,
   ),
 );
+
+// Animations
+
+$animation-duration: 300ms !default;
+$animation-timing: ease-in !default;

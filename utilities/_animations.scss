@@ -1,0 +1,6 @@
+#{$animation-prefix}fadeIn {
+  @include fadeIn($duration: $animation-duration);
+}
+#{$animation-prefix}fadeOut {
+  @include fadeOut($duration: $animation-duration);
+}
