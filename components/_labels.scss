@@ -10,6 +10,11 @@ Markup
   display: inline-block;
   background-color: $color-default;
   border-radius: $global-radius;
+  
+  .inverted & {
+    background-color: darken($color-default, 30%);
+    color: white;
+  }
 }
 
 .#{$component-prefix}badge-circle {
