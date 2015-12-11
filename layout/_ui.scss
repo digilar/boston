@@ -78,10 +78,6 @@ body:-webkit-full-screen {
   overflow: visible;
 }
 
-.#{$layout-prefix}content--padding {
-  padding: $global-padding;
-}
-
 %#{$layout-prefix}container {
   margin: 0 auto;
   padding: 0 $global-margin * 2;
