@@ -107,10 +107,10 @@
 
 .#{$layout-prefix}toolbar-section {
   display: none;
-  padding: $global-padding;
   flex: 1;
 }
 
 .#{$layout-prefix}toolbar-section--visible {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
