@@ -17,6 +17,12 @@
   margin-left: 0;
   opacity: 1;
   transition: margin-left 250ms ease;
+  @include breakpoints(max-width, large) {
+    .toolbar--opened & {
+      margin-left: ($global-padding - $sidebar-width);
+      padding-right: $global-padding;
+    }
+  }
   @include breakpoints(max-width,medium) {
     position: absolute;
     top: 0px;
@@ -25,30 +31,52 @@
     right: 0;
     display: none;
     z-index: 9999;
+    @include fadeInLeft(1s, 0, forwards);
+    margin-left: 0;
+    padding-right: 0;
   }
 }
 
 .#{$layout-prefix}sidebar--opener {
   display: none;
-  width: 0.9rem;
+  width: $global-padding;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -0.9rem;
+  right: -1px;
   z-index: 99;
   background-image: url(#{$icon-path}chevron-right.svg);
   background-repeat: no-repeat;
-  background-position: right 2px center;
+  background-position: center center;
   background-size: 12px 12px;
   background-color: #fff;
   box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.15);
-  @include fadeInLeft();
+  cursor: pointer;
+  background-color: white;
+  border-right: 1px solid white;
   @include breakpoints(max-width, large) {
-    @at-root {
-      .toolbar--opened .#{$layout-prefix}sidebar--opener {
-        display: block;
-      }
+    .toolbar--opened & {
+      display: block;
     }
+  }
+  @include breakpoints(max-width, medium) {
+    .toolbar--opened & {
+      display: none;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -1px;
+    background-color: rgba(54, 142, 216, .3);
+    border-right: 1px solid rgba(54, 142, 216, .8);
+    @include fadeOut(4s, 0, forwards);
+  }
+  &:hover {
+    border-right: 1px solid rgba(54, 142, 216, .8);
   }
 }
 
