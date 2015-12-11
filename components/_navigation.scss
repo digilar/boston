@@ -152,14 +152,14 @@
 .#{$component-prefix}pagination-jump {
   @extend .#{$component-prefix}pagination;
   .#{$component-prefix}form-input {
-    margin: 0;
     width: auto;
     max-width: 3rem;
     text-align: center;
     border-radius: $global-rounded;
   }
   .#{$component-prefix}pagination-jumpto {
-    display: inline-block;
+    display: flex;
+    align-items: center;
   }
   @include breakpoints(max-width,small) {
     .#{$component-prefix}pagination-jumpto {
