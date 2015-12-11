@@ -9,7 +9,7 @@
 .#{$layout-prefix}flow-nav {
   flex-shrink: 1;
   background-color: map-deep-get($ui, "dark", base);
-  @include breakpoints(max-width,small) {
+  @include breakpoints(max-width, medium) {
     display: none;
   }
 }
