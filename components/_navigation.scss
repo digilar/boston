@@ -34,10 +34,6 @@
   }
 }
 
-.#{$component-prefix}nav-item--selected {
-  color: $color-default;
-}
-
 .#{$component-prefix}nav-icon {
   margin-right: 0.5rem;
 }
@@ -115,6 +111,7 @@
 
 .#{$component-prefix}nav-item--selected > a {
   font-weight: $font-weight-bold;
+  color: $color-default;
 }
 
 // Pagination
