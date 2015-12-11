@@ -20,25 +20,21 @@
 */
 
 .#{$component-prefix}card-section {
-  background-color: map-deep-get($ui, "light",light);
+  background-color: #fff;
   border-bottom: 1px solid $global-border-color;
 }
 
 .#{$component-prefix}card-area {
   padding: $global-padding 0;
-  background-color: map-deep-get($ui, "light",base);
+  background-color: $color-grey;
 }
 
 .#{$component-prefix}card {
-  background-color: map-deep-get($ui, "light", light);
+  background-color: #fff;
   border-radius: $global-radius;
-  // border: 1px solid $global-border-color;
   margin-bottom: $global-margin;
   border: 1px solid $global-border-color;
   position: relative;
-  p:last-child {
-    margin-bottom: 0;
-  }
   img {
     @extend %img-responsive;
   }
@@ -48,10 +44,6 @@
   .#{$component-prefix}card-figure img {
     border-radius: $global-radius $global-radius 0 0;
   }
-}
-
-.#{$component-prefix}card--noborder {
-  border: 0;
 }
 
 .#{$component-prefix}card-content,
