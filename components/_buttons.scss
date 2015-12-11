@@ -88,18 +88,6 @@
 }
 
 /*
-  ###Rounded button
-  Append the class to a button
-  ```
-  <button class="ui-btn-rounded">Button</button>
-  ```
-*/
-
-.#{$component-prefix}btn-rounded {
-  border-radius: $global-rounded;
-}
-
-/*
   ##Button expand
   The button stretches to the parent container width
   ```
