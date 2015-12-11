@@ -10,11 +10,10 @@ Markup
   margin: 0 0 $global-margin 0;
 }
 
-.#{$base-prefix}form--bordered {
-  @extend .#{$base-prefix}form;
-  border: 1px solid $global-border-color;
-  padding: $global-margin;
-  border-radius: $global-radius;
+.#{$base-prefix}form-row {
+  display: block;
+  @extend %clearfix;
+  margin-bottom: $global-margin;
 }
 
 // Label
@@ -23,10 +22,6 @@ Markup
   margin: 0 0 0.8rem 0;
   display: block;
   font-weight: $font-weight-bold;
-}
-
-.#{$base-prefix}form-label--inline {
-  display: inline-block;
 }
 
 // Default
@@ -64,11 +59,6 @@ textarea.#{$base-prefix}form-input {
   height: auto;
 }
 
-.#{$base-prefix}form-input--rounded {
-  @extend .#{$base-prefix}form-input;
-  border-radius: $global-rounded;
-}
-
 // Labeled input
 
 .#{$base-prefix}form-labeled-input {
@@ -96,26 +86,10 @@ textarea.#{$base-prefix}form-input {
   position: relative;
 }
 
-.#{$base-prefix}form-input--success {
   background-image: url(#{$icon-path}correct.svg);
   background-position: right 0.3rem center;
   @extend .#{$base-prefix}form-input;
   border-color: $color-success;
-}
-
-// Form info
-
-%#{$base-prefix}form-info {
-  display: block;
-  margin-top: -0.55rem;
-  border-radius: 0 0 $global-radius $global-radius;
-  padding: $global-padding / 1.5;
-}
-
-.#{$base-prefix}form-info--error {
-  @extend %#{$base-prefix}form-info;
-  background-color: $color-error;
-  color: #fff;
 }
 
 // Appended buttons
@@ -500,19 +474,4 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   background: #fff;
   color: #333;
   outline: none;
-}
-
-.#{$base-prefix}form--inline {
-  display: inline-block;
-  width: auto;
-}
-
-.#{$base-prefix}form--block {
-  display: block;
-}
-
-.#{$base-prefix}form-row {
-  display: block;
-  @extend %clearfix;
-  margin-bottom: $global-margin;
 }
