@@ -85,7 +85,7 @@ textarea.#{$base-prefix}form-input {
   border-color: $color-error;
   position: relative;
 }
-
+.#{$base-prefix}form-input--success {
   background-image: url(#{$icon-path}correct.svg);
   background-position: right 0.3rem center;
   @extend .#{$base-prefix}form-input;
