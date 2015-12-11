@@ -32,6 +32,9 @@
   @include breakpoints(max-width,xsmall) {
     font-size: $font-size-base * 1.2;
   }
+  .#{$component-prefix}nav-item--selected > & {
+    color: $color-default;
+  }
 }
 
 .#{$component-prefix}nav-icon {
@@ -69,14 +72,14 @@
     color: $color-default;
     position: relative;
     &:before {
+      box-sizing: border-box;
       position: absolute;
-      top: 16px;
+      top: 50%;
+      margin-top: -0.5rem;
       left: -9px;
-
       background: $color-blue;
       width: 16px;
       height: 16px;
-
       border: 3px solid #fff;
       border-radius: $global-rounded;
       content: "";
@@ -111,7 +114,6 @@
 
 .#{$component-prefix}nav-item--selected > a {
   font-weight: $font-weight-bold;
-  color: $color-default;
 }
 
 // Pagination
