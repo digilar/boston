@@ -73,4 +73,5 @@
 .#{$component-prefix}panel--right {
   left: auto;
   box-shadow: -2px 0px 5px 0px $global-shadow;
+  @include fadeInRight(0.5s, 0, forwards);
 }
