@@ -43,14 +43,6 @@ body:-webkit-full-screen {
     position: relative;
 }
 
-.#{$layout-prefix}frame {
-  display: flex;
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
 .#{$layout-prefix}wrapper {
   display: flex;
   flex: 1;
