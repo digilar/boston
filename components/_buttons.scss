@@ -133,23 +133,11 @@
 }
 
 .#{$component-prefix}btn-bborder--selected {
-  border-bottom: 3px solid map-deep-get($ui,"dark",base);
-}
-
-.#{$component-prefix}btn-unbordered {
-  @extend .#{$component-prefix}btn;
-  background: #fff;
-  border: 1px solid transparent;
-  color: #333;
-  &:active {
-    cursor: pointer;
-    border: 1px solid $color-default;
-  }
+  border-bottom: 3px solid $color-default;
 }
 
 /*
   ##Button outline
-
   <button class="ui-btn-outline">Button</button>
 */
 
