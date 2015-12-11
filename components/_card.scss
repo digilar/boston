@@ -19,13 +19,6 @@
 ```
 */
 
-.#{$component-prefix}divider {
-  height: 1px;
-  display: block;
-  background: $global-border-color;
-  margin: $global-margin 0;
-}
-
 .#{$component-prefix}card-section {
   background-color: map-deep-get($ui, "light",light);
   border-bottom: 1px solid $global-border-color;
