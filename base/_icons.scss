@@ -314,6 +314,14 @@
   background-image: url(#{$icon-path}sidebar-white.svg);
 }
 
+[data-ico~="sidebar-close"] {
+  background-image: url(#{$icon-path}sidebar-close.svg);
+}
+
+[data-ico~="sidebar-close-white"] {
+  background-image: url(#{$icon-path}sidebar-close-white.svg);
+}
+
 [data-ico~="toolbar"] {
   background-image: url(#{$icon-path}toolbar.svg);
 }

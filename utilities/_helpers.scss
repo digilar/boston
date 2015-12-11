@@ -40,10 +40,17 @@ __margin__
 
 .#{$utility-prefix}absolute--center {
   position: absolute;
-  top: 50%;
-  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 999;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  
+  > * {
+    margin: 0 auto;
+  }
 }
 
 .#{$utility-prefix}text-overflow {

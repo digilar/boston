@@ -251,3 +251,22 @@
 .#{$component-prefix}group-icontext {
   margin: 0 $global-margin / 3;
 }
+
+// Toggle button, button with two icons indicating state
+
+.#{$component-prefix}btn-toggle {
+  > :first-child {
+    display: block;
+  }
+  > :nth-child(2) {
+    display: none;
+  }
+}
+.#{$component-prefix}btn-toggle--selected {
+  > :first-child {
+    display: none;
+  }
+  > :nth-child(2) {
+    display: block;
+  }
+}
