@@ -18,6 +18,9 @@
   z-index: 999;
   width: $panel-width;
   @extend %scrollable-content;
+  @include breakpoints(max-width,medium) {
+    bottom: $sm-nav-height;
+  }
   @include breakpoints(max-width,small) {
     width: 100vw;
   }
