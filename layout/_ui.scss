@@ -48,14 +48,12 @@ body:-webkit-full-screen {
   flex: 1;
   position: relative;
   overflow: hidden;
-  z-index: 1;
 }
 
 .#{$layout-prefix}section {
   display: flex;
   flex: 1;
   position: relative;
-  z-index: 1;
   min-height: 0;
   min-width: 0;
   overflow: auto;
