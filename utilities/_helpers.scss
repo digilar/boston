@@ -47,7 +47,7 @@ __margin__
   z-index: 999;
   display: flex;
   align-items: center;
-  
+
   > * {
     margin: 0 auto;
   }
@@ -130,6 +130,14 @@ __margin__
 .#{$utility-prefix}mx3 { margin-left: $global-margin * 3; margin-right: $global-margin * 3; }
 
 .mx-auto { margin-left: auto; margin-right: auto; }
+
+// Depth
+
+@for $i from 1 through $depth-levels {
+  .#{$utility-prefix}z-index-#{$i} {
+    z-index: $i
+  }
+}
 
 // Nudging
 
