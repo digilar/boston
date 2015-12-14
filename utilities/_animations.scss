@@ -5,11 +5,11 @@
 	@include fadeOut($duration: $animation-duration);
 }
 .#{$animation-prefix}fade-in-medium {
-	@include fadeIn(0.5s, 0, forwards);
+	@include fadeIn(0.5s);
 }
 .#{$animation-prefix}fade-in-up-slow {
-	@include fadeInUp(1s, 0, forwards);
+	@include fadeInUp(1s);
 }
 .#{$animation-prefix}fade-out-medium {
-	@include fadeOut(0.5s, 0, forwards);
+	@include fadeOut(0.5s);
 }
