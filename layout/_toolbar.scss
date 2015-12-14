@@ -86,19 +86,6 @@
       background: #fff;
     }
   }
-  @include breakpoints(max-width,large) {
-    .#{$layout-prefix}sidebar {
-      margin-left: -$sidebar-width;
-      box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.15);
-      cursor: pointer;
-      transition: margin-left 100ms ease-in;
-      position: relative;
-      background-image: url(#{$icon-path}chevron-right.svg);
-      background-repeat: no-repeat;
-      background-position: right 2px center;
-      background-size: 12px 12px;
-    }
-  }
   .#{$layout-prefix}toolbar-content {
     display: flex;
     flex-direction: column;

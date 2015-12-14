@@ -31,7 +31,7 @@
     right: 0;
     display: none;
     z-index: 9999;
-    @include fadeInLeft(1s, 0, forwards);
+    @include fadeInLeft(1s);
     margin-left: 0;
     padding-right: 0;
   }
@@ -73,7 +73,7 @@
     right: -1px;
     background-color: rgba(54, 142, 216, .3);
     border-right: 1px solid rgba(54, 142, 216, .8);
-    @include fadeOut(4s, 0, forwards);
+    @include fadeOut(4s);
   }
   &:hover {
     border-right: 1px solid rgba(54, 142, 216, .8);
