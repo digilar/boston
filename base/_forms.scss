@@ -451,8 +451,7 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   outline: 0 none;
   padding-right: 40px;
   -webkit-appearance: none;
-  width: 100%;
-  @include text-overflow;
+  @include text-overflow(100%);
   border-radius: $global-radius;
   @include breakpoints(max-width, small) {
     font-size: 16px;
