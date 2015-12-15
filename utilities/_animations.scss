@@ -1,8 +1,8 @@
-#{$animation-prefix}fade-in {
-	@include fadeIn($duration: $animation-duration);
+.#{$animation-prefix}fade-in {
+	@include fadeIn($animation-duration);
 }
-#{$animation-prefix}fade-out {
-	@include fadeOut($duration: $animation-duration);
+.#{$animation-prefix}fade-out {
+	@include fadeOut($animation-duration);
 }
 .#{$animation-prefix}fade-in-medium {
 	@include fadeIn(0.5s);
