@@ -435,11 +435,10 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   content: "";
   position: absolute;
   top: 0;
-  right: 0px;
+  right: 0;
+  bottom: 0;
   display: block;
   width: 32px;
-  height: 32px;
-  line-height: 32px;
   text-align: center;
   pointer-events: none;
   border-radius: $global-radius;
@@ -449,8 +448,10 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   border: 0;
   vertical-align: middle;
   outline: 0 none;
-  padding-right: 40px;
+  padding: 0 40px 0 0.8rem;
+  line-height: 40px;
   -webkit-appearance: none;
+  -moz-appearance: none;
   width: 100%;
   border-radius: $global-radius;
   @include breakpoints(max-width, small) {
