@@ -7,6 +7,7 @@ $color-peach: #D96363;
 $color-pink: #DD3182;
 $color-marine: #574E84;
 $color-sand: #F9F4EF;
+$color-sky: #F2F4F7;
 $color-red: #E14D4D;
 $color-green:#64b886;
 $color-blue: #368ED8;
@@ -46,6 +47,9 @@ $complementary: (
   ),
   lightblue: (
     base: $color-lightblue,
+  ),
+  sky: (
+    base: $color-sky,
   ),
   purple: (
     base: $color-purple,
