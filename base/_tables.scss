@@ -6,7 +6,6 @@ Markup
 ```
 */
 .#{$base-prefix}table {
-  margin-bottom: $global-margin;
   border-collapse: collapse;
   border-spacing: 0;
   text-align:left;
@@ -19,6 +18,10 @@ Markup
   }
   td {
     border-top:1px solid $global-border-color;
+    vertical-align: middle;
+  }
+  .typography & {
+    margin-bottom: $global-margin;
   }
   @include breakpoints(max-width,small) {
 		overflow-x: auto;
