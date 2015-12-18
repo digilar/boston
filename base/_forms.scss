@@ -320,6 +320,7 @@ input[type=range].#{$base-prefix}form-range {
   -moz-appearance: none;
   width: 100%;
   margin: 5.5px 0;
+  padding: 0;
 }
 input[type=range].#{$base-prefix}form-range:focus {
   outline: none;
@@ -370,35 +371,37 @@ input[type=range].#{$base-prefix}form-range::-moz-range-thumb {
 input[type=range].#{$base-prefix}form-range::-ms-track {
   width: 100%;
   height: 9px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: transparent;
 }
 input[type=range].#{$base-prefix}form-range::-ms-fill-lower {
-  background: #dadada;
+  background: #e4e4e4;
   border: 0px solid #010101;
-  border-radius: 50px;
+  border-radius: 12px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
 }
 input[type=range].#{$base-prefix}form-range::-ms-fill-upper {
   background: #e4e4e4;
   border: 0px solid #010101;
-  border-radius: 50px;
+  border-radius: 12px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
 }
 input[type=range].#{$base-prefix}form-range::-ms-thumb {
-  box-shadow: 1px 1px 5px #787878, 0px 0px 1px #858585;
-  border: 0px solid #ffffff;
-  height: 20px;
-  width: 20px;
+  border: 4px solid #ffffff;
+  height: 24px;
+  width: 24px;
   border-radius: 16px;
-  background: #ffffff;
+  background: $color-blue;
   cursor: pointer;
-  height: 9px;
+  margin-top: 0;
+  box-sizing: border-box;
 }
 input[type=range].#{$base-prefix}form-range:focus::-ms-fill-lower {
-  background: #e4e4e4;
+  background: #eeeeee;
 }
 input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   background: #eeeeee;
@@ -457,6 +460,10 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   -moz-appearance: none;
   width: 100%;
   border-radius: $global-radius;
+  &::-ms-expand {
+    visibility: hidden;
+    height: 40px;
+  }
   @include breakpoints(max-width, small) {
     font-size: 16px;
   }
