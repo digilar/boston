@@ -1,0 +1,14 @@
+@each $subject, $bgcolor in $productcolors {
+    .#{$component-prefix}subject-#{$subject} {
+      width: 48px;
+      height: 48px;
+      background: $bgcolor;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 140%;
+      font-weight: 300;
+      color: #fff;
+      border-radius: $global-radius;
+    }
+}

@@ -28,7 +28,20 @@ $color-secondary: $color-purple;
 $color-default:$color-blue;
 $color-info:$color-lightblue;
 
-// Text formats
+// Product colors
+
+$productcolors: (
+  religion: #EE761F,
+  chemistry: #3FC1A4,
+  english: #CE5291,
+  geography: #9BAD2D,
+  history: #E2443F,
+  math: #5C69A0,
+  society: #4A90E2,
+  library: #414141,
+  swedish: #662572,
+  spanish: #FF3000
+);
 
 // Word colors
 
