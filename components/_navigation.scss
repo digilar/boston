@@ -17,10 +17,13 @@
 }
 
 .#{$component-prefix}nav-heading {
-  padding: ($global-padding / 1.5) 0 0 0;
-  font-weight: $font-weight-bold;
+  padding: ($global-padding) 0 0.3rem 0;
+  margin-bottom: $global-padding / 2;
+  font-weight: 700;
+  font-size: $font-size-base * 0.95;
   flex-shrink: 0;
   text-transform: uppercase;
+  border-bottom: 1px solid $global-border-color;
 }
 
 .#{$component-prefix}nav-link {
