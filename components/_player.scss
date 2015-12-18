@@ -44,6 +44,12 @@
 	padding: 0;
 }
 
+.#{$component-prefix}player-railtime {
+  @include breakpoints(max-width,xsmall) {
+    display: none;
+  }
+}
+
 .#{$component-prefix}player-backward,
 .#{$component-prefix}player-forward,
 .#{$component-prefix}player-pauseplay {

@@ -57,6 +57,8 @@ body:-webkit-full-screen {
   min-height: 0;
   min-width: 0;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .#{$layout-prefix}content-area {
