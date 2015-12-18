@@ -460,6 +460,10 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   -moz-appearance: none;
   width: 100%;
   border-radius: $global-radius;
+  &::-ms-expand {
+    visibility: hidden;
+    height: 40px;
+  }
   @include breakpoints(max-width, small) {
     font-size: 16px;
   }
