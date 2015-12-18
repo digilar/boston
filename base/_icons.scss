@@ -24,16 +24,6 @@
   height:22px;
 }
 
-// Flags
-
-[data-ico~="f-sweden"] {
-  background-image: url(/assets/flags/sweden.svg);
-}
-
-[data-ico~="f-uk"] {
-  background-image: url(/assets/flags/uk.svg);
-}
-
 [data-ico~="small"] {
   @include icon-size(16px,16px);
   @extend [data-ico~="scale"]
