@@ -157,3 +157,37 @@
     content:"\02014 \0020";
   }
 }
+
+.#{$base-prefix}text-collapse {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 65px;
+    background: linear-gradient(rgba(0,0,0,0),#fff);
+  }
+}
+
+.#{$base-prefix}text-collapse-content {
+  max-height: 65px;
+  overflow-y: hidden;
+}
+
+.#{$base-prefix}text-collapse--dark {
+  background: linear-gradient(rgba(0,0,0,0),$color-purple);
+}
+
+.#{$base-prefix}text-collapse-toggler {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 99;
+  cursor: pointer;
+  border-radius: $global-circle;
+  background: #fff url(#{$icon-path}arrow-down.svg) no-repeat center center;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+}
