@@ -19,7 +19,7 @@ Markup
 }
 
 .#{$component-prefix}accordion-header {
-  padding: $global-padding;
+  padding: $global-padding ($global-padding * 3) $global-padding $global-padding ;
   background: url(/img/svgicons/chevron-down.svg) no-repeat right 1rem center;
   display: flex;
   cursor: pointer;
@@ -41,7 +41,6 @@ Markup
 
 .#{$component-prefix}accordion-content {
   border-top: 2px solid $color-blue;
-  background: $color-grey;
   display: none;
   padding: $global-padding;
 }
