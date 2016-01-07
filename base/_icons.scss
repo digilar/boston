@@ -33,3 +33,9 @@
   @include icon-size(48px,48px);
   @extend [data-ico~="scale"]
 }
+
+[data-ico~="selected"] {
+  background: $color-lightblue;
+  box-shadow: 0px 0px 0px 5px $color-lightblue;
+  border-radius: $global-circle;
+}
