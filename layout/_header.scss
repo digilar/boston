@@ -10,9 +10,6 @@
   display: flex;
   align-items: center;
   height: $header-height;
-  &:hover {
-    background: darken($color-secondary, 5%);
-  }
 }
 
 .#{$layout-prefix}toggle-mobile-nav {
@@ -114,9 +111,7 @@
   align-items: center;
   position: relative;
   cursor: pointer;
-  &:hover {
-    background: lighten($color-secondary, 5%);
-  }
+  background: lighten($color-secondary, 5%);
 }
 
 .#{$layout-prefix}header-settings--selected {
