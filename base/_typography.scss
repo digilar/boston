@@ -75,6 +75,7 @@
 .#{$base-prefix}h3,
 .#{$base-prefix}h4 {
   margin:0;
+  font-weight:600
 }
 
 .#{$base-prefix}typography {
@@ -174,6 +175,16 @@
 .#{$base-prefix}text-collapse-content {
   max-height: 65px;
   overflow-y: hidden;
+}
+
+.#{$base-prefix}text-collapse--visible {
+  &:after {
+    background: none;
+  }
+  .#{$base-prefix}text-collapse-content {
+    max-height: none;
+    overflow-y: auto;
+  }
 }
 
 .#{$base-prefix}text-collapse--dark {
