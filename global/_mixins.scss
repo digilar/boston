@@ -42,6 +42,24 @@
   }
 }
 
+@mixin bp-below($value) {
+  @media (max-width: #{$value}) {
+    @content;
+  }
+}
+
+@mixin bp-above($value) {
+  @media (min-width: #{$value}) {
+    @content;
+  }
+}
+
+@mixin bp-between($min, $max) {
+  @media (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}
+
 // scrollhint
 
 @mixin scrollhint() {
