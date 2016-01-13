@@ -1,0 +1,9 @@
+.upload-dropzone {
+  border:1px dashed $color-default;
+  border-radius:$global-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:300px;
+  flex-direction: column;
+}
