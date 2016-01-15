@@ -20,24 +20,28 @@
   pointer-events: none;
 }
 
-.#{$component-prefix}-close {
-  background: url(../img/svgicons/close.svg) no-repeat center center;
-  width: 30px;
-  height: 30px;
+.#{$component-prefix}modal-close {
+  background: #fff url(#{$icon-path}close.svg) no-repeat center center;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+  border-radius: $global-circle;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: -1rem;
+  right: -1rem;
 }
 
-.#{$component-prefix}modal-overlay--visible {
+.#{$component-prefix}modal-overlay--in {
   visibility: visible;
   background: rgba(65,35,65,0.8);
   pointer-events: auto;
+  @include fadeIn($duration: 0.6s);
 }
 
 .#{$component-prefix}modal-overlay--out {
-  z-index: -1;
-  visibility: hidden;
+  @include fadeOut($duration: 0.6s);
+  pointer-events: none;
 }
 
 .#{$component-prefix}modal-body {
@@ -48,25 +52,14 @@
   max-width: 500px;
   margin: 3rem auto 5rem auto;
   border-radius: $global-radius;
-}
-
-.#{$component-prefix}modal-overlay--out .modal-body {
- // Animation out
-}
-
-.#{$component-prefix}modal-media {
-  flex: 1;
+  position: relative;
 }
 
 .#{$component-prefix}modal-content {
-  padding: $global-padding $global-padding *2;
+  padding: $global-padding $global-padding * 2;
   @include breakpoints(max-width,small) {
     padding: $global-padding;
   }
-}
-
-.#{$component-prefix}modal-title {
-  margin: 0;
 }
 
 .#{$component-prefix}modal-footer {
