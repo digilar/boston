@@ -14,7 +14,10 @@
   position: relative;
 }
 
+.#{$layout-prefix}page-header-inner {
+  padding: 2rem 0;
+}
+
 .#{$layout-prefix}page-header-overlay {
   background: rgba(65,35,65,0.8);
-  padding: 2rem 0;
 }
