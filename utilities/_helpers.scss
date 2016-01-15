@@ -182,6 +182,10 @@ __margin__
 .#{$utility-prefix}table        { display: table }
 .#{$utility-prefix}table-cell   { display: table-cell }
 
+.#{$utility-prefix}vertical-align-top      { vertical-align: top }
+.#{$utility-prefix}vertical-align-middle   { vertical-align: middle }
+.#{$utility-prefix}vertical-align-bottom   { vertical-align: bottom }
+
 // Pointer
 
 .#{$utility-prefix}pointer-events-none    { pointer-events: none; }
