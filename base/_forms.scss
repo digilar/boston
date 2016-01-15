@@ -80,14 +80,16 @@ textarea.#{$base-prefix}form-input {
 
 .#{$base-prefix}form-input--error {
   background-image: url(#{$icon-path}error.svg);
-  background-position: right 0.3rem center;
+  background-position: right 0.6rem center;
+  background-repeat: no-repeat;
   @extend .#{$base-prefix}form-input;
   border-color: $color-error;
   position: relative;
 }
 .#{$base-prefix}form-input--success {
   background-image: url(#{$icon-path}correct.svg);
-  background-position: right 0.3rem center;
+  background-position: right 0.6rem center;
+  background-repeat: no-repeat;
   @extend .#{$base-prefix}form-input;
   border-color: $color-success;
 }
