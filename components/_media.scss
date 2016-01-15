@@ -39,16 +39,27 @@
   }
 }
 
+.#{$component-prefix}img-small {
+  @include breakpoints(min-width, small) {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
 // Wrapper class for positioning
 
 .#{$component-prefix}img-figure--align-right {
-  float: right;
-  margin: 0 0 $global-margin $global-margin;
+  @include breakpoints(min-width, small) {
+    float: right;
+    margin: 0 0 $global-margin $global-margin;
+  }
 }
 
 .#{$component-prefix}img-figure--align-left {
-  float: left;
-  margin: 0 $global-margin $global-margin 0;
+  @include breakpoints(min-width, small) {
+    float: left;
+    margin: 0 $global-margin $global-margin 0;
+  }
 }
 
 .#{$component-prefix}img-figure--align-center {
