@@ -1,9 +1,0 @@
-.#{$layout-prefix}main-nav-actions {
-  display: flex;
-  flex-shrink: 0;
-  padding-top: $global-padding;
-  border-top: 1px solid map-deep-get($ui,"dark", light);
-  > div:first-child {
-    margin-right: $global-margin / 2;
-  }
-}
