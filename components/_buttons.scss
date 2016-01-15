@@ -187,7 +187,7 @@
 .#{$component-prefix}btn-tab {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 1 0 auto;
   justify-content: center;
   padding: map-deep-get($inline-sizes, "sm", padding);
   background: #fff;
