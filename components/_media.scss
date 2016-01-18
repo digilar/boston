@@ -86,19 +86,6 @@
   text-align: left;
 }
 
-.#{$component-prefix}img-caption-over {
-  position:  absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  background: rgba(0,0,0,0.8);
-  margin-top: $global-padding;
-  padding: $global-padding;
-  color: #fff;
-  font-size:  $font-size-base * 0.95;
-}
-
 .#{$component-prefix}img-gallery {
   position:  relative;
 }
