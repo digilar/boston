@@ -13,3 +13,15 @@
 .#{$animation-prefix}fade-out-medium {
 	@include fadeOut(0.5s);
 }
+.#{$animation-prefix}fade-in-left-medium {
+	@include fadeInLeft(0.5s);
+}
+.#{$animation-prefix}fade-out-left-medium {
+	@include fadeOutLeft(0.5s);
+}
+.#{$animation-prefix}fade-in-right-medium {
+	@include fadeInRight(0.5s);
+}
+.#{$animation-prefix}fade-out-right-medium {
+	@include fadeOutRight(0.5s);
+}
