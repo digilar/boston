@@ -8,24 +8,20 @@
 
 
 .#{$component-prefix}panel {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
   background: #fff;
   z-index: 999;
   width: $panel-width;
+  opacity: 0;
+  pointer-events: none;
   @extend %scrollable-content;
   @include breakpoints(max-width,small) {
     width: 100vw;
   }
-}
-
-.#{$component-prefix}panel--visible {
-  display: flex;
-  flex-direction: column;
 }
 
 .#{$component-prefix}panel-header {
@@ -66,12 +62,11 @@
 }
 
 .#{$component-prefix}panel--left {
-  right: auto;
+  left: 0;
   box-shadow: 2px 0 5px 0px $global-shadow;
 }
 
 .#{$component-prefix}panel--right {
-  left: auto;
+  right: 0;
   box-shadow: -2px 0px 5px 0px $global-shadow;
-  @include fadeInRight(0.5s);
 }
