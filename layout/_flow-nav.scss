@@ -44,6 +44,7 @@
   flex-wrap: nowrap;
   flex-direction: row;
   display: flex;
+  z-index: 2;
   @extend %scrollable-content-x;
   flex: 1;
 }
