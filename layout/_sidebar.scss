@@ -25,13 +25,13 @@
   }
   @include breakpoints(max-width,medium) {
     position: absolute;
-    top: 0px;
-    bottom: 0px;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     z-index: 9999;
-    @include fadeInLeft(1s);
     margin-left: 0;
     padding-right: 0;
   }
@@ -78,10 +78,6 @@
   &:hover {
     border-right: 1px solid rgba(54, 142, 216, .8);
   }
-}
-
-.#{$layout-prefix}sidebar--visible {
-  display: flex;
 }
 
 .#{$layout-prefix}sidebar--shrink {
