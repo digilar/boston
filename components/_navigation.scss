@@ -28,13 +28,6 @@
 
 .#{$component-prefix}nav-link {
   display: block;
-  flex-shrink: 0;
-  &:last-child {
-    border: 0;
-  }
-  @include breakpoints(max-width,xsmall) {
-    font-size: $font-size-base * 1.2;
-  }
   .#{$component-prefix}nav-item--selected > & {
     color: $color-default;
   }
@@ -44,59 +37,78 @@
   margin-right: 0.5rem;
 }
 
-.#{$component-prefix}nav-dots {
-  // Hide sub levels
-  .#{$component-prefix}nav-item .#{$component-prefix}nav {
-    display: none;
-  }
-  // Show current items sub levels
-  .#{$component-prefix}nav-item--selected .#{$component-prefix}nav {
+// Nav dots
+
+.#{$component-prefix}nav-dots-item {
+  padding: $global-padding;
+  border-bottom: 1px solid $global-border-color;
+  > {
     display: block;
-  }
-  // Show sub levels when parent is selected
-  .#{$component-prefix}nav-item--opened #{$component-prefix}nav {
-    display: block;
-  }
-  .#{$component-prefix}nav-item--opened > a {
-    color: $color-default;
-  }
-  .#{$component-prefix}nav-link {
-    display: block;
-  }
-  // 2nd level
-  .#{$component-prefix}nav-item .#{$component-prefix}nav-item {
-    border-left: 2px solid  map-deep-get($ui, "light", dark);
-    background: map-deep-get($ui, "light", light);
-    margin-left: $global-margin;
-    padding-left: $global-padding;
-  }
-  // 2nd level selected
-  .#{$component-prefix}nav-item .#{$component-prefix}nav-item.#{$component-prefix}nav-item--selected {
-    color: $color-default;
-    position: relative;
-    &:before {
-      box-sizing: border-box;
-      position: absolute;
-      top: 50%;
-      margin-top: -0.5rem;
-      left: -9px;
-      background: $color-blue;
-      width: 16px;
-      height: 16px;
-      border: 3px solid #fff;
-      border-radius: $global-rounded;
-      content: "";
-    }
   }
 }
 
-.#{$component-prefix}nav-children-toggle {
+.#{$component-prefix}nav-dots-heading {
+  @extend .nav-heading;
+  margin: 0;
+}
+
+// Hide sub levels
+.#{$component-prefix}nav-dots-item .#{$component-prefix}nav-dots {
+  display: none;
+  margin-top: $global-margin / 2;
+}
+
+// Show current items sub levels
+.#{$component-prefix}nav-dots-item--selected .#{$component-prefix}nav-dots {
+  display: block;
+}
+
+.#{$component-prefix}nav-dots-item--selected {
+  background: $color-grey;
+  border-bottom: 1px solid $global-border-color;
+  > a {
+    color: $color-default;
+  }
+}
+
+// 2nd level
+.#{$component-prefix}nav-dots-item .#{$component-prefix}nav-dots-item {
+  border: 0;
+  border-left: 1px solid $global-border-color;
+  margin-left: $global-margin;
+  padding-left: $global-padding;
+}
+
+// 2nd level selected
+.#{$component-prefix}nav-dots-item .#{$component-prefix}nav-dots-item.#{$component-prefix}nav-dots-item--selected {
+  color: $color-default;
+  position: relative;
+  &:before {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+    left: -9px;
+    background: $color-blue;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #fff;
+    border-radius: $global-rounded;
+    content: "";
+  }
+}
+
+.#{$component-prefix}nav-item-toggler {
   float: right;
-  width: 40px;
+  width: 24px;
+  height: 24px;
   border-radius: $global-radius;
-  background: map-deep-get($ui,"dark",light);
-  color: #fff;
-  text-align: center;
+  background: #fff url(#{$icon-path}/chevron-down.svg) no-repeat center center;
+  border: 1px solid transparent;
+  .#{$component-prefix}nav-dots-item--selected & {
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+    border: 1px solid $global-border-color;
+  }
 }
 
 .#{$component-prefix}nav-inline {
@@ -113,6 +125,14 @@
 .#{$component-prefix}nav-inline-item {
   margin: 0.3rem;
   display: block;
+}
+
+.#{$component-prefix}nav-item--selected {
+  background: url(#{$icon-path}/chevron-right.svg) right center no-repeat;
+  padding-right: 30px;
+  .nav-link {
+    color: $color-primary;
+  }
 }
 
 .#{$component-prefix}nav-item--selected > a {
@@ -177,25 +197,9 @@
   align-items: center;
   border-bottom: 1px solid $global-border-color;
   padding-bottom: $global-padding / 2;
-  > li {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    &:after {
-      content: " / ";
-      color: $global-border-color;
-    }
-    &:last-child {
-      &:after {
-        content: "";
-      }
-    }
-    &:first-child {
-      .#{$component-prefix}breadcrumb-item {
-        padding-left: 0;
-        padding-right: 0.5rem;
-      }
-    }
+  >li+li:before {
+    padding: 0 5px;
+    color: #ccc;
     content: "/\00a0";
   }
 }
