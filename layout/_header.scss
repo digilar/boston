@@ -77,6 +77,10 @@
   }
 }
 
+.#{$layout-prefix}header-nav-dropdown {
+  padding-right: 20px;
+}
+
 .#{$layout-prefix}header-nav-link {
   padding: $global-padding / 2 $global-padding;
   display: block;
