@@ -14,32 +14,20 @@
   border-right: 1px solid $global-border-color;
   position: relative;
   z-index: 3;
-  margin-left: 0;
-  opacity: 1;
-  transition: margin-left 250ms ease;
-  @include breakpoints(max-width, large) {
-    .toolbar--opened & {
-      margin-left: ($global-padding - $sidebar-width);
-      padding-right: $global-padding;
-    }
-  }
-  @include breakpoints(max-width,medium) {
+  @include breakpoints(max-width, medium) {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    right: 100%;
     opacity: 0;
-    pointer-events: none;
     z-index: 9999;
-    margin-left: 0;
-    padding-right: 0;
   }
 }
 
 .#{$layout-prefix}sidebar--opener {
-  display: none;
-  width: $global-padding;
+  display: block;
+  width: 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -49,32 +37,9 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 12px 12px;
-  background-color: #fff;
+  background-color: rgba(54, 142, 216, .3);
   box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.15);
   cursor: pointer;
-  background-color: white;
-  border-right: 1px solid white;
-  @include breakpoints(max-width, large) {
-    .toolbar--opened & {
-      display: block;
-    }
-  }
-  @include breakpoints(max-width, medium) {
-    .toolbar--opened & {
-      display: none;
-    }
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: -1px;
-    background-color: rgba(54, 142, 216, .3);
-    border-right: 1px solid rgba(54, 142, 216, .8);
-    @include fadeOut(4s);
-  }
   &:hover {
     border-right: 1px solid rgba(54, 142, 216, .8);
   }
