@@ -1,5 +1,6 @@
 .#{$component-prefix}content-meta {
   display: none;
+  overflow: hidden;
   padding: $global-padding;
   border: 1px solid $global-border-color;
   border-radius:  $global-radius;
