@@ -17,7 +17,6 @@
   z-index: 999;
   width: $panel-width;
   opacity: 0;
-  pointer-events: none;
   @extend %scrollable-content;
   @include breakpoints(max-width,small) {
     width: 100vw;
@@ -62,11 +61,17 @@
 }
 
 .#{$component-prefix}panel--left {
-  left: 0;
+  left: -$panel-width;
   box-shadow: 2px 0 5px 0px $global-shadow;
+  @include breakpoints(max-width,small) {
+    left: -100vw;
+  }
 }
 
 .#{$component-prefix}panel--right {
-  right: 0;
+  right: -$panel-width;
   box-shadow: -2px 0px 5px 0px $global-shadow;
+  @include breakpoints(max-width,small) {
+    right: -100vw;
+  }
 }
