@@ -44,8 +44,3 @@
     border-right: 1px solid rgba(54, 142, 216, .8);
   }
 }
-
-.#{$layout-prefix}sidebar--shrink {
-  @extend .flex-shrink;
-  flex-basis: auto;
-}
