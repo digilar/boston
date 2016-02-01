@@ -7,15 +7,19 @@
 */
 
 .#{$layout-prefix}toolbar {
-  flex-basis: $toolbar-opened;
+  width: $toolbar-opened;
   margin-right: -($toolbar-opened - $toolbar-width);
   display: flex;
   box-shadow: -2px 0px 12px 0px rgba(0,0,0,0.2);
   position: relative;
   z-index: 2;
-  transition: margin-right 250ms ease;
   @include breakpoints(max-width, medium) {
-    margin-right: -$toolbar-opened;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    margin: 0;
+    background: #fff;
   }
 }
 
@@ -39,57 +43,21 @@
   border-right: 1px solid $global-border-color;
 }
 
-.#{$layout-prefix}toolbar-close {
-  cursor: pointer;
-}
-
 .#{$layout-prefix}toolbar-icon-title {
   margin-top: 0.2rem;
   font-size: $font-size-base - 0.1;
 }
 
+.#{$layout-prefix}toolbar-close {
+  cursor: pointer;
+}
+
 .#{$layout-prefix}toolbar-content {
-  display: none;
   flex: 1;
-  animation-duration: 300ms;
 }
 
 .#{$layout-prefix}toolbar--visible {
   flex-basis: $toolbar-width;
-}
-
-.#{$layout-prefix}toolbar--opened {
-  .#{$layout-prefix}toolbar-close {
-    display: block;
-  }
-  .#{$layout-prefix}toolbar-open {
-    display: none;
-  }
-  @include breakpoints(max-width, medium) {
-    .#{$layout-prefix}toolbar-icons {
-      border-left: 1px solid $global-border-color;
-      border-right: 0;
-      order: 2;
-    }
-    .#{$layout-prefix}toolbar-content {
-      order: 1;
-    }
-  }
-  .#{$layout-prefix}toolbar {
-    margin-right: 0;
-    @include breakpoints(max-width, medium) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background: #fff;
-    }
-  }
-  .#{$layout-prefix}toolbar-content {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .#{$layout-prefix}toolbar-section {
