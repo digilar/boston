@@ -38,6 +38,8 @@ __margin__
   }
 }
 
+// Positions
+
 .#{$utility-prefix}absolute--center {
   position: absolute;
   top: 0;
@@ -51,6 +53,18 @@ __margin__
   > * {
     margin: 0 auto;
   }
+}
+
+.#{$utility-prefix}static {
+  position: static;
+}
+
+.#{$utility-prefix}absolute {
+  position: absolute;
+}
+
+.#{$utility-prefix}relative {
+  position: relative;
 }
 
 .#{$utility-prefix}text-overflow {
@@ -69,12 +83,6 @@ __margin__
 .text-color--#{$name} {
     color: complementarypalette($name);
   }
-}
-
-// Positions
-
-.#{$utility-prefix}relative {
-  position: relative;
 }
 
 .#{$utility-prefix}p0  { padding: 0 }
