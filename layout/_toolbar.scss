@@ -17,9 +17,13 @@
     position: absolute;
     top: 0;
     right: -100%;
+    opacity: 0;
     bottom: 0;
     margin: 0;
     background: #fff;
+  }
+  @include breakpoints(max-width, small) {
+    width: 100%;
   }
 }
 
@@ -46,10 +50,6 @@
 .#{$layout-prefix}toolbar-icon-title {
   margin-top: 0.2rem;
   font-size: $font-size-base - 0.1;
-}
-
-.#{$layout-prefix}toolbar-close {
-  cursor: pointer;
 }
 
 .#{$layout-prefix}toolbar-content {
