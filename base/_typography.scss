@@ -41,33 +41,34 @@
 // Reset fonts for relevant elements
 .#{$layout-prefix}body {
   @include responsive-font(3vw, 15px, 16px);
-  .#{$base-prefix}h1 {
-    @include responsive-font(3vw, 26px, 32px);
-  }
-
-  .#{$base-prefix}h2 {
-    @include responsive-font(3vw, 21px, 24px);
-  }
-
-  .#{$base-prefix}h3 {
-    @include responsive-font(3vw, 18px, 21px);
-  }
-
-  .#{$base-prefix}h4 {
-    @include responsive-font(3vw, 16px, 18px);
-  }
-
-  .#{$base-prefix}text-small {
-    @include responsive-font(3vw, 13px, 14px);
-  }
-
-  .#{$base-prefix}lead {
-    @include responsive-font(3vw, 18px, 21px);
-  }
 
   p {
     margin-bottom:0.8rem;
   }
+}
+
+.#{$base-prefix}h1 {
+  @include responsive-font(3vw, 26px, 32px);
+}
+
+.#{$base-prefix}h2 {
+  @include responsive-font(3vw, 21px, 24px);
+}
+
+.#{$base-prefix}h3 {
+  @include responsive-font(3vw, 18px, 21px);
+}
+
+.#{$base-prefix}h4 {
+  @include responsive-font(3vw, 16px, 18px);
+}
+
+.#{$base-prefix}text-small {
+  @include responsive-font(3vw, 13px, 14px);
+}
+
+.#{$base-prefix}lead {
+  @include responsive-font(3vw, 18px, 21px);
 }
 
 .#{$base-prefix}h1,

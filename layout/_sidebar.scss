@@ -18,10 +18,12 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
-    right: 100%;
+    left: -100%;
     opacity: 0;
     z-index: 9999;
+  }
+  @include breakpoints(max-width, small) {
+    width: 100%;
   }
 }
 
