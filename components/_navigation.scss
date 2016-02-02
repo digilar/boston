@@ -173,7 +173,7 @@
 
 .#{$component-prefix}pagination-jump {
   @extend .#{$component-prefix}pagination;
-  .#{$component-prefix}form-input {
+  .#{$base-prefix}form-input {
     width: auto;
     max-width: 3rem;
     text-align: center;
