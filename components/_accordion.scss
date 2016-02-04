@@ -20,7 +20,7 @@ Markup
 
 .#{$component-prefix}accordion-header {
   padding: $global-padding ($global-padding * 3) $global-padding $global-padding ;
-  background: url(/img/svgicons/chevron-down.svg) no-repeat right 1rem center;
+  background: url(#{$icon-path}chevron-down.svg) no-repeat right 1rem center;
   display: flex;
   cursor: pointer;
 }
@@ -32,7 +32,7 @@ Markup
 
 .#{$component-prefix}accordion-item--opened {
   .#{$component-prefix}accordion-header {
-    background: url(/img/svgicons/chevron-up.svg) no-repeat right 1rem center;
+    background: url(#{$icon-path}chevron-up.svg) no-repeat right 1rem center;
   }
   .#{$component-prefix}accordion-content {
     display: block;
