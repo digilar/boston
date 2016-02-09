@@ -8,10 +8,11 @@
   color: #fff;
   display: none;
   border-radius: $global-radius;
-  padding: $global-padding;
+  padding: $global-padding ($global-padding + 1.5rem) $global-padding $global-padding;
   z-index: 1;
   box-shadow: 0 0 16px 0 rgba(0,0,0,0.3);
-  min-width: 220px;
+  cursor: pointer;
+  white-space: nowrap;
   &--topright {
     @include css-arrow(topright, $color-blue, 0.8rem);
   }
@@ -35,16 +36,13 @@
   }
 }
 
-.#{$component-prefix}tooltip--visible {
-  display: block;
-}
-
 .#{$component-prefix}tooltip-title {
   font-weight: $font-weight-bold;
-  margin-bottom: 0.8rem;
 }
 
 .#{$component-prefix}tooltip-close {
-  float: right;
-  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: $global-padding ($global-padding * 0.5);
 }
