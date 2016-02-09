@@ -33,7 +33,7 @@
 
 .#{$layout-prefix}toolbar-icon {
   text-align: center;
-  padding: 0.6rem 0.4rem;
+  padding: 0.6rem 0;
   cursor: pointer;
   &--selected {
     background-color: map-deep-get($ui, "light", base);
@@ -50,6 +50,8 @@
 .#{$layout-prefix}toolbar-icon-title {
   margin-top: 0.2rem;
   font-size: $font-size-base - 0.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .#{$layout-prefix}toolbar-content {
