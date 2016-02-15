@@ -183,11 +183,6 @@
     display: flex;
     align-items: center;
   }
-  @include breakpoints(max-width,small) {
-    .#{$component-prefix}pagination-jumpto {
-      display: none;
-    }
-  }
 }
 
 // Breadcrumb
