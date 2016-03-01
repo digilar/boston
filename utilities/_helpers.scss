@@ -103,9 +103,9 @@ __margin__
 .#{$utility-prefix}pb2  { padding-bottom: $global-padding * 2 }
 .#{$utility-prefix}pb3  { padding-bottom: $global-padding * 3 }
 
-.#{$utility-prefix}pt1  { padding-bottom: $global-padding }
-.#{$utility-prefix}pt2  { padding-bottom: $global-padding * 2 }
-.#{$utility-prefix}pt3  { padding-bottom: $global-padding * 3 }
+.#{$utility-prefix}pt1  { padding-top: $global-padding }
+.#{$utility-prefix}pt2  { padding-top: $global-padding * 2 }
+.#{$utility-prefix}pt3  { padding-top: $global-padding * 3 }
 
 // Margin
 
