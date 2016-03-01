@@ -102,6 +102,7 @@ __margin__
 .#{$utility-prefix}pb1  { padding-bottom: $global-padding }
 .#{$utility-prefix}pb2  { padding-bottom: $global-padding * 2 }
 .#{$utility-prefix}pb3  { padding-bottom: $global-padding * 3 }
+.#{$utility-prefix}pb-full-scroll { padding-bottom: 80vh; }
 
 .#{$utility-prefix}pt1  { padding-top: $global-padding }
 .#{$utility-prefix}pt2  { padding-top: $global-padding * 2 }
