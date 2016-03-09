@@ -36,17 +36,22 @@
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
   position: relative;
   display: block;
-  .#{$component-prefix}card-figure {
-    margin: -1px -1px 0px -1px;
-  }
-  .#{$component-prefix}card-figure img {
-    border-radius: $global-radius $global-radius 0 0;
-  }
   &--clickable {
     cursor: pointer;
     &:active {
       box-shadow: 0px 0px 12px 0px rgba($color-blue, 0.3);
     }
+  }
+}
+
+.#{$component-prefix}card-figure {
+  &:first-child img {
+    border-top-left-radius: $global-radius;
+    border-top-right-radius: $global-radius;
+  }
+  &:last-child img {
+    border-bottom-left-radius: $global-radius;
+    border-bottom-right-radius: $global-radius;
   }
 }
 
