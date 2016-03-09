@@ -108,6 +108,14 @@ __margin__
 .#{$utility-prefix}pt2  { padding-top: $global-padding * 2 }
 .#{$utility-prefix}pt3  { padding-top: $global-padding * 3 }
 
+.#{$utility-prefix}pl1  { padding-left: $global-padding }
+.#{$utility-prefix}pl2  { padding-left: $global-padding * 2 }
+.#{$utility-prefix}pl3  { padding-left: $global-padding * 3 }
+
+.#{$utility-prefix}pr1  { padding-right: $global-padding }
+.#{$utility-prefix}pr2  { padding-right: $global-padding * 2 }
+.#{$utility-prefix}pr3  { padding-right: $global-padding * 3 }
+
 // Margin
 
 .#{$utility-prefix}m0  { margin:        0 }
