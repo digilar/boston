@@ -146,7 +146,7 @@ __margin__
 .#{$utility-prefix}mx2 { margin-left: $global-margin * 2; margin-right: $global-margin * 2; }
 .#{$utility-prefix}mx3 { margin-left: $global-margin * 3; margin-right: $global-margin * 3; }
 
-.mx-auto { margin-left: auto; margin-right: auto; }
+.#{$utility-prefix}mx-auto { margin-left: auto; margin-right: auto; }
 
 // Depth
 
