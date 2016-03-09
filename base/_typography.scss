@@ -67,6 +67,10 @@
   @include responsive-font(3vw, 13px, 14px);
 }
 
+.#{$base-prefix}text-bold {
+  font-weight: $font-weight-bold;
+}
+
 .#{$base-prefix}lead {
   @include responsive-font(3vw, 18px, 21px);
 }
