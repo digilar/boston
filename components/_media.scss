@@ -5,9 +5,6 @@
   flex: 1;
   align-items:  center;
   padding: $global-padding / 2 0 $global-padding / 2 0;
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .#{$component-prefix}media--selected {
@@ -16,7 +13,6 @@
 
 .#{$component-prefix}media-object {
   display: flex;
-  padding: ($global-padding / 3) 0;
 }
 
 .#{$component-prefix}media-content {
