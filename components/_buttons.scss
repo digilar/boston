@@ -30,9 +30,8 @@
 .#{$component-prefix}btn-row {
   display: flex;
   flex-wrap: nowrap;
-  overflow: scroll;
+  overflow: auto;
   position: relative;
-  @include scrollhint();
 }
 
 .#{$component-prefix}btn-row-item {

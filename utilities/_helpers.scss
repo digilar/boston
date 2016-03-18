@@ -310,3 +310,20 @@ __margin__
   background: $global-border-color;
   margin: $global-margin 0;
 }
+
+// scrollhint
+
+.#{$utility-prefix}scrollhint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: $global-rounded;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  margin-left: -30px;
+  margin-top: -32px;
+  content: "";
+  background: #fff url(#{$icon-path}scroll.svg) center center no-repeat;
+  pointer-events: none;
+}
