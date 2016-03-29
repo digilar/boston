@@ -465,6 +465,7 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   &::-ms-expand {
     visibility: hidden;
     height: 40px;
+    width: 0;
   }
   @include breakpoints(max-width, small) {
     font-size: 16px;
