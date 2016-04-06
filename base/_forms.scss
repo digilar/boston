@@ -50,8 +50,9 @@ Markup
   }
 }
 
-.#{$base-prefix}form-input-lg {
+.#{$base-prefix}form-input-large {
   padding: map-deep-get($inline-sizes, "lg", padding);
+  font-size: map-deep-get($inline-sizes, "lg", font-size);
 }
 
 textarea.#{$base-prefix}form-input {
@@ -107,6 +108,9 @@ textarea.#{$base-prefix}form-input {
 
 .#{$base-prefix}form-item {
   margin: 0 $global-margin / 2;
+  &:first-child {
+    margin-left: 0;
+  }
   &:last-child {
     margin-right: 0;
   }
