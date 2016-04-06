@@ -19,5 +19,5 @@
 }
 
 .#{$layout-prefix}page-header-overlay {
-  background: rgba(65,35,65,0.8);
+  background: linear-gradient(to bottom, rgba(64,35,65,0.44) 0%, rgba(64,35,65,1) 100%);
 }
