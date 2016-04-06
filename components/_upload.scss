@@ -1,9 +1,106 @@
+/*
+##Upload
+  Description
+```
+```
+*/
+
 .upload-dropzone {
-  border:1px dashed $color-default;
-  border-radius:$global-radius;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px dashed $color-default;
+  border-radius: $global-radius;
+  min-height: 150px;
+  padding: $global-padding * 3;
+
+}
+
+.upload-dropzone--state {
+  border: 1px dashed transparent;
+}
+
+.upload-dropzone--selected {
+  background: rgba($color-default, 0.05);
+}
+
+.upload-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  border-radius: $global-circle;
+  margin: 0 0 $global-margin 0;
+}
+
+.upload-add {
+  cursor: pointer;
+}
+
+.upload-failed,
+.upload-success {
+  display: none;
+}
+
+.upload-icon-add {
+  background: $color-default;
+  @include teeter();
+}
+
+.upload-icon-success {
+  background: $color-success;
+  @include bounce();
+}
+
+.upload-icon-failed {
+  background: $color-error;
+  @include shake();
+}
+
+.upload-rail {
+  position: absolute;
+  top: 45%;
+  left: $global-margin;
+  right: $global-margin;
+  bottom: 45%;
+
+  display: none;
+
+  background: rgba($color-success, 0.3);
+  border-radius: $global-rounded;
+}
+
+.upload-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  transition: width 300ms ease-in;
+
+  width: 0;
+  border-radius: $global-rounded;
+  background: rgba($color-success,0.8);
+}
+
+.upload-percent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height:300px;
-  flex-direction: column;
+
+  color: #fff;
+  text-align: center;
+  font-size: $font-size-base * 1.5;
 }
