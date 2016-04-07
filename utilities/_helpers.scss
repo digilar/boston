@@ -258,6 +258,7 @@ __margin__
 .flex-shrink  { flex: 0 0 auto; }
 .flex-expand  { flex: 1 1 auto; }
 .flex-none    { flex: none }
+.flex-reduce  { flex: 0 1 auto; }
 
 .flex-first   { order: -1 }
 .flex-last    { order: 99999 }
