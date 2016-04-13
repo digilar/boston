@@ -172,12 +172,12 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
   content:' ';
   position: absolute;
   left: -30px;
-  top: -2px;
+  top: 0;
   width: 23px;
   height: 23px;
   display: block;
   z-index: 1;
-  background: url('data: image/svg+xml,<svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><path d="M13.439 1.09c.414-.367 1.059-.328 1.431.076l.413.448c.377.409.36 1.037-.048 1.413l-8.925 8.217c-.403.371-1.036.347-1.412-.054l-3.773-4.018c-.377-.401-.372-1.062 0-1.467l.413-.448c.377-.409.993-.413 1.37-.015l2.671 2.816 7.858-6.969z" fill="#7AB23D"/></svg>') no-repeat center center;
+  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTMuNDM5IDEuMDljLjQxNC0uMzY3IDEuMDU5LS4zMjggMS40MzEuMDc2bC40MTMuNDQ4Yy4zNzcuNDA5LjM2IDEuMDM3LS4wNDggMS40MTNsLTguOTI1IDguMjE3Yy0uNDAzLjM3MS0xLjAzNi4zNDctMS40MTItLjA1NGwtMy43NzMtNC4wMThjLS4zNzctLjQwMS0uMzcyLTEuMDYyIDAtMS40NjdsLjQxMy0uNDQ4Yy4zNzctLjQwOS45OTMtLjQxMyAxLjM3LS4wMTVsMi42NzEgMi44MTYgNy44NTgtNi45Njl6IiBmaWxsPSIjN0FCMjNEIi8+PC9zdmc+') no-repeat center center;
   transition: all .3s ease;
   transform: scale(0);
   opacity: 0;
