@@ -214,24 +214,6 @@ __margin__
 .#{$utility-prefix}cursor-default         { cursor: auto; }
 .#{$utility-prefix}cursor-not-allowed     { cursor: not-allowed; }
 
-@each $key, $value in $breakpoints {
-	$value: nth($key, 1);
-	@include breakpoints(max-width,$value) {
-		.hide-#{$value} {
-      display: none;
-    }
-	}
-}
-
-@each $key, $value in $breakpoints {
-	$value: nth($key, 1);
-	@include breakpoints(min-width,$value) {
-		.show-#{$value} {
-      display: block;
-    }
-	}
-}
-
 // Flex classes
 
 .flex           { display: flex; backface-visibility: hidden; }
@@ -330,4 +312,24 @@ __margin__
   content: "";
   background: #fff url(#{$icon-path}scroll.svg) center center no-repeat;
   pointer-events: none;
+}
+
+// Break-point visibility
+
+@each $key, $value in $breakpoints {
+	$value: nth($key, 1);
+	@include breakpoints(max-width,$value) {
+		.hide-#{$value} {
+      display: none;
+    }
+	}
+}
+
+@each $key, $value in $breakpoints {
+	$value: nth($key, 1);
+	@include breakpoints(min-width,$value) {
+		.show-#{$value} {
+      display: block;
+    }
+	}
 }
