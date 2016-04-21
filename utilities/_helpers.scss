@@ -162,6 +162,9 @@ __margin__
 .#{$utility-prefix}nr1 { margin-right: $global-margin / 2; }
 .#{$utility-prefix}nt1 { margin-top: $global-margin / 2; }
 .#{$utility-prefix}nb1 { margin-bottom: $global-margin / 2; }
+.#{$utility-prefix}nx1 { margin-left: $global-margin / 2; margin-right: $global-margin / 2; }
+.#{$utility-prefix}ny1 { margin-top: $global-margin / 2; margin-bottom: $global-margin / 2; }
+.#{$utility-prefix}n1 { margin: $global-margin / 2; }
 
 // Alignments
 .#{$utility-prefix}pull-right   { float: right; }
