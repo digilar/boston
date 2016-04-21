@@ -203,17 +203,6 @@ __margin__
   position: absolute;
 }
 
-.#{$utility-prefix}disabled     { opacity: 0.6; cursor: not-allowed; }
-.#{$utility-prefix}dimmed       { opacity: 0.5; }
-.#{$utility-prefix}hidden       { display: none; }
-.#{$utility-prefix}visible      { display: block; }
-
-.#{$utility-prefix}inline-block { display: inline-block; }
-.#{$utility-prefix}inline       { display: inline; }
-.#{$utility-prefix}block        { display: block; }
-.#{$utility-prefix}table        { display: table }
-.#{$utility-prefix}table-cell   { display: table-cell }
-
 .#{$utility-prefix}vertical-align-top      { vertical-align: top }
 .#{$utility-prefix}vertical-align-middle   { vertical-align: middle }
 .#{$utility-prefix}vertical-align-bottom   { vertical-align: bottom }
@@ -275,6 +264,19 @@ __margin__
 .justify-center         { justify-content: center; }
 .justify-flex-end       { justify-content: flex-end; }
 .justify-flex-start     { justify-content: flex-end; }
+
+// Display overwrites
+
+.#{$utility-prefix}disabled     { opacity: 0.6; cursor: not-allowed; }
+.#{$utility-prefix}dimmed       { opacity: 0.5; }
+.#{$utility-prefix}hidden       { display: none; }
+.#{$utility-prefix}visible      { display: block; }
+
+.#{$utility-prefix}inline-block { display: inline-block; }
+.#{$utility-prefix}inline       { display: inline; }
+.#{$utility-prefix}block        { display: block; }
+.#{$utility-prefix}table        { display: table }
+.#{$utility-prefix}table-cell   { display: table-cell }
 
 // Borders
 
