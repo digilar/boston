@@ -73,13 +73,13 @@ __margin__
   @include text-overflow;
 }
 
-.#{$utility-prefix}-overflow-auto {
+.#{$utility-prefix}overflow-auto {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.#{$utility-prefix}-overflow-hidden {
+.#{$utility-prefix}overflow-hidden {
   overflow: hidden;
 }
 
