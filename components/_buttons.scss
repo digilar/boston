@@ -36,18 +36,12 @@
 
 .#{$component-prefix}btn-row-item {
   display: flex;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   align-items: center;
   flex-direction: column;
   padding: $global-padding / 2;
   position: relative;
-  width: rem-calc(200px);
-  
-  [class*="ui-ping"]  {
-    position: absolute;
-    top: 0;
-    right: rem-calc(20px);
-  }
+  min-width: 10rem;
 }
 
 .#{$component-prefix}btn-row-title {
