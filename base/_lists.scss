@@ -103,27 +103,27 @@ Markup
 // Hierarchy
 
 .#{$base-prefix}list-tree-view {
-  margin-left:0.7rem;
-  margin-bottom:$global-margin;
-  border-left:1px solid $global-border-color;
-  li {
-    padding:$list-padding 0 $list-padding 1.4rem;
+  @extend .#{$base-prefix}list;
+  margin-left: $global-margin;
+  border-left: 1px solid $global-border-color;
+}
+
+.#{$base-prefix}list-tree-view-item {
+  padding: $global-padding $global-padding 0 $global-padding;
+  
+  > :first-child {
     position: relative;
+    
     &:before {
-      position:absolute;
-      content:"";
-      top:50%;
-      left:0px;
-      width:1rem;
-      height:1px;
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: -1rem;
+      width: 0.7rem;
+      height: 1px;
       background: $global-border-color;
     }
   }
-}
-
-.#{$base-prefix}list-tree-view-children {
-  margin-left:1.4rem;
-  border-left:1px solid $global-border-color;
 }
 
 // With arrow
