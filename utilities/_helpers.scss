@@ -295,8 +295,10 @@ __margin__
 // Border radius
 .#{$utility-prefix}br0  { border-radius: none }
 .#{$utility-prefix}br   { border-radius: $global-radius; }
-.#{$utility-prefix}bry  { border-radius: $global-radius; }
-.#{$utility-prefix}brx  { border-radius: $global-radius; }
+.#{$utility-prefix}brtl  { border-radius-top-left: $global-radius; }
+.#{$utility-prefix}brtr  { border-radius-top-right: $global-radius; }
+.#{$utility-prefix}brbr  { border-radius-bottom-left: $global-radius; }
+.#{$utility-prefix}brbl  { border-radius-bottom-right: $global-radius; }
 
 // Shadow
 .shadow                 { box-shadow: 0 0 6px 0 $global-shadow; }
