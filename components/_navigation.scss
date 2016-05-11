@@ -131,7 +131,7 @@
 .#{$component-prefix}nav-item--selected {
   background: url(#{$icon-path}/chevron-right.svg) right center no-repeat;
   padding-right: 30px;
-  .nav-link {
+  .#{$component-prefix}nav-link {
     color: $color-primary;
   }
 }
