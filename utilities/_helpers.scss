@@ -334,18 +334,24 @@ __margin__
 
 @each $key, $value in $breakpoints {
 	$value: nth($key, 1);
-	@include breakpoints(max-width,$value) {
+	
+	@include breakpoints(max-width, $value) {
 		.hide-#{$value} {
-      display: none;
-    }
+			display: none;
+		}
+		
+		.show-from-#{$value} {
+			display: block;
+		}
 	}
-}
-
-@each $key, $value in $breakpoints {
-	$value: nth($key, 1);
-	@include breakpoints(min-width,$value) {
+	
+	@include breakpoints(min-width, $value) {
 		.show-#{$value} {
-      display: block;
-    }
+			display: block;
+		}
+		
+		.hide-from-#{$value} {
+			display: none;
+		}
 	}
 }
