@@ -13,7 +13,7 @@
   @include breakpoints(min-width, small) {
     position: absolute;
     top: 90%;
-    :after {
+    &:after {
       bottom: 100%;
       left: 20%;
       border: solid transparent;
@@ -34,7 +34,7 @@
   @include breakpoints(min-width, small) {
     position: absolute;
     bottom: 110%;
-    :after {
+    &:after {
       top: 100%;
       left: 20%;
       border: solid transparent;
