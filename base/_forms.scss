@@ -201,24 +201,24 @@ input[type=radio].#{$base-prefix}form-radio-input {
 }
 
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label {
-  margin: 0 0 0 28px;
+  margin: 0 0 0 2rem;
   position: relative;
   cursor: pointer;
-  min-height: 24px;
+  min-height: 1.5rem;
   font-weight: normal;
 }
 
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label ~ .#{$base-prefix}form-label {
-  margin: 0 0 0 36px;
+  margin: 0 0 0 4rem;
 }
 
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::before {
   content: ' ';
   position: absolute;
-  left: -28px;
-  top: 2px;
-  width: 20px;
-  height: 20px;
+  left: -2rem;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
   display: block;
   background: white;
   border-radius: $global-circle;
@@ -236,10 +236,11 @@ input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::after {
   content: ' ';
   position: absolute;
-  left: -24px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
+  left: -2rem;
+  top: 0rem;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem;
   display: block;
   z-index: 1;
   background: $color-default;
