@@ -41,10 +41,6 @@
 // Reset fonts for relevant elements
 .#{$layout-prefix}body {
   @include responsive-font(3vw, 15px, 16px);
-
-  p {
-    margin-bottom:0.8rem;
-  }
 }
 
 .#{$base-prefix}h1 {
