@@ -12,6 +12,7 @@
 	font-weight: 600;
 	max-width: 100%;
 	min-width: 0;
+	position: relative;
 }
 
 .#{$layout-prefix}header-logo {
@@ -45,6 +46,7 @@
 	flex: 1 1 auto;
 	min-width: 0;
 	min-height: 0;
+	z-index: 999;
 	
 	@include breakpoints(max-width, medium) {
 		opacity: 0;
