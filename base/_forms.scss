@@ -146,24 +146,20 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input {
 }
 
 input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-label {
-  margin: 0 0 0 2rem;
+  margin: 0;
   position: relative;
   cursor: pointer;
   min-height: 1.5rem;
   font-weight: normal;
-}
-
-input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-label ~ .#{$base-prefix}form-label {
-  margin: 0 0 0 4rem;
+  display: flex;
+  align-items: center;
 }
 
 input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-label:before {
   content: ' ';
-  position: absolute;
-  left: -2rem;
-  top: 0;
   width: 1.5rem;
   height: 1.5rem;
+  margin-right: 0.5rem;
   display: block;
   background: white;
   border-radius: $global-radius;
@@ -173,8 +169,9 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
 input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-label:after {
   content:' ';
   position: absolute;
-  left: -2rem;
-  top: 0;
+  left: 0;
+  top: 50%;
+  margin-top: -0.75rem;
   width: 1.5rem;
   height: 1.5rem;
   display: block;
@@ -203,24 +200,20 @@ input[type=radio].#{$base-prefix}form-radio-input {
 }
 
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label {
-  margin: 0 0 0 2rem;
+  margin: 0;
   position: relative;
   cursor: pointer;
   min-height: 1.5rem;
   font-weight: normal;
-}
-
-input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label ~ .#{$base-prefix}form-label {
-  margin: 0 0 0 4rem;
+  display: flex;
+  align-items: center;
 }
 
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::before {
   content: ' ';
-  position: absolute;
-  left: -2rem;
-  top: 0;
   width: 1.5rem;
   height: 1.5rem;
+  margin-right: 0.5rem;
   display: block;
   background: white;
   border-radius: $global-circle;
@@ -238,11 +231,11 @@ input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::after {
   content: ' ';
   position: absolute;
-  left: -2rem;
-  top: 0;
+  left: 0.25rem;
+  top: 50%;
+  margin-top: -0.5rem;
   width: 1rem;
   height: 1rem;
-  margin: 0.25rem;
   display: block;
   z-index: 1;
   background: $color-default;
