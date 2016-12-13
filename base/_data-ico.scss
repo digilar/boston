@@ -1,11 +1,23 @@
+/* Add your own icons to your project by doing like this
+
+[data-ico~="account"] {
+	background-image: url(#{$icon-path}account.svg);
+}
+
+and then:
+
+<i data-ico="account"></i>
+
+*/
+
 @mixin icon-size ($width,$height) {
-  width:$width;
-  height:$height;
+  width: $width;
+  height: $height;
 }
 
 [data-ico] {
-  width:$icon-size;
-  height:$icon-size;
+  width: $icon-size;
+  height: $icon-size;
   display: inline-block;
   vertical-align: middle;
   background-size: 100% 100%;
@@ -27,6 +39,10 @@
 
 [data-ico~="xlarge"] {
   @include icon-size(64px,64px);
+}
+
+[data-ico~="autosize"] {
+  background-size: auto;
 }
 
 [data-ico~="selected"] {

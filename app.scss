@@ -16,7 +16,6 @@ $icon-path: "../../svgicons/";
 @import "base/normalize";
 @import "base/typography";
 @import "base/data-ico";
-@import "base/icons";
 @import "base/forms";
 @import "base/tables";
 @import "base/lists";
@@ -24,28 +23,21 @@ $icon-path: "../../svgicons/";
 // components
 // @_Variables: $component-prefix
 @import "components/buttons";
-@import "components/action-bar";
 @import "components/card";
 @import "components/panel";
 @import "components/tooltip";
 @import "components/navigation";
-@import "components/player";
 @import "components/modal";
 @import "components/tabs";
 @import "components/alerts";
 @import "components/labels";
 @import "components/media";
 @import "components/accordion";
-@import "components/media-source";
 @import "components/range-default";
 @import "components/drawer";
-@import "components/lightbox";
-@import "components/draggable";
-@import "components/dropzone";
 
 // LAYOUT
 @import "layout/ui";
-@import "layout/header";
 @import "layout/sidebar";
 @import "layout/top-bar";
 @import "layout/bottom-bar";
