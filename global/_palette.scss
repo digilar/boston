@@ -1,16 +1,16 @@
 // Base colors
 
-$color-red: #e20019;
-$color-green: #46b293;
-$color-grey: #f1f1f1;
-$color-black: #1a171b;
-$color-blue: #5388c2;
-$color-marine: #0f5169;
-$color-orange: #ea690a;
-$color-white: #ffffff;
+$color-red: #e20019 !default;
+$color-green: #46b293 !default;
+$color-grey: #f1f1f1 !default;
+$color-black: #1a171b !default;
+$color-blue: #5388c2 !default;
+$color-marine: #0f5169 !default;
+$color-orange: #ea690a !default;
+$color-white: #ffffff !default;
 
-$color-altmarine: #28505a;
-$color-lightmarine: lighten($color-marine, 5%);
+$color-altmarine: #28505a !default;
+$color-lightmarine: lighten($color-marine, 5%) !default;
 
 $complementary: (
 	grey: (
