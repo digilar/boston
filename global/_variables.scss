@@ -19,12 +19,24 @@ $rem-base: 16px !default;
 
 // Type
 
-$font-family-base:'Open Sans', sans-serif !default;
-$line-height-base:1.5 !default;
-$font-size-base:0.85rem !default;
+$font-family-base: 'Open Sans', sans-serif !default;
+$line-height-base: 1.5 !default;
 $font-weight-base: 400 !default;
 $font-weight-bold: 600 !default;
 $heading-font-weight-base: 500 !default;
+
+$font-size-min: 15px !default;
+$font-size-base: 16px !default;
+$h1-min: 32px !default;
+$h1-max: 28px !default;
+$h2-min: 21px !default;
+$h2-max: 24px !default;
+$h3-min: 18px !default;
+$h3-max: 21px !default;
+$h4-min: 16px !default;
+$h4-max: 18px !default;
+$font-size-small-min: 13px !default;
+$font-size-small: 14px !default;
 
 $list-padding: 0.6rem !default;
 

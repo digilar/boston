@@ -36,11 +36,9 @@
   visibility: visible;
   background: rgba(red($color-black), green($color-black), blue($color-black), 0.8);
   pointer-events: auto;
-  @include fadeIn($duration: 0.6s);
 }
 
 .#{$component-prefix}modal-overlay--out {
-  @include fadeOut($duration: 0.6s);
   pointer-events: none;
 }
 

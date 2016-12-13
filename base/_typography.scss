@@ -40,27 +40,27 @@
 
 // Reset fonts for relevant elements
 .#{$layout-prefix}body {
-  @include responsive-font(3vw, 15px, 16px);
+  @include responsive-font(3vw, $font-size-min, $font-size-base);
 }
 
 .#{$base-prefix}h1 {
-  @include responsive-font(3vw, 26px, 32px);
+  @include responsive-font(3vw, $h1-min, $h1-max);
 }
 
 .#{$base-prefix}h2 {
-  @include responsive-font(3vw, 21px, 24px);
+  @include responsive-font(3vw, $h2-min, $h2-max);
 }
 
 .#{$base-prefix}h3 {
-  @include responsive-font(3vw, 18px, 21px);
+  @include responsive-font(3vw, $h3-min, $h3-max);
 }
 
 .#{$base-prefix}h4 {
-  @include responsive-font(3vw, 16px, 18px);
+  @include responsive-font(3vw, $h4-min, $h4-max);
 }
 
 .#{$base-prefix}text-small {
-  @include responsive-font(3vw, 13px, 14px);
+  @include responsive-font(3vw, $font-size-small-min, $font-size-small);
 }
 
 .#{$base-prefix}text-bold {
@@ -68,7 +68,7 @@
 }
 
 .#{$base-prefix}lead {
-  @include responsive-font(3vw, 18px, 21px);
+  @include responsive-font(3vw, $h3-min, $h3-max);
 }
 
 .#{$base-prefix}h1,

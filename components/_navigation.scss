@@ -48,7 +48,7 @@
 }
 
 .#{$component-prefix}nav-dots-heading {
-  @extend .nav-heading;
+  @extend nav-heading !optional;
   margin: 0;
 }
 

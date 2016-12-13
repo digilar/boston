@@ -49,3 +49,103 @@ Markup
     }
   }
 }
+
+.#{$base-prefix}table-responsive {
+  overflow-x: scroll;
+}
+
+.#{$base-prefix}table-responsive--horizontal {
+  vertical-align: top;
+  max-width: 100%;
+  width: 100%;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.#{$base-prefix}table-responsive--horizontal,
+.#{$base-prefix}table-responsive--horizontal--flip tbody {
+  -webkit-overflow-scrolling: touch;
+}
+
+.#{$base-prefix}table-responsive--horizontal th {
+  text-align: left;
+  text-transform: uppercase;
+  background: $color-grey;
+  font-weight: $font-weight-bold;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 80%;
+}
+
+.#{$base-prefix}table-responsive--horizontal th,
+.#{$base-prefix}table-responsive--horizontal td {
+  padding: 8px 12px;
+}
+
+.#{$base-prefix}table-responsive--horizontal th {
+  border: 1px solid $global-border-color;
+}
+
+.#{$base-prefix}table-responsive--horizontal td {
+  border: 1px solid $global-border-color;
+}
+
+.#{$base-prefix}table-responsive--horizontal tr:nth-child(even) {
+  background: $color-grey;
+}
+
+.#{$base-prefix}table-responsive--horizontal tr:hover {
+  background: darken($color-grey,5%);
+}
+
+// Flipped version. Add this class to table-responsive--horizontal
+
+.#{$base-prefix}table-responsive--horizontal--flip {
+  display: flex;
+  overflow: hidden;
+}
+
+.#{$base-prefix}table-responsive--horizontal--flip thead {
+  display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+}
+
+.#{$base-prefix}table-responsive--horizontal--flip th {
+  flex: 1;
+}
+
+.#{$base-prefix}table-responsive--horizontal--flip tbody {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
+}
+
+.#{$base-prefix}table-responsive--horizontal--flip tr {
+  display: flex;
+  flex-direction: column;
+  min-width: min-content;
+  flex: 1 0 auto;
+}
+
+.#{$base-prefix}table-responsive--horizontal--flip td,
+.#{$base-prefix}table-responsive--horizontal--flip th {
+  display: block;
+}
+
+.#{$base-prefix}table-responsive--horizontal--flip td {
+  border-left: 0;
+}
+
+// border-collapse is no longer active
+.#{$base-prefix}table-responsive--horizontal--flip th:not(:last-child),
+.#{$base-prefix}table-responsive--horizontal--flip td:not(:last-child) {
+  border-bottom: 0;
+}

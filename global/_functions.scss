@@ -28,6 +28,11 @@
   @return $num / ($num * 0 + 1);
 }
 
+@function rem-to-px($size) {
+	$value: strip-unit($size) * 15px; //15px is the base size specified
+	@return round($value);
+}
+
 @function convert-to-rem($value, $base-value: $rem-base)  {
   $value: strip-unit($value) / strip-unit($base-value) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
