@@ -46,6 +46,7 @@
 
 .#{$component-prefix}btn-row-title {
   margin-top: $global-margin / 2;
+  max-width: 100%;
 }
 
 .#{$component-prefix}btn-row-vertical {
@@ -71,7 +72,7 @@
 .#{$component-prefix}btn-#{$name} {
     @extend .#{$component-prefix}btn;
     background: palette($name);
-    color: #fff;
+    color: $color-white;
   }
 }
 
@@ -85,7 +86,7 @@
 
 .#{$component-prefix}btn-expand {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   justify-content: center;
 }
 
@@ -121,7 +122,7 @@
 }
 
 .#{$component-prefix}btn-bborder--selected {
-  border-bottom: 3px solid $color-default;
+  border-bottom: 3px solid $color-blue;
 }
 
 /*
@@ -131,22 +132,22 @@
 
 .#{$component-prefix}btn-outline {
   @extend .#{$component-prefix}btn;
-  background: #fff;
+  background: $color-white;
   border: 1px solid $global-border-color;
-  color: #333;
+  color: $color-black;
   &:active {
     cursor: pointer;
-    border: 1px solid $color-default;
+    border: 1px solid $color-blue;
   }
 }
 
 .#{$component-prefix}btn-outline--inverted {
   @extend .#{$component-prefix}btn;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid $color-white;
+  color: $color-white;
   &:active {
     cursor: pointer;
-    border: 1px solid $color-default;
+    border: 1px solid $color-blue;
   }
 }
 
@@ -159,10 +160,10 @@
 */
 
 .#{$component-prefix}btn--selected {
-  background: #fff;
-  border: 1px solid darken($color-blue,10%);
+  background: $color-white;
+  border: 1px solid darken($color-blue, 10%);
   box-shadow: 0 0 6px 0 rgba($color-blue,0.5);
-  color: #333;
+  color: $color-black;
 }
 
 // Button tab
@@ -178,7 +179,7 @@
   flex: 1 0 auto;
   justify-content: center;
   padding: map-deep-get($inline-sizes, "sm", padding);
-  background: #fff;
+  background: $color-white;
   border-top: 1px solid $global-border-color;
   border-bottom: 1px solid $global-border-color;
   border-right: 1px solid $global-border-color;
@@ -193,14 +194,14 @@
 }
 
 .#{$component-prefix}btn-tab--selected {
-  background: $color-default;
-  border: 1px solid $color-default;
-  color: #fff;
+  background: $color-blue;
+  border: 1px solid $color-blue;
+  color: $color-white;
   &:last-child {
-    border-right: 1px solid $color-default;
+    border-right: 1px solid $color-blue;
   }
   &:first-child {
-    border-left: 1px solid $color-default;
+    border-left: 1px solid $color-blue;
   }
 }
 

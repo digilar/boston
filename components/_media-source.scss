@@ -1,0 +1,30 @@
+.#{$component-prefix}media-source {
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	max-width: calc(100% - 1rem);
+	text-align: left;
+	padding: 0.35rem 0.5rem;
+	background: $color-black;
+	color: $color-white;
+	cursor: pointer;
+	border-radius: $global-radius;
+	z-index: 1;
+	
+	.chapter-image &,
+	.chapter-movie & {
+		display: none;
+	}
+	
+	@include breakpoints(max-width, xlarge) {
+		.standard-mode .chapter-text-wrap .chapter-image & {
+			display: block;
+		}
+	}
+	
+	@include breakpoints(max-width, xsmall) {
+		.chapter-image--large & {
+			display: block;
+		}
+	}
+}

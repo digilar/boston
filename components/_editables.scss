@@ -11,7 +11,7 @@ Markup
   min-width: 25px;
   min-height: $font-size-base * 2;
   vertical-align: top;
-  border-bottom: 2px solid $color-default;
+  border-bottom: 2px solid $color-blue;
 }
 
 .#{$component-prefix}drag-objects {
@@ -39,16 +39,16 @@ Markup
   border-radius: $global-radius;
   border:1px solid $global-border-color;
   vertical-align:middle;
-  background:#fff;
+  background:$color-white;
   padding:map-deep-get($inline-sizes, "sm", padding);
   padding-left:$icon-size + 10;
-  background:#fff url(#{$icon-path}drag.svg) no-repeat 5px center;
+  background:$color-white url(#{$icon-path}drag.svg) no-repeat 5px center;
 
 }
 
 .#{$component-prefix}drag-dropzone {
   border-radius: $global-radius;
-  background-color:$color-info;
+  background-color:lighten($color-blue, 40%);
   display: inline-block;
   padding:0.2rem;
   min-width: 80px;

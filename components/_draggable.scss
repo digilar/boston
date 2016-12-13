@@ -1,0 +1,36 @@
+.#{$component-prefix}draggable {
+  display: inline-flex;
+  border-radius: $global-radius;
+  border: 1px dotted #bbb;
+  align-items: center;
+  padding: map-deep-get($inline-sizes, "sm", padding);
+  background: $color-white;
+  position: relative;
+  cursor: move;
+  overflow: hidden;
+  
+  &:active {
+    top: 1px;
+  }
+  &.locked {
+      border: 1px dashed transparent;
+      cursor: auto;
+      background: transparent;
+  }
+  p {
+      margin: 0;
+  }
+}
+
+@each $name, $palette in $colors {
+  .#{$component-prefix}draggable-#{$name} {
+    @extend .#{$component-prefix}draggable;
+    background: palette($name);
+    color: $color-white;
+  }
+}
+
+.#{$component-prefix}draggable-placeholder {
+  @extend .#{$component-prefix}draggable;
+  background: lighten($color-orange, 40%);
+}

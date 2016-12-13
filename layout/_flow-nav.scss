@@ -7,11 +7,17 @@
 */
 
 .#{$layout-prefix}flow-nav {
-  flex-shrink: 1;
+  flex-shrink: 0;
   z-index: 10;
-  background-color: map-deep-get($ui, "dark", base);
+  background-color: $color-marine;
   @include breakpoints(max-width, medium) {
     display: none;
+  }
+}
+
+.#{$layout-prefix}flow-nav--toggled {
+  @include breakpoints(max-width, medium) {
+    display: block;
   }
 }
 
@@ -26,7 +32,6 @@
 .#{$layout-prefix}flow-line {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
   position: relative;
   &:after {
     position: absolute;
@@ -36,7 +41,7 @@
     width: 100%;
     height: 1px;
     z-index: -1;
-    background: map-deep-get($ui, "dark", light);
+    background: lighten($color-marine, 5%);
   }
 }
 
@@ -47,7 +52,7 @@
   z-index: 2;
   position: relative;
   @extend %scrollable-content-x;
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .#{$layout-prefix}flow-container {
@@ -61,7 +66,7 @@
   display: flex;
   padding: 0.5rem;
   box-shadow: 1px 0 8px 0 rgba(0,0,0,0.3);
-  background-color: map-deep-get($ui, "dark", light);
+  background-color: lighten($color-marine, 5%);
   z-index: 2;
 }
 
@@ -70,7 +75,7 @@
   position: relative;
   min-width: 1rem;
   z-index: 2;
-  background-color: map-deep-get($ui, "dark", light);
+  background-color: lighten($color-marine, 5%);
   display: flex;
   min-width: 30px;
   padding: 0.5rem;
@@ -88,10 +93,10 @@
   text-align: center;
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: $color-white;
   min-width: 200px;
   a {
-    color: #999;
+    color: darken($color-grey, 30%);
     display: inline-block;
     padding: 1rem 2rem;
     white-space: nowrap;
@@ -103,12 +108,12 @@
 
 .#{$layout-prefix}flow-nav-step--selected {
   .#{$layout-prefix}flow-nav-number {
-    background: $color-success;
-    color: #fff;
-    border: 2px solid $color-success;
+    background: $color-green;
+    color: $color-white;
+    border: 2px solid $color-green;
   }
   a {
-    color: #fff;
+    color: $color-white;
   }
 }
 
@@ -119,8 +124,8 @@
   line-height: 20px;
   font-weight: bold;
   display: inline-block;
-  background: map-deep-get($ui, "dark", base);
-  border: 2px solid map-deep-get($ui, "dark", light);
+  background: $color-marine;
+  border: 2px solid lighten($color-marine, 5%);
 }
 
 .#{$layout-prefix}flow-nav-title {

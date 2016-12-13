@@ -7,13 +7,13 @@
 */
 
 .#{$component-prefix}modal-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   visibility: hidden;
-  z-index: 999;
+  z-index: 9999;
   padding: $global-padding;
   @extend %scrollable-content;
   transition: all 400ms ease-in-out;
@@ -21,7 +21,7 @@
 }
 
 .#{$component-prefix}modal-close {
-  background: #fff url(#{$icon-path}close.svg) no-repeat center center;
+  background: $color-white url(#{$icon-path}close.svg) no-repeat center center;
   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
   border-radius: $global-circle;
   cursor: pointer;
@@ -34,7 +34,7 @@
 
 .#{$component-prefix}modal-overlay--in {
   visibility: visible;
-  background: rgba(65,35,65,0.8);
+  background: rgba(red($color-black), green($color-black), blue($color-black), 0.8);
   pointer-events: auto;
   @include fadeIn($duration: 0.6s);
 }
@@ -46,7 +46,7 @@
 
 .#{$component-prefix}modal-body {
   // Animation in
-  background: #fff;
+  background: $color-white;
   flex-direction: column;
   box-shadow: 0 0 20px 0 $global-shadow;
   max-width: 500px;

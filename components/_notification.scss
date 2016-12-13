@@ -16,7 +16,7 @@
   margin-top: $global-margin;
   box-shadow: 0 0 4px 0 $global-shadow;
   border-radius: $global-radius;
-  background: #fff;
+  background: $color-white;
 }
 
 .#{$component-prefix}notification {

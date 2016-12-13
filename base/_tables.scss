@@ -33,9 +33,9 @@ Markup
 .#{$base-prefix}table-bordered {
   @extend .#{$base-prefix}table;
   th {
-    background-color:$color-default;
-    border:1px solid $color-default;
-    color:#fff;
+    background-color:$color-blue;
+    border:1px solid $color-blue;
+    color:$color-white;
     font-weight:bold;
   }
   td,th {

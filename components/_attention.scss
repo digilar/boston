@@ -1,6 +1,6 @@
 .#{$component-prefix}attention {
   position: fixed;
-  top: map-deep-get($ui,header-height);
+  top: $header-height;
   bottom: 0;
   left: 0;
   right: 0;
@@ -29,6 +29,6 @@
   align-items:  center;
   padding: $global-padding;
   border-radius:  $global-radius;
-  background: #fff;
+  background: $color-white;
   box-shadow:  0 0 8px 0 $global-shadow;
 }

@@ -31,10 +31,10 @@ Markup
 }
 
 .#{$base-prefix}list-item--selected {
-  box-shadow:0 0 10px 0 rgba($color-default,0.6);
+  box-shadow:0 0 10px 0 rgba($color-blue,0.6);
   border-radius:$global-radius;
   margin:0 -0.5rem;
-  background:#fff;
+  background:$color-white;
 }
 
 .#{$base-prefix}list-item > ul {
@@ -56,7 +56,7 @@ Markup
 }
 
 .#{$base-prefix}list-content {
-  flex:1;
+  flex: 1 1 auto;
 }
 
 .#{$base-prefix}list-object {
@@ -109,7 +109,7 @@ Markup
 }
 
 .#{$base-prefix}list-tree-view-item {
-  padding: $global-padding $global-padding 0 $global-padding;
+  padding: ($global-padding / 2) $global-padding 0 $global-padding;
   
   > :first-child {
     position: relative;

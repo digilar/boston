@@ -1,48 +1,90 @@
-.#{$component-prefix}tooltip-container {
-  position: relative;
+%#{$component-prefix}tooltip {
+	position: absolute;
+	display: none;
+	border-radius: $global-radius;
+	box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
 }
 
-.#{$component-prefix}tooltip {
-  position: absolute;
-  background: $color-blue;
-  color: #fff;
-  display: none;
-  border-radius: $global-radius;
-  padding: $global-padding ($global-padding + 1.5rem) $global-padding $global-padding;
-  z-index: 1;
-  box-shadow: 0 0 16px 0 rgba(0,0,0,0.3);
-  cursor: pointer;
-  white-space: nowrap;
-  &--topright {
-    @include css-arrow(topright, $color-blue, 0.8rem);
-  }
-  &--right {
-    @include css-arrow(right, $color-blue, 0.8rem);
-  }
-  &--topleft {
-    @include css-arrow(topleft, $color-blue, 0.8rem);
-  }
-  &--left {
-    @include css-arrow(left, $color-blue, 0.8rem);
-  }
-  &--top {
-    @include css-arrow(top, $color-blue, 0.8rem);
-  }
-  &--bottom {
-    @include css-arrow(bottom, $color-blue, 0.8rem);
-  }
-  &--bottomleft {
-    @include css-arrow(bottomleft, $color-blue, 0.8rem);
-  }
+.#{$component-prefix}tooltip--blue {
+	@extend %#{$component-prefix}tooltip;
+	background: $color-blue;
+	color: $color-white;
 }
 
-.#{$component-prefix}tooltip-title {
-  font-weight: $font-weight-bold;
+.#{$component-prefix}tooltip--white {
+	@extend %#{$component-prefix}tooltip;
+	background: $color-white;
+	color: $color-black;
 }
 
-.#{$component-prefix}tooltip-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: $global-padding ($global-padding * 0.5);
+%#{$component-prefix}tooltip-arrow {
+	position: absolute;
+	background-color: inherit;
+	width: 1rem;
+	height: 1rem;
+	box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.#{$component-prefix}tooltip-arrow--top {
+	@extend %#{$component-prefix}tooltip-arrow;
+	bottom: 100%;
+	left: 50%;
+	transform: matrix(0.71, -0.71, 0.71, 0.71, -#{strip-unit($rem-base)/2}, #{strip-unit($rem-base)/2});
+}
+
+.#{$component-prefix}tooltip-arrow--topright {
+	@extend %#{$component-prefix}tooltip-arrow;
+	left: 100%;
+	top: 1rem;
+	transform: matrix(0.71, -0.71, 0.71, 0.71, -#{strip-unit($rem-base)/2}, 0);
+}
+
+.#{$component-prefix}tooltip-arrow--right {
+	@extend %#{$component-prefix}tooltip-arrow;
+	left: 100%;
+	top: 50%;
+	transform: matrix(0.71, -0.71, 0.71, 0.71, -#{strip-unit($rem-base)/2}, -#{strip-unit($rem-base)/2});
+}
+
+.#{$component-prefix}tooltip-arrow--bottomright {
+	@extend %#{$component-prefix}tooltip-arrow;
+	top: 100%;
+	right: 1rem;
+	transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+	margin-top: -0.5rem;
+}
+
+.#{$component-prefix}tooltip-arrow--bottom {
+	@extend %#{$component-prefix}tooltip-arrow;
+	top: 100%;
+	left: 50%;
+	transform: matrix(0.71, -0.71, 0.71, 0.71, -#{strip-unit($rem-base)/2}, 0);
+	margin-top: -0.5rem;
+}
+
+.#{$component-prefix}tooltip-arrow--bottomleft {
+	@extend %#{$component-prefix}tooltip-arrow;
+	top: 100%;
+	left: 1rem;
+	transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+	margin-top: -0.5rem;
+}
+
+.#{$component-prefix}tooltip-arrow--left {
+	@extend %#{$component-prefix}tooltip-arrow;
+	right: 100%;
+	top: 50%;
+	transform: matrix(0.71, -0.71, 0.71, 0.71, #{strip-unit($rem-base)/2}, -#{strip-unit($rem-base)/2});
+}
+
+.#{$component-prefix}tooltip-arrow--topleft {
+	@extend %#{$component-prefix}tooltip-arrow;
+	right: 100%;
+	top: 1rem;
+	transform: matrix(0.71, -0.71, 0.71, 0.71, #{strip-unit($rem-base)/2}, 0);
+}
+
+.#{$component-prefix}tooltip-content {
+	position: relative;
+	background-color: inherit;
 }

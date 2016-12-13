@@ -97,6 +97,13 @@ __margin__
   }
 }
 
+// Border colors
+@each $name, $complementarypalette in $complementary {
+.border-color--#{$name} {
+    border-color: complementarypalette($name);
+  }
+}
+
 .#{$utility-prefix}p0  { padding: 0 }
 
 .#{$utility-prefix}p1  { padding:       $global-padding }
@@ -159,6 +166,8 @@ __margin__
 .#{$utility-prefix}mx3 { margin-left: $global-margin * 3; margin-right: $global-margin * 3; }
 
 .#{$utility-prefix}mx-auto { margin-left: auto; margin-right: auto; }
+
+.#{$utility-prefix}min-wh0 { min-width: 0; min-height: 0; };
 
 // Depth
 
@@ -263,7 +272,7 @@ __margin__
 .justify-space-around   { justify-content: space-around; }
 .justify-center         { justify-content: center; }
 .justify-flex-end       { justify-content: flex-end; }
-.justify-flex-start     { justify-content: flex-end; }
+.justify-flex-start     { justify-content: flex-start; }
 
 // Display overwrites
 
@@ -277,6 +286,10 @@ __margin__
 .#{$utility-prefix}block        { display: block; }
 .#{$utility-prefix}table        { display: table }
 .#{$utility-prefix}table-cell   { display: table-cell }
+
+// Visibility
+
+.#{$utility-prefix}invisible { visibility: hidden; }
 
 // Borders
 
@@ -293,7 +306,7 @@ __margin__
 .#{$utility-prefix}bl1  { border-left:   1px solid $global-border-color; }
 
 // Border radius
-.#{$utility-prefix}br0  { border-radius: none }
+.#{$utility-prefix}br0  { border-radius: 0; }
 .#{$utility-prefix}br   { border-radius: $global-radius; }
 .#{$utility-prefix}brtl  { border-top-left-radius: $global-radius; }
 .#{$utility-prefix}brtr  { border-top-right-radius: $global-radius; }
@@ -326,7 +339,7 @@ __margin__
   margin-left: -30px;
   margin-top: -32px;
   content: "";
-  background: #fff url(#{$icon-path}scroll.svg) center center no-repeat;
+  background: $color-white url(#{$icon-path}scroll.svg) center center no-repeat;
   pointer-events: none;
 }
 

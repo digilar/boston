@@ -8,7 +8,7 @@
 
 .#{$layout-prefix}bottombar {
   padding: $global-padding / 2 $global-padding;
-  background-color: map-deep-get($ui, "light", light);
+  background-color: $color-white;
   flex-shrink: 0;
   display: flex;
   position: relative;

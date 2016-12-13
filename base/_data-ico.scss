@@ -1,0 +1,36 @@
+@mixin icon-size ($width,$height) {
+  width:$width;
+  height:$height;
+}
+
+[data-ico] {
+  width:$icon-size;
+  height:$icon-size;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+[data-ico~="logo"] {
+  @include icon-size(191px,64px);
+}
+
+[data-ico~="small"] {
+  @include icon-size(16px,16px);
+}
+
+[data-ico~="large"] {
+  @include icon-size(48px,48px);
+}
+
+[data-ico~="xlarge"] {
+  @include icon-size(64px,64px);
+}
+
+[data-ico~="selected"] {
+  background: lighten($color-blue, 40%);
+  box-shadow: 0px 0px 0px 5px lighten($color-blue, 40%);
+  border-radius: $global-circle;
+}

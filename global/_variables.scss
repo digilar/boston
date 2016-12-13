@@ -4,7 +4,7 @@ $global-radius: 3px !default;
 $global-rounded: 40px !default;
 $global-circle: 100% !default;
 $global-shadow: rgba(0,0,0,0.16) !default;
-$global-border-color:#d6d6d6 !default;
+$global-border-color: #d6d6d6 !default;
 $global-padding:1rem !default;
 $global-margin:1rem !default;
 
@@ -90,19 +90,6 @@ $panel-width:20rem !default;
 $topbar-height:3.5rem !default;
 $bottombar-height:3.5rem !default;
 $depth-levels: 10;
-
-$ui: (
-  dark: (
-    base: $color-secondary,
-    dark: darken($color-secondary, 3%),
-    light: lighten($color-secondary, 5%),
-  ),
-  light: (
-    base: $color-grey,
-    dark: darken($color-grey, 10%),
-    light: #fff,
-  ),
-);
 
 // Animations
 

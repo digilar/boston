@@ -2,23 +2,26 @@
 
 .#{$component-prefix}media {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   align-items:  center;
   padding: $global-padding / 2 0 $global-padding / 2 0;
 }
 
 .#{$component-prefix}media--selected {
-  color: $color-default;
+  color: $color-blue;
 }
 
 .#{$component-prefix}media-object {
   display: flex;
+  flex: 0 0 auto;
 }
 
 .#{$component-prefix}media-content {
   padding: 0 ($global-padding / 2);
-  flex: 1;
-  align-items:  center;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  align-items: center;
 }
 
 // Images
@@ -66,7 +69,7 @@
 .#{$component-prefix}img-portrait {
   box-shadow:  0px 0px 4px 0px rgba(0,0,0,0.15);
   padding:  $global-padding;
-  background: #fff;
+  background: $color-white;
   img {
     display:  block;
     margin: 0 auto;
@@ -95,7 +98,7 @@
   top: 50%;
   margin-top: -20px;
   padding: 10px 12px;
-  background: #fff;
+  background: $color-white;
   border-radius:  $global-circle;
 }
 
@@ -111,5 +114,5 @@
   box-shadow:  0px 0px 4px 0px rgba(0,0,0,0.15);
   padding:  $global-padding;
   position:  relative;
-  background: #fff;
+  background: $color-white;
 }

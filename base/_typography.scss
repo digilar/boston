@@ -132,7 +132,7 @@
 }
 
 .#{$base-prefix}link {
-  color:$color-default;
+  color:$color-blue;
   cursor:pointer;
 }
 
@@ -169,7 +169,7 @@
     right: 0px;
     left: 0px;
     height: 65px;
-    background: linear-gradient(rgba(0,0,0,0),#fff);
+    background: linear-gradient(rgba(0,0,0,0),$color-white);
   }
 }
 
@@ -189,7 +189,7 @@
 }
 
 .#{$base-prefix}text-collapse--dark {
-  background: linear-gradient(rgba(0,0,0,0),$color-purple);
+  background: linear-gradient(rgba(0,0,0,0),$color-black);
 }
 
 .#{$base-prefix}text-collapse-toggler {
@@ -200,6 +200,6 @@
   z-index: 99;
   cursor: pointer;
   border-radius: $global-circle;
-  background: #fff url(#{$icon-path}arrow-down.svg) no-repeat center center;
+  background: $color-white url(#{$icon-path}arrow-down.svg) no-repeat center center;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
 }

@@ -12,7 +12,7 @@
   flex-direction: column;
   align-items: center;
 
-  border: 1px dashed $color-default;
+  border: 1px dashed $color-blue;
   border-radius: $global-radius;
   min-height: 150px;
   padding: $global-padding * 3;
@@ -24,7 +24,7 @@
 }
 
 .upload-dropzone--selected {
-  background: rgba($color-default, 0.05);
+  background: rgba($color-blue, 0.05);
 }
 
 .upload-icon {
@@ -48,17 +48,17 @@
 }
 
 .upload-icon-add {
-  background: $color-default;
+  background: $color-blue;
   @include teeter();
 }
 
 .upload-icon-success {
-  background: $color-success;
+  background: $color-green;
   @include bounce();
 }
 
 .upload-icon-failed {
-  background: $color-error;
+  background: $color-red;
   @include shake();
 }
 
@@ -71,7 +71,7 @@
 
   display: none;
 
-  background: rgba($color-success, 0.3);
+  background: rgba($color-green, 0.3);
   border-radius: $global-rounded;
 }
 
@@ -86,7 +86,7 @@
 
   width: 0;
   border-radius: $global-rounded;
-  background: rgba($color-success,0.8);
+  background: rgba($color-green,0.8);
 }
 
 .upload-percent {
@@ -100,7 +100,7 @@
   justify-content: center;
   align-items: center;
 
-  color: #fff;
+  color: $color-white;
   text-align: center;
   font-size: $font-size-base * 1.5;
 }

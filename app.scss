@@ -1,0 +1,111 @@
+/*
+# Digilar - UI Style guide
+## Bootstrap-like documentation for digilar!
+*/
+
+$component-prefix: c-;
+$layout-prefix: l-;
+$grid-prefix: g-;
+$base-prefix: b-;
+$utility-prefix: u-;
+$animation-prefix: a-;
+
+$icon-path: "../../svgicons/";
+
+// Animations
+@import "../saffron/variables";
+@import "../saffron/helpers/contains";
+@import "../saffron/helpers/prefix";
+@import "../saffron/helpers/animation";
+@import "../saffron/helpers/transition";
+@import "../saffron/helpers/transform";
+@import "../saffron/helpers/keyframes";
+@import "../saffron/entrances/fade-in";
+@import "../saffron/entrances/fade-in-up";
+@import "../saffron/entrances/drop-in";
+@import "../saffron/exits/fade-out";
+@import "../saffron/exits/drop-out";
+@import "../saffron/in-place/shake";
+@import "../saffron/in-place/sway";
+
+// Global
+@import "global/palette";
+@import "global/variables";
+@import "global/functions";
+@import "global/mixins";
+
+// base
+// @_Variables: $base-prefix
+@import "base/typography";
+@import "base/data-ico";
+@import "base/icons";
+@import "base/forms";
+@import "base/tables";
+@import "base/lists";
+
+// components
+// @_Variables: $component-prefix
+@import "components/buttons";
+@import "components/explanation";
+@import "components/action-bar";
+@import "components/card";
+@import "components/panel";
+@import "components/tooltip";
+@import "components/navigation";
+@import "components/player";
+@import "components/modal";
+@import "components/tabs";
+@import "components/content-meta";
+@import "components/alerts";
+@import "components/labels";
+@import "components/media";
+@import "components/accordion";
+@import "components/media-source";
+@import "components/range-default";
+@import "components/drawer";
+@import "components/lightbox";
+@import "components/draggable";
+@import "components/dropzone";
+
+// LAYOUT
+@import "layout/ui";
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/toolbar";
+@import "layout/top-bar";
+@import "layout/bottom-bar";
+@import "layout/page-header";
+@import "layout/flow-nav";
+@import "layout/sm-nav";
+@import "layout/focus-mode";
+@import "layout/draggable-bar";
+
+// CUSTOM TEMPLATES
+// @_Variables: $template-prefix
+
+@import "templates/subjects";
+@import "templates/introduction";
+@import "templates/chapter";
+@import "templates/contest";
+@import "templates/lesson-flow";
+@import "templates/portfolio";
+@import "templates/map";
+@import "templates/product-start-page";
+@import "templates/assessments";
+@import "templates/assignments";
+@import "templates/app-glossary";
+
+// WIDGET SPECIFIC
+
+@import "widgets/speech-synthesis";
+@import "widgets/calculator";
+@import "widgets/login";
+@import "widgets/login-form";
+@import "widgets/read-ruler";
+@import "widgets/skolon";
+
+// @_Variables: $grid-prefix
+@import "grid/grid";
+
+// @_Variables: $utility-prefix
+@import "utilities/helpers";

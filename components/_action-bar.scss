@@ -18,12 +18,12 @@
 
 .#{$component-prefix}action-bar {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .#{$component-prefix}action-bar-area {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   align-items: center;
   &-left {
     justify-content: flex-start;
@@ -56,7 +56,7 @@
 }
 
 .#{$component-prefix}action-bar-item--selected {
-  background-color: lighten($color-purple,10%);
+  background-color: lighten($color-black, 10%);
 }
 
 .#{$component-prefix}action-bar-item-vertical {

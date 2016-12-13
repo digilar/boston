@@ -9,7 +9,7 @@
 .#{$layout-prefix}sm-nav {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: $color-white;
   min-height: $sm-nav-height;
   @include breakpoints(min-width, medium) {
     display: none;
@@ -18,5 +18,5 @@
     flex: 0 1 auto;
     display: flex;
   }
-  background: map-deep-get($ui,"dark",dark);
+  background: $color-black;
 }

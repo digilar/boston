@@ -29,7 +29,7 @@
 .#{$component-prefix}nav-link {
   display: block;
   .#{$component-prefix}nav-item--selected > & {
-    color: $color-default;
+    color: $color-blue;
   }
 }
 
@@ -67,7 +67,7 @@
   background: $color-grey;
   border-bottom: 1px solid $global-border-color;
   > a {
-    color: $color-default;
+    color: $color-blue;
   }
 }
 
@@ -82,7 +82,7 @@
 
 // 2nd level selected
 .#{$component-prefix}nav-dots-item .#{$component-prefix}nav-dots-item.#{$component-prefix}nav-dots-item--selected {
-  color: $color-default;
+  color: $color-blue;
   position: relative;
   &:before {
     box-sizing: border-box;
@@ -93,7 +93,7 @@
     background: $color-blue;
     width: 16px;
     height: 16px;
-    border: 3px solid #fff;
+    border: 3px solid $color-white;
     border-radius: $global-rounded;
     content: "";
   }
@@ -104,7 +104,7 @@
   width: 24px;
   height: 24px;
   border-radius: $global-radius;
-  background: #fff url(#{$icon-path}/chevron-down.svg) no-repeat center center;
+  background: $color-white url(#{$icon-path}/chevron-down.svg) no-repeat center center;
   border: 1px solid transparent;
   .#{$component-prefix}nav-dots-item--selected & {
     box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
@@ -115,24 +115,32 @@
 .#{$component-prefix}nav-inline {
   display: flex;
   flex-shrink: 0;
+  margin: 0.5rem 0;
   flex-wrap: wrap;
 }
 
 .#{$component-prefix}nav-inline-heading {
   @extend .#{$component-prefix}nav-heading;
+  margin: 0.5rem 0;
+  padding: 0 1rem 0.5rem 1rem;
   flex-basis: 100%;
 }
 
 .#{$component-prefix}nav-inline-item {
-  margin: 0.3rem;
-  display: block;
+  margin: 0.5rem 0 0.5rem 0.6rem;
+  display: flex;
+}
+
+.#{$component-prefix}nav-inline-item--selected {
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
 }
 
 .#{$component-prefix}nav-item--selected {
   background: url(#{$icon-path}/chevron-right.svg) right center no-repeat;
   padding-right: 30px;
   .#{$component-prefix}nav-link {
-    color: $color-primary;
+    color: $color-orange;
   }
 }
 
@@ -156,7 +164,7 @@
   display: flex;
   align-items: center;
   padding: 0.2rem;
-  background: #fff;
+  background: $color-white;
   border-radius: $global-rounded;
 }
 
@@ -168,7 +176,7 @@
 }
 
 .#{$component-prefix}pagination-content {
-  flex: 1;
+  flex: 1 1 auto;
   padding: 0.2rem;
 }
 
@@ -191,24 +199,21 @@
 .#{$component-prefix}breadcrumb {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $global-border-color;
-  padding-bottom: $global-padding / 2;
   >li+li:before {
-    padding: 0 5px;
-    color: #ccc;
-    content: "/\00a0";
+    color: darken($color-grey, 35%);
+    content: "/";
+    display: inline-block;
+    padding: 0 0.4rem;
   }
 }
 
 .#{$component-prefix}breadcrumb-item {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   font-weight: $font-weight-bold;
 }
 
 .#{$component-prefix}breadcrumb-item--selected {
   font-weight: $font-weight-base;
-  color: $color-primary;
+  color: $color-orange;
 }
 
 

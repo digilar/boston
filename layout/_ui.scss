@@ -26,7 +26,7 @@ body.#{$layout-prefix}body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  color: $body-text;
+  color: $color-black;
   line-height: $line-height-base;
   * {
     box-sizing: border-box;
@@ -45,14 +45,15 @@ body:-webkit-full-screen {
 
 .#{$layout-prefix}wrapper {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .#{$layout-prefix}section {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   position: relative;
   min-height: 0;
   min-width: 0;
@@ -63,7 +64,7 @@ body:-webkit-full-screen {
 
 .#{$layout-prefix}content-area {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   flex-direction: column;
   min-height: 0;
   min-width: 0;

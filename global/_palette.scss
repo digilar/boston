@@ -1,129 +1,84 @@
 // Base colors
 
-$color-purple: #402341;
-$color-teal: #35C7B0;
-$color-navy: #2E8BBA;
-$color-peach: #D96363;
-$color-pink: #DD3182;
-$color-marine: #574E84;
-$color-sand: #F9F4EF;
-$color-sky: #F2F4F7;
-$color-red: #E14D4D;
-$color-green:#64b886;
-$color-blue: #368ED8;
-$color-grey:#f4f4f4;
-$color-yellow:#F8E71C;
-$color-brown:#e9af88;
-$color-black:#2e2e2e;
+$color-red: #e20019;
+$color-green: #46b293;
+$color-grey: #f1f1f1;
+$color-black: #1a171b;
+$color-blue: #5388c2;
+$color-marine: #0f5169;
+$color-orange: #ea690a;
+$color-white: #ffffff;
 
-$color-lightgreen:lighten($color-green,40%);
-$color-lightblue: lighten($color-blue,40%);
-$color-lightyellow: lighten($color-yellow,30%);
-$color-lightbrown: lighten($color-brown,20%);
-
-// Common
-
-$color-primary: #E36526;
-$color-secondary: $color-purple;
-$color-default:$color-blue;
-$color-info:$color-lightblue;
-
-// Product colors
-
-$productcolors: (
-  religion: #EE761F,
-  chemistry: #3FC1A4,
-  english: #CE5291,
-  geography: #9BAD2D,
-  history: #E2443F,
-  math: #5C69A0,
-  society: #4A90E2,
-  library: #414141,
-  swedish: #662572,
-  spanish: #FF3000
-);
-
-// Word colors
-
-// States
-$color-success:$color-green;
-$color-error:$color-red;
-
-// Ui
-
-$body-bg: #F9F9F9;
-$body-text: #333;
+$color-altmarine: #28505a;
+$color-lightmarine: lighten($color-marine, 5%);
 
 $complementary: (
-  grey: (
-    base: $color-grey,
-  ),
-  lightblue: (
-    base: $color-lightblue,
-  ),
-  blue: (
-    base: $color-blue,
-  ),
-  sky: (
-    base: $color-sky,
-  ),
-  purple: (
-    base: $color-purple,
-  ),
-  white: (
-    base: #fff,
-  ),
-  black: (
-    base: $color-black,
-  ),
-  red: (
-    base: $color-red,
-  ),
-  green: (
-    base: $color-green,
-  ),
+	grey: (
+		base: $color-grey
+	),
+	lightblue: (
+		base: lighten($color-blue, 40%)
+	),
+	blue: (
+		base: $color-blue
+	),
+	white: (
+		base: $color-white
+	),
+	black: (
+		base: $color-black
+	),
+	red: (
+		base: $color-red
+	),
+	green: (
+		base: $color-green
+	),
+	marine: (
+		base: $color-marine
+	)
 );
 
 $colors: (
-  primary: (
-    base: $color-primary,
-    dark: darken($color-primary, 10%),
-    light: lighten($color-primary, 10%),
-    textcolor: #fff
-  ),
-  secondary: (
-    base: $color-secondary,
-    dark: darken($color-secondary, 10%),
-    light: lighten($color-secondary, 10%),
-    textcolor: #fff
-  ),
-  default: (
-    base: $color-default,
-    dark: darken($color-default, 10%),
-    light: lighten($color-default, 10%),
-    textcolor: #fff
-  ),
-  success: (
-    base: $color-success,
-    dark: darken(#53A82B, 10%),
-    light: lighten(#53A82B, 10%),
-    textcolor: #fff
-  ),
-  error: (
-    base: $color-error,
-    dark: darken($color-error, 10%),
-    light: lighten($color-error, 10%),
-    textcolor: #fff
-  ),
-  info: (
-    base: $color-info,
-    dark: darken($color-info, 10%),
-    light: lighten($color-info, 10%),
-    textcolor: #333
-  ),
-  link: (
-    base: $color-default,
-    dark: darken($color-default, 10%),
-    light: lighten($color-default, 10%)
-  ),
+	primary: (
+		base: $color-orange,
+		dark: darken($color-orange, 10%),
+		light: lighten($color-orange, 10%),
+		textcolor: $color-white
+	),
+	secondary: (
+		base: $color-marine,
+		dark: darken($color-marine, 10%),
+		light: lighten($color-marine, 10%),
+		textcolor: $color-white
+	),
+	default: (
+		base: $color-blue,
+		dark: darken($color-blue, 10%),
+		light: lighten($color-blue, 10%),
+		textcolor: $color-white
+	),
+	success: (
+		base: $color-green,
+		dark: darken($color-green, 10%),
+		light: lighten($color-green, 10%),
+		textcolor: $color-white
+	),
+	error: (
+		base: $color-red,
+		dark: darken($color-red, 10%),
+		light: lighten($color-red, 10%),
+		textcolor: $color-white
+	),
+	info: (
+		base: lighten($color-blue, 40%),
+		dark: darken(lighten($color-blue, 40%), 10%),
+		light: lighten(lighten($color-blue, 40%), 10%),
+		textcolor: $color-black
+	),
+	link: (
+		base: $color-blue,
+		dark: darken($color-blue, 10%),
+		light: lighten($color-blue, 10%)
+	)
 );

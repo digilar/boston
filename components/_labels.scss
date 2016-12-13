@@ -8,11 +8,11 @@ Markup
 %#{$component-prefix}badge {
   padding: 0.1rem 0.6rem;
   display: inline-block;
-  background-color: $color-default;
+  background-color: $color-blue;
   border-radius: $global-radius;
   
   .inverted & {
-    background-color: darken($color-default, 30%);
+    background-color: darken($color-blue, 30%);
     color: white;
   }
 }
@@ -24,7 +24,7 @@ Markup
 
 .#{$component-prefix}badge-outline {
   @extend %#{$component-prefix}badge;
-  background: #fff;
+  background: $color-white;
   border: 1px solid $global-border-color;
 }
 
@@ -65,5 +65,5 @@ Markup
   position: absolute;
   top: -15px;
   right: -15px;
-  background: #fff;
+  background: $color-white;
 }

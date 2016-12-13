@@ -42,7 +42,7 @@ Markup
   appearance: none;
   &:focus {
     outline: none;
-    border-color: $color-default;
+    border-color: $color-blue;
   }
   &:disabled {
     opacity: 0.5;
@@ -80,19 +80,19 @@ textarea.#{$base-prefix}form-input {
 // Form colors
 
 .#{$base-prefix}form-input--error {
-  background-image: url(#{$icon-path}error.svg);
+  background-image: url(#{$icon-path}close-error.svg);
   background-position: right 0.6rem center;
   background-repeat: no-repeat;
   @extend .#{$base-prefix}form-input;
-  border-color: $color-error;
+  border-color: $color-red;
   position: relative;
 }
 .#{$base-prefix}form-input--success {
-  background-image: url(#{$icon-path}correct.svg);
+  background-image: url(#{$icon-path}check-success.svg);
   background-position: right 0.6rem center;
   background-repeat: no-repeat;
   @extend .#{$base-prefix}form-input;
-  border-color: $color-success;
+  border-color: $color-green;
 }
 
 // Appended buttons
@@ -102,7 +102,7 @@ textarea.#{$base-prefix}form-input {
   align-items: center;
   .#{$base-prefix}form-input {
     margin: 0;
-    flex: 1;
+    flex: 1 1 auto;
   }
 }
 
@@ -164,6 +164,7 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
   background: white;
   border-radius: $global-radius;
   border: 1px solid $global-border-color;
+  flex: 0 0 auto;
 }
 
 input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-label:after {
@@ -176,7 +177,10 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
   height: 1.5rem;
   display: block;
   z-index: 1;
-  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTMuNDM5IDEuMDljLjQxNC0uMzY3IDEuMDU5LS4zMjggMS40MzEuMDc2bC40MTMuNDQ4Yy4zNzcuNDA5LjM2IDEuMDM3LS4wNDggMS40MTNsLTguOTI1IDguMjE3Yy0uNDAzLjM3MS0xLjAzNi4zNDctMS40MTItLjA1NGwtMy43NzMtNC4wMThjLS4zNzctLjQwMS0uMzcyLTEuMDYyIDAtMS40NjdsLjQxMy0uNDQ4Yy4zNzctLjQwOS45OTMtLjQxMyAxLjM3LS4wMTVsMi42NzEgMi44MTYgNy44NTgtNi45Njl6IiBmaWxsPSIjN0FCMjNEIi8+PC9zdmc+') no-repeat center center;
+  background-image: url(#{$icon-path}checkbox-checked.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 12px;
   transition: all .3s ease;
   transform: scale(0);
   opacity: 0;
@@ -218,6 +222,7 @@ input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::
   background: white;
   border-radius: $global-circle;
   border: 1px solid $global-border-color;
+  flex: 0 0 auto;
 }
 
 .#{$base-prefix}element--active {
@@ -238,7 +243,7 @@ input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::
   height: 1rem;
   display: block;
   z-index: 1;
-  background: $color-default;
+  background: $color-blue;
   border-radius: $global-circle;
   transition: all .3s ease;
   transform: scale(0);
@@ -284,22 +289,22 @@ input[type=radio].#{$base-prefix}form-radio-input:checked + .#{$base-prefix}form
 .#{$base-prefix}onoffswitch-inner:before {
     content: "";
     padding-left: 10px;
-    background-color: $color-success;
-    color: #FFFFFF;
+    background-color: $color-green;
+    color: $color-white;
 }
 .#{$base-prefix}onoffswitch-inner:after {
     content: "";
     padding-right: 10px;
     background-color: #EEEEEE;
-    color: #999999;
+    color: darken($color-grey, 30%);
     text-align: right;
 }
 .#{$base-prefix}onoffswitch-switch {
     display: block;
     width: 28px;
     margin: -2px;
-    background: #fff;
-    border: 1px solid #d6d6d6;
+    background: $color-white;
+    border: 1px solid $global-border-color;
     box-shadow: 0 0 4px 0 $global-shadow;
     border-radius: 20px;
     position: absolute;
@@ -338,7 +343,7 @@ input[type=range].#{$base-prefix}form-range::-webkit-slider-runnable-track {
   border: 0px solid #010101;
 }
 input[type=range].#{$base-prefix}form-range::-webkit-slider-thumb {
-  border: 4px solid #ffffff;
+  border: 4px solid $color-white;
   height: 24px;
   width: 24px;
   border-radius: 16px;
@@ -361,7 +366,7 @@ input[type=range].#{$base-prefix}form-range::-moz-range-track {
   border: 0px solid #010101;
 }
 input[type=range].#{$base-prefix}form-range::-moz-range-thumb {
-  border: 4px solid #ffffff;
+  border: 4px solid $color-white;
   height: 24px;
   width: 24px;
   border-radius: 16px;
@@ -394,7 +399,7 @@ input[type=range].#{$base-prefix}form-range::-ms-fill-upper {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
 }
 input[type=range].#{$base-prefix}form-range::-ms-thumb {
-  border: 4px solid #ffffff;
+  border: 4px solid $color-white;
   height: 24px;
   width: 24px;
   border-radius: 16px;
@@ -414,14 +419,14 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
 
 .#{$base-prefix}form-selects {
   border-radius: $global-radius;
-  background-color: #fff;
+  background-color: $color-white;
   border:1px solid $global-border-color;
   position: relative;
   display: inline-block;
   &:after,
   &::after,
   select {
-    background-color: #fff;
+    background-color: $color-white;
   }
 }
 
@@ -458,7 +463,7 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   vertical-align: middle;
   outline: 0 none;
   padding: 0 40px 0 0.8rem;
-  line-height: 35px;
+  height: 2.5em;
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 100%;
@@ -475,7 +480,15 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
 
 .#{$base-prefix}form-selects option {
   border: 0;
-  background: #fff;
-  color: #333;
+  background: $color-white;
+  color: $color-black;
   outline: none;
+}
+
+.#{$base-prefix}form-selects--multiple::after {
+	display: none;
+}
+
+.#{$base-prefix}form-selects--multiple select {
+	padding: 0;
 }

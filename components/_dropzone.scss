@@ -1,0 +1,22 @@
+.#{$component-prefix}dropzone {
+  display: block;
+  border: 1px solid #d6d6d6;
+  background-color: lighten($color-orange, 40%);
+  position: relative;
+  padding: 0;
+  border-radius: 4px;
+  min-height: calc(1.7rem + 4px + 1.5em);
+  &.hover {
+    background-color: $color-grey;
+    border: 1px dashed #d2d2d2;
+  }
+  
+}
+
+.#{$component-prefix}dropzone-inline {
+  @extend .#{$component-prefix}dropzone;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  min-width: 50px;
+}

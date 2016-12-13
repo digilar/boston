@@ -15,7 +15,7 @@
 
 .#{$component-prefix}tab {
   display: inline-flex;
-  flex: 1;
+  flex: 1 1 auto;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -33,7 +33,7 @@
     right: 0;
     content: "";
     height: 5px;
-    background: $color-default;
+    background: $color-blue;
     border-radius: $global-rounded;
   }
 }

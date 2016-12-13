@@ -7,8 +7,7 @@
 */
 
 .#{$layout-prefix}page-header {
-  background: rgba(65,35,65,0.9);
-  color: #fff;
+  background: $color-white;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -19,5 +18,6 @@
 }
 
 .#{$layout-prefix}page-header-overlay {
-  background: linear-gradient(to bottom, rgba(64,35,65,0.44) 0%, rgba(64,35,65,1) 100%);
+  background: linear-gradient(to bottom, rgba(red($color-altmarine), green($color-altmarine), blue($color-altmarine), 0.4) 0%, rgba(red($color-black), green($color-black), blue($color-black), 1) 100%);
+  color: $color-white;
 }

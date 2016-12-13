@@ -1,29 +1,29 @@
 .#{$layout-prefix}header {
 	display: flex;
 	flex: 0 0 auto;
+	z-index: 2;
 }
 
 .#{$layout-prefix}header-navigation {
-	background-color: map-deep-get($ui, "dark", base);
 	height: $header-height;
 	display: flex;
-	color: #fff;
 	flex: 1 1 auto;
 	font-weight: 600;
 	max-width: 100%;
 	min-width: 0;
 	position: relative;
+	background-color: $color-marine;
+	color: $color-white;
 }
 
 .#{$layout-prefix}header-logo {
 	display: flex;
 	align-items: center;
-	padding: 0 $global-padding;
+	padding-right: $global-padding;
 	flex: 0 0 auto;
 }
 
 .#{$layout-prefix}mobile-nav {
-	padding: 0 $global-padding / 2;
 	flex: 1 0 auto;
 	height: $header-height;
 	display: none;
@@ -55,8 +55,8 @@
 		bottom: $header-height;
 		left: 0;
 		right: 0;
-		background: #fff;
-		color: #333;
+		background: $color-white;
+		color: $color-black;
 		height: auto;
 		max-height: calc(100vh - #{$header-height});
 		flex-direction: column;
@@ -79,6 +79,7 @@
 	@include breakpoints(max-width, medium) {
 		padding: $global-padding / 2 0;
 		flex: 0 0 auto;
+		justify-content: space-between;
 	}
 }
 
@@ -92,11 +93,17 @@
 }
 
 .#{$layout-prefix}header-nav-link--selected {
-	color: $color-primary;
+	color: $color-orange;
 }
 
 .#{$layout-prefix}header-select {
 	position: relative;
+	background: $color-lightmarine;
+	margin-left: 0.5rem;
+	
+	@include breakpoints(max-width, medium) {
+		background: $color-grey;
+	}
 	
 	select {
 		display: inline-block;
@@ -109,6 +116,28 @@
 		padding-left: 2.5rem;
 		overflow: hidden;
 		cursor: pointer;
+	}
+	
+	optgroup,
+	option {
+		background: white;
+		color: $color-black;
+	}
+	
+	optgroup {
+		padding: 0 $global-padding / 2;
+		
+		&:before {
+			padding-top: $global-padding / 2;
+			margin-bottom: $global-padding / 2;
+			font-style: normal;
+		}
+	}
+	
+	option {
+		padding: $global-padding / 2;
+		margin-left: -($global-padding / 2);
+		margin-right: -($global-padding / 2);
 	}
 }
 
@@ -135,7 +164,7 @@
 }
 
 .#{$layout-prefix}header-tool {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	padding: 0 $global-padding / 2;
 	height: $header-height;
@@ -144,10 +173,11 @@
 
 .#{$layout-prefix}header-settings {
 	display: flex;
+	background-color: $color-lightmarine;
+	color: $color-white;
 	padding: 0 $global-padding;
 	align-items: center;
 	cursor: pointer;
-	background: lighten($color-secondary, 5%);
 }
 
 .#{$layout-prefix}header-settings-name {

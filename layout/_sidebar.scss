@@ -9,7 +9,7 @@
 .#{$layout-prefix}sidebar {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: $color-white;
   width: $sidebar-width;
   border-right: 1px solid $global-border-color;
   position: relative;
@@ -20,7 +20,7 @@
     bottom: 0;
     left: -100%;
     opacity: 0;
-    z-index: 9999;
+    z-index: 998;
     border: 0;
     box-shadow: 2px 0px 12px 0px rgba(0,0,0,0.2);
   }

@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: $color-white;
   border-radius: $global-circle;
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
   position: absolute;
@@ -39,7 +39,7 @@
 }
 
 .#{$component-prefix}help-ruler-viewer--move {
-  background: rgba(#fff,0.8) url(/assets/digicons/drag.svg) no-repeat center center;
+  background: rgba($color-white,0.8) url(/assets/digicons/drag.svg) no-repeat center center;
   cursor: move;
   pointer-events: all;
   position: relative;
@@ -69,7 +69,7 @@
 
 .#{$component-prefix}help-ruler-shade {
   background: rgba(0,0,0,0.7);
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .#{$component-prefix}help-ruler--visible {
@@ -98,7 +98,7 @@
   position: absolute;
   top: 12px;
   left: 10px;
-  color: #fff;
+  color: $color-white;
   pointer-events: auto;
   @include breakpoints(min-width,small) {
     display: none;
