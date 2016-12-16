@@ -8,16 +8,18 @@ Markup
 .#{$base-prefix}table {
   border-collapse: collapse;
   border-spacing: 0;
-  text-align:left;
-  width:100%;
+  text-align: left;
+  width: 100%;
   th {
-    font-weight:bold;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
   }
   td,th {
-    padding:$global-padding;
+    padding: $global-padding;
   }
   td {
-    border-top:1px solid $global-border-color;
+    border-top: 1px solid $global-border-color;
   }
   .typography & {
     margin-bottom: $global-margin;
@@ -69,38 +71,6 @@ Markup
 .#{$base-prefix}table-responsive--horizontal,
 .#{$base-prefix}table-responsive--horizontal--flip tbody {
   -webkit-overflow-scrolling: touch;
-}
-
-.#{$base-prefix}table-responsive--horizontal th {
-  text-align: left;
-  text-transform: uppercase;
-  background: $color-grey;
-  font-weight: $font-weight-bold;
-  max-width: 120px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 80%;
-}
-
-.#{$base-prefix}table-responsive--horizontal th,
-.#{$base-prefix}table-responsive--horizontal td {
-  padding: 8px 12px;
-}
-
-.#{$base-prefix}table-responsive--horizontal th {
-  border: 1px solid $global-border-color;
-}
-
-.#{$base-prefix}table-responsive--horizontal td {
-  border: 1px solid $global-border-color;
-}
-
-.#{$base-prefix}table-responsive--horizontal tr:nth-child(even) {
-  background: $color-grey;
-}
-
-.#{$base-prefix}table-responsive--horizontal tr:hover {
-  background: darken($color-grey,5%);
 }
 
 // Flipped version. Add this class to table-responsive--horizontal
