@@ -422,7 +422,7 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   background-color: $color-white;
   border:1px solid $global-border-color;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   &:after,
   &::after,
   select {

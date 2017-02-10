@@ -67,6 +67,11 @@
   font-weight: $font-weight-bold;
 }
 
+.#{$base-prefix}text-ui {
+  font-weight: $font-weight-bold;
+  line-height: 1;
+}
+
 .#{$base-prefix}lead {
   @include responsive-font(3vw, $h3-min, $h3-max);
 }
@@ -132,8 +137,8 @@
 }
 
 .#{$base-prefix}link {
-  color:$color-blue;
-  cursor:pointer;
+  color: $color-blue;
+  cursor: pointer;
 }
 
 .#{$base-prefix}blockquote {
