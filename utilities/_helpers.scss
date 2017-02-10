@@ -238,6 +238,8 @@ __margin__
 .flex-stretch   { align-items: stretch; }
 .flex-start     { align-items: flex-start; }
 .flex-end       { align-items: flex-end; }
+.flex-right     { margin-left: auto; }
+.flex-left      { margin-right: auto; }
 
 .flex-justify  { justify-content: space-between; }
 

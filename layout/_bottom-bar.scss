@@ -17,6 +17,7 @@
   min-height: $bottombar-height;
   flex-wrap: nowrap;
   border-top: 1px solid $global-border-color;
+  box-shadow: 0 0 2px 0 $global-shadow;
 }
 
 .#{$layout-prefix}bottombar + .#{$layout-prefix}bottombar {

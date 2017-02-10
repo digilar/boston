@@ -13,6 +13,9 @@
   &:active {
     top: 1px;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .#{$component-prefix}btn-small {
