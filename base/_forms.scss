@@ -6,6 +6,13 @@ Markup
 ```
 */
 
+input,
+select {
+  &:focus {
+    outline: none;
+  }
+}
+
 .#{$base-prefix}form {
   margin: 0 0 $global-margin 0;
 }

@@ -21,8 +21,7 @@ Markup
 }
 
 .#{$base-prefix}list-item-heading {
-  font-weight: 600;
-  @include responsive-font(3vw, 16px, 18px);
+  font-weight: $font-weight-bold;
 }
 
 .#{$base-prefix}list-divider {

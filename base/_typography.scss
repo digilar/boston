@@ -38,29 +38,35 @@
   font-size: $responsive;
 }
 
+.app {
+  font-size: 62.5%;
+  /* Makes rem units like pixels e.g 2.4rem = 24px */
+}
+
 // Reset fonts for relevant elements
 .#{$layout-prefix}body {
-  @include responsive-font(3vw, $font-size-min, $font-size-base);
+  font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
 .#{$base-prefix}h1 {
-  @include responsive-font(3vw, $h1-min, $h1-max);
+  font-size: $h1;
 }
 
 .#{$base-prefix}h2 {
-  @include responsive-font(3vw, $h2-min, $h2-max);
+  font-size: $h2;
 }
 
 .#{$base-prefix}h3 {
-  @include responsive-font(3vw, $h3-min, $h3-max);
+  font-size: $h3;
 }
 
 .#{$base-prefix}h4 {
-  @include responsive-font(3vw, $h4-min, $h4-max);
+  font-size: $h4;
 }
 
 .#{$base-prefix}text-small {
-  @include responsive-font(3vw, $font-size-small-min, $font-size-small);
+  font-size: $font-size-small;
 }
 
 .#{$base-prefix}text-bold {
@@ -73,20 +79,20 @@
 }
 
 .#{$base-prefix}lead {
-  @include responsive-font(3vw, $h3-min, $h3-max);
+  font-size: $h4;
 }
 
 .#{$base-prefix}h1,
 .#{$base-prefix}h2,
 .#{$base-prefix}h3,
 .#{$base-prefix}h4 {
-  margin:0;
-  font-weight:600
+  margin: 0;
+  font-weight: 600
 }
 
 .#{$base-prefix}typography {
   h1,h2,h3,h4,h5,h6 {
-    font-weight:600;
+    font-weight: 600;
     margin: 0 0 0.5rem;
   }
   h1 {
@@ -106,7 +112,7 @@
 // Custom headings
 
 .#{$base-prefix}heading-bordered {
-	padding-bottom:$global-padding / 2;
+	padding-bottom: $global-padding / 2;
   border-bottom: 1px solid $global-border-color;
 }
 
@@ -122,18 +128,6 @@
 		top: 50%;
 		margin-left: 10px;
 	}
-}
-
-.#{$base-prefix}heading-area {
-  margin:1.4rem 0 0.3rem 0;
-  padding-bottom:0.5rem;
-  text-transform: uppercase;
-  border-bottom:1px solid $global-border-color;
-}
-
-.#{$base-prefix}heading-content {
-  margin:0 0 0.5rem 0;
-  @include responsive-font(3vw, 30px, 36px);
 }
 
 .#{$base-prefix}link {
@@ -163,48 +157,4 @@
   &:before {
     content:"\02014 \0020";
   }
-}
-
-.#{$base-prefix}text-collapse {
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    height: 65px;
-    background: linear-gradient(rgba(0,0,0,0),$color-white);
-  }
-}
-
-.#{$base-prefix}text-collapse-content {
-  max-height: 65px;
-  overflow-y: hidden;
-}
-
-.#{$base-prefix}text-collapse--visible {
-  &:after {
-    background: none;
-  }
-  .#{$base-prefix}text-collapse-content {
-    max-height: none;
-    overflow-y: auto;
-  }
-}
-
-.#{$base-prefix}text-collapse--dark {
-  background: linear-gradient(rgba(0,0,0,0),$color-black);
-}
-
-.#{$base-prefix}text-collapse-toggler {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  bottom: 0px;
-  z-index: 99;
-  cursor: pointer;
-  border-radius: $global-circle;
-  background: $color-white url(#{$icon-path}arrow-down.svg) no-repeat center center;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
 }
