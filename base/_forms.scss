@@ -469,8 +469,8 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   border: 0;
   vertical-align: middle;
   outline: 0 none;
-  padding: 0 40px 0 0.8rem;
-  height: 2.5em;
+  padding: map-deep-get($inline-sizes, "sm", padding);
+  padding-right: 40px;
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 100%;
