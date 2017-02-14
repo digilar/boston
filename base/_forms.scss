@@ -164,9 +164,9 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
 
 input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-label:before {
   content: ' ';
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.5rem;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
   display: block;
   background: white;
   border-radius: $global-radius;
@@ -178,10 +178,9 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
   content:' ';
   position: absolute;
   left: 0;
-  top: 50%;
-  margin-top: -0.75rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  top: 0;
+  width: 24px;
+  height: 24px;
   display: block;
   z-index: 1;
   background-image: url(#{$icon-path}checkbox-checked.svg);
@@ -214,7 +213,6 @@ input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label {
   margin: 0;
   position: relative;
   cursor: pointer;
-  min-height: 1.5rem;
   font-weight: normal;
   display: flex;
   align-items: center;
@@ -222,9 +220,9 @@ input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label {
 
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::before {
   content: ' ';
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.5rem;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
   display: block;
   background: white;
   border-radius: $global-circle;
@@ -232,22 +230,13 @@ input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::
   flex: 0 0 auto;
 }
 
-.#{$base-prefix}element--active {
-  transition: all 0.30s ease-in-out;
-  box-shadow: 0 0 0 0 $global-shadow;
-  &:active {
-    box-shadow: 0 0 6px 6px $global-shadow;
-  }
-}
-
 input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label::after {
   content: ' ';
   position: absolute;
-  left: 0.25rem;
-  top: 50%;
-  margin-top: -0.5rem;
-  width: 1rem;
-  height: 1rem;
+  left: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
   display: block;
   z-index: 1;
   background: $color-blue;
@@ -267,6 +256,7 @@ input[type=radio].#{$base-prefix}form-radio-input:checked + .#{$base-prefix}form
 .#{$base-prefix}onoffswitch {
     position: relative; width: 54px;
     -webkit-user-select: none;
+    display: inline-block;
 }
 .#{$base-prefix}onoffswitch-checkbox {
     display: none;
