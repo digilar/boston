@@ -17,7 +17,7 @@
 }
 
 .#{$component-prefix}nav-heading {
-  padding: ($global-padding) 0 0.3rem 0;
+  padding: $global-padding 0 5px 0;
   margin-bottom: $global-padding / 2;
   font-weight: 700;
   font-size: $font-size-base * 0.95;
@@ -34,7 +34,7 @@
 }
 
 .#{$component-prefix}nav-icon {
-  margin-right: 0.5rem;
+  margin-right: 10px;
 }
 
 // Nav dots
@@ -88,7 +88,7 @@
     box-sizing: border-box;
     position: absolute;
     top: 50%;
-    margin-top: -0.5rem;
+    margin-top: -10px;
     left: -9px;
     background: $color-blue;
     width: 16px;
@@ -115,19 +115,19 @@
 .#{$component-prefix}nav-inline {
   display: flex;
   flex-shrink: 0;
-  margin: 0.5rem 0;
+  margin: 10px 0;
   flex-wrap: wrap;
 }
 
 .#{$component-prefix}nav-inline-heading {
   @extend .#{$component-prefix}nav-heading;
-  margin: 0.5rem 0;
-  padding: 0 1rem 0.5rem 1rem;
+  margin: 10px 0;
+  padding: 0 15px 10px 15px;
   flex-basis: 100%;
 }
 
 .#{$component-prefix}nav-inline-item {
-  margin: 0.5rem 0 0.5rem 0.6rem;
+  margin: 10px 0 10px 10px;
   display: flex;
 }
 
@@ -169,22 +169,22 @@
 }
 
 .#{$component-prefix}pagination-prev {
-  margin-right: 0.3rem;
+  margin-right: 5px;
 }
 .#{$component-prefix}pagination-next {
-  margin-left: 0.3rem;
+  margin-left: 5px;
 }
 
 .#{$component-prefix}pagination-content {
   flex: 1 1 auto;
-  padding: 0.2rem;
+  padding: 5px;
 }
 
 .#{$component-prefix}pagination-jump {
   @extend .#{$component-prefix}pagination;
   .#{$base-prefix}form-input {
     width: auto;
-    max-width: 3rem;
+    max-width: 50px;
     text-align: center;
     border-radius: $global-rounded;
   }
@@ -203,7 +203,7 @@
     color: darken($color-grey, 35%);
     content: "/";
     display: inline-block;
-    padding: 0 0.4rem;
+    padding: 0 4px;
   }
 }
 

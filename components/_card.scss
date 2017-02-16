@@ -59,9 +59,6 @@
 .#{$component-prefix}card-header,
 .#{$component-prefix}card-footer {
   padding: $global-padding;
-  @include breakpoints(max-width,xsmall) {
-    padding: 0.8rem ($global-padding);
-  }
 }
 
 .#{$component-prefix}card-header {

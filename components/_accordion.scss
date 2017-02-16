@@ -14,7 +14,7 @@ Markup
 ```
 */
 
-.#{$component-prefix}accordion-item {
+.#{$component-prefix}accordion {
   border-bottom: 1px solid $global-border-color;
 }
 
@@ -25,22 +25,17 @@ Markup
   cursor: pointer;
 }
 
-.#{$component-prefix}accordion-header-item {
-  background:none;
-  justify-content: space-between;
+.#{$component-prefix}accordion-content {
+  border-top: 2px solid $color-blue;
+  display: none;
+  padding: $global-padding;
 }
 
-.#{$component-prefix}accordion-item--opened {
+.#{$component-prefix}accordion--opened {
   .#{$component-prefix}accordion-header {
     background: url(#{$icon-path}chevron-up.svg) no-repeat right 1rem center;
   }
   .#{$component-prefix}accordion-content {
     display: block;
   }
-}
-
-.#{$component-prefix}accordion-content {
-  border-top: 2px solid $color-blue;
-  display: none;
-  padding: $global-padding;
 }

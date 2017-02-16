@@ -8,7 +8,7 @@ Markup
 %#{$component-prefix}alert {
   padding: map-deep-get($inline-sizes, "sm", padding);
   border-width: 1px;
-  border-left-width: rem-calc(5px);
+  border-left-width: 5px;
   border-style: solid;
   background-color: $color-blue;
   border-radius: $global-radius;

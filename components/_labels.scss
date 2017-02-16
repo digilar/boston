@@ -6,7 +6,7 @@ Markup
 ```
 */
 %#{$component-prefix}badge {
-  padding: 0.1rem 0.6rem;
+  padding: 3px 8px;
   display: inline-block;
   background-color: $color-blue;
   border-radius: $global-radius;
@@ -17,9 +17,9 @@ Markup
   }
 }
 
-.#{$component-prefix}badge-circle {
+.#{$component-prefix}badge-rounded {
   @extend %#{$component-prefix}badge;
-  border-radius: $global-circle;
+  border-radius: $global-rounded;
 }
 
 .#{$component-prefix}badge-outline {
@@ -37,33 +37,7 @@ Markup
   }
 }
 
-.#{$component-prefix}badge-top-right {
-  position: absolute;
-  top: $global-margin;
-  right: $global-margin;
-}
-
-.#{$component-prefix}badge-top-left {
-  position: absolute;
-  top: $global-margin;
-  right: $global-margin;
-}
-
 .#{$component-prefix}badge-small {
-  padding: 0.08rem 0.5rem;
+  padding: 2px 5px;
   font-size: $font-size-base * 0.9;
-}
-
-.#{$component-prefix}tick {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: $global-rounded;
-  box-shadow: 0 0 5px 0 $global-shadow;
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  background: $color-white;
 }

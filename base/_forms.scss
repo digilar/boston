@@ -26,7 +26,7 @@ select {
 // Label
 
 .#{$base-prefix}form-label {
-  margin: 0 0 0.8rem 0;
+  margin: 0 0 10px 0;
   display: block;
   font-weight: $font-weight-bold;
 }
@@ -74,7 +74,7 @@ textarea.#{$base-prefix}form-input {
   .#{$base-prefix}form-label {
     position: absolute;
     top: 10px;
-    left: 0.9rem;
+    left: 10px;
     font-size: $font-size-base * 0.8;
     text-transform: uppercase;
   }
@@ -88,7 +88,7 @@ textarea.#{$base-prefix}form-input {
 
 .#{$base-prefix}form-input--error {
   background-image: url(#{$icon-path}close-error.svg);
-  background-position: right 0.6rem center;
+  background-position: right 10px center;
   background-repeat: no-repeat;
   @extend .#{$base-prefix}form-input;
   border-color: $color-red;
@@ -96,7 +96,7 @@ textarea.#{$base-prefix}form-input {
 }
 .#{$base-prefix}form-input--success {
   background-image: url(#{$icon-path}check-success.svg);
-  background-position: right 0.6rem center;
+  background-position: right 10px center;
   background-repeat: no-repeat;
   @extend .#{$base-prefix}form-input;
   border-color: $color-green;
@@ -156,7 +156,7 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
   margin: 0;
   position: relative;
   cursor: pointer;
-  min-height: 1.5rem;
+  min-height: 15px;
   font-weight: normal;
   display: flex;
   align-items: center;
@@ -318,6 +318,22 @@ input[type=radio].#{$base-prefix}form-radio-input:checked + .#{$base-prefix}form
 }
 
 // Input range
+
+.#{$component-prefix}range-wrap {
+	position: relative;
+	display: flex;
+}
+
+.#{$component-prefix}range-default {
+	position: absolute;
+	top: 50%;
+	margin-top: -7px;
+	width: 4px;
+	height: 14px;
+	border-radius: 3px;
+	background: $color-blue;
+	z-index: 1;
+}
 
 input[type=range].#{$base-prefix}form-range {
   position: relative;
