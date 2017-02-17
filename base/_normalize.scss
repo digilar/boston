@@ -100,11 +100,15 @@ pre {
 /**
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ * 3. Remove color, use .link to style
+ * 4. No decoration, use .link
  */
 
 a {
   background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
+  color: inherit; /* 3 */
+  text-decoration: none; /* 4 */
 }
 
 /**
@@ -254,9 +258,8 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif; /* 1 */
+  font-family: $font-family-base; /* 1 */
   font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
 

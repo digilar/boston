@@ -439,7 +439,7 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   border:1px solid $global-border-color;
   position: relative;
   display: inline-flex;
-  flex-shrink: 0;
+  flex-shrink: 1;
   &:after,
   &::after,
   select {

@@ -12,7 +12,9 @@ Markup
   list-style: none;
 }
 
-.#{$base-prefix}list {
+.#{$base-prefix}list,
+ul,
+ol {
   @extend .#{$base-prefix}list-reset;
 }
 
