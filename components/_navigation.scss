@@ -2,7 +2,7 @@
 ##Nav
   Description
 ```
-<button class="ui-btn--{color}">Code</button>
+
 ```
 */
 
@@ -33,72 +33,6 @@
   }
 }
 
-.#{$component-prefix}nav-icon {
-  margin-right: 10px;
-}
-
-// Nav dots
-
-.#{$component-prefix}nav-dots-item {
-  padding: $global-padding;
-  border-bottom: 1px solid $global-border-color;
-  > {
-    display: block;
-  }
-}
-
-.#{$component-prefix}nav-dots-heading {
-  @extend nav-heading !optional;
-  margin: 0;
-}
-
-// Hide sub levels
-.#{$component-prefix}nav-dots-item .#{$component-prefix}nav-dots {
-  display: none;
-  margin-top: $global-margin / 2;
-}
-
-// Show current items sub levels
-.#{$component-prefix}nav-dots-item--selected .#{$component-prefix}nav-dots {
-  display: block;
-}
-
-.#{$component-prefix}nav-dots-item--selected {
-  background: $color-grey;
-  border-bottom: 1px solid $global-border-color;
-  > a {
-    color: $color-blue;
-  }
-}
-
-// 2nd level
-.#{$component-prefix}nav-dots-item .#{$component-prefix}nav-dots-item {
-  border: 0;
-  border-left: 1px solid $global-border-color;
-  margin-left: $global-margin;
-
-  padding: $global-padding / 2 0 $global-padding / 2 $global-padding;
-}
-
-// 2nd level selected
-.#{$component-prefix}nav-dots-item .#{$component-prefix}nav-dots-item.#{$component-prefix}nav-dots-item--selected {
-  color: $color-blue;
-  position: relative;
-  &:before {
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    margin-top: -10px;
-    left: -9px;
-    background: $color-blue;
-    width: 16px;
-    height: 16px;
-    border: 3px solid $color-white;
-    border-radius: $global-rounded;
-    content: "";
-  }
-}
-
 .#{$component-prefix}nav-item-toggler {
   float: right;
   width: 24px;
@@ -116,6 +50,7 @@
   display: flex;
   flex-shrink: 0;
   margin: 10px 0;
+  padding: 0;
   flex-wrap: wrap;
 }
 
@@ -163,16 +98,22 @@
 .#{$component-prefix}pagination-next {
   display: flex;
   align-items: center;
-  padding: 0.2rem;
+  padding: 6px;
   background: $color-white;
   border-radius: $global-rounded;
 }
 
 .#{$component-prefix}pagination-prev {
   margin-right: 5px;
+  width: 24px;
+  height: 24px;
+  background: url(#{$icon-path}chevron-left.svg) no-repeat center center;
 }
 .#{$component-prefix}pagination-next {
   margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  background: url(#{$icon-path}chevron-right.svg) no-repeat center center;
 }
 
 .#{$component-prefix}pagination-content {
@@ -199,11 +140,14 @@
 .#{$component-prefix}breadcrumb {
   display: flex;
   align-items: center;
+  margin:0;
+  padding:0;
+  list-style: none;
   >li+li:before {
     color: darken($color-grey, 35%);
     content: "/";
     display: inline-block;
-    padding: 0 4px;
+    padding: 0 7px;
   }
 }
 
@@ -214,9 +158,4 @@
 .#{$component-prefix}breadcrumb-item--selected {
   font-weight: $font-weight-base;
   color: $color-orange;
-}
-
-
-.#{$component-prefix}breadcrumb-link {
-  padding: 0.5rem 0.8rem;
 }

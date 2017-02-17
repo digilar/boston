@@ -10,6 +10,7 @@
   cursor: pointer;
   position: relative;
   height: auto;
+  line-height: $line-height-base;
   &:active {
     top: 1px;
   }
@@ -28,35 +29,6 @@
   @extend .#{$component-prefix}btn;
   padding: map-deep-get($inline-sizes, "lg", padding);
   font-size: map-deep-get($inline-sizes, "lg", font-size);
-}
-
-.#{$component-prefix}btn-row {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: auto;
-  position: relative;
-}
-
-.#{$component-prefix}btn-row-item {
-  display: flex;
-  flex: 1 1 auto;
-  align-items: center;
-  flex-direction: column;
-  padding: $global-padding / 2;
-  position: relative;
-  min-width: 8rem;
-}
-
-.#{$component-prefix}btn-row-title {
-  margin-top: $global-margin / 2;
-  max-width: 100%;
-}
-
-.#{$component-prefix}btn-row-vertical {
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
-  position: relative;
 }
 
 /*

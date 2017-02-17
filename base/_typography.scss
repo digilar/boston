@@ -83,9 +83,13 @@
 }
 
 .#{$base-prefix}h1,
+h1,
 .#{$base-prefix}h2,
+h2,
 .#{$base-prefix}h3,
-.#{$base-prefix}h4 {
+h3,
+.#{$base-prefix}h4,
+h4 {
   margin: 0;
   font-weight: 600
 }
@@ -93,6 +97,7 @@
 .#{$base-prefix}typography {
   h1,h2,h3,h4,h5,h6 {
     font-weight: 600;
+    line-height: 1.2;
   }
   h1,h2,h3,h4,h5,h6,p {
     margin: 0 0 1rem;

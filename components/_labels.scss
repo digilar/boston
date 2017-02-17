@@ -17,6 +17,11 @@ Markup
   }
 }
 
+.#{$component-prefix}badge-small {
+  padding: 2px 5px;
+  font-size: $font-size-base * 0.9;
+}
+
 .#{$component-prefix}badge-rounded {
   @extend %#{$component-prefix}badge;
   border-radius: $global-rounded;
@@ -35,9 +40,4 @@ Markup
     border-color: palette($name,dark);
     color: palette($name,textcolor);
   }
-}
-
-.#{$component-prefix}badge-small {
-  padding: 2px 5px;
-  font-size: $font-size-base * 0.9;
 }

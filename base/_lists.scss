@@ -129,12 +129,12 @@ Markup
 
 .#{$base-prefix}list-arrow {
   li {
-    padding:$list-padding 0;
-    border-bottom:1px solid $global-border-color;
-    padding-right:30px;
-    background:url(#{$icon-path}list-arrow.svg) no-repeat right center;
+    padding: $list-padding 0;
+    border-bottom: 1px solid $global-border-color;
+    padding-right: 30px;
+    background: url(#{$icon-path}list-arrow.svg) no-repeat right center;
     &:last-child {
-      border:0;
+      border: 0;
     }
   }
 }
@@ -144,12 +144,12 @@ Markup
 .#{$base-prefix}list-arrow--pre {
   @extend .#{$base-prefix}list-reset;
   li {
-    padding:$list-padding 0;
-    border-bottom:1px solid $global-border-color;
-    padding-left:30px;
-    background:url(#{$icon-path}list-arrow.svg) no-repeat left center;
+    padding: $list-padding 0;
+    border-bottom: 1px solid $global-border-color;
+    padding-left: 30px;
+    background: url(#{$icon-path}list-arrow.svg) no-repeat left center;
     &:last-child {
-      border:0;
+      border: 0;
     }
   }
 }

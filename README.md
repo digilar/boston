@@ -2,7 +2,6 @@ Digilär css
 ======
 ##Guidelines
 
-* Use rem values for layout use rem-calc. E.g rem-calc(220px)
 * Use classes instead of IDs (Avoid uneccessary specificity)
 * Mobile first and responsive
 * Add classes according to simplified BEM (Block Element Modifier)

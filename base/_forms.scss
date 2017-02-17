@@ -39,14 +39,16 @@ select {
   max-width: 100%;
   border-radius: $global-radius;
   padding: map-deep-get($inline-sizes, "sm", padding);
-  line-height: 1.5;
+  line-height: $line-height-base;
   border-style: solid;
   border-width: 1px;
   border-color: $global-border-color;
   -webkit-appearance: none;
   vertical-align: middle;
-  font-size: 16px;
   appearance: none;
+  @include breakpoints(max-width, medium) {
+    font-size: 16px;
+  }
   &:focus {
     outline: none;
     border-color: $color-blue;
@@ -254,34 +256,35 @@ input[type=radio].#{$base-prefix}form-radio-input:checked + .#{$base-prefix}form
 // On off
 
 .#{$base-prefix}onoffswitch {
-    position: relative; width: 54px;
-    -webkit-user-select: none;
-    display: inline-block;
+  position: relative; width: 54px;
+  -webkit-user-select: none;
+  display: inline-block;
+  flex: 1 0 auto;
 }
 .#{$base-prefix}onoffswitch-checkbox {
-    display: none;
+  display: none;
 }
 .#{$base-prefix}onoffswitch-label {
-    display: block; overflow:
-    hidden; cursor: pointer;
-    border-radius: 20px;
+  display: block; overflow:
+  hidden; cursor: pointer;
+  border-radius: 20px;
 }
 .#{$base-prefix}onoffswitch-inner {
-    display: block;
-    width: 200%;
-    margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
 }
 .#{$base-prefix}onoffswitch-inner:before,
 .#{$base-prefix}onoffswitch-inner:after {
-    display: block;
-    float: left;
-    width: 50%;
-    height: 24px;
-    padding: 0;
-    line-height: 28px;
-    font-size: 14px;
-    color: white;
+  display: block;
+  float: left;
+  width: 50%;
+  height: 24px;
+  padding: 0;
+  line-height: 28px;
+  font-size: 14px;
+  color: white;
 }
 .#{$base-prefix}onoffswitch-inner:before {
     content: "";
@@ -436,6 +439,7 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   border:1px solid $global-border-color;
   position: relative;
   display: inline-flex;
+  flex-shrink: 0;
   &:after,
   &::after,
   select {
@@ -481,6 +485,7 @@ input[type=range].#{$base-prefix}form-range:focus::-ms-fill-upper {
   -moz-appearance: none;
   width: 100%;
   border-radius: $global-radius;
+  line-height: $line-height-base;
   &::-ms-expand {
     visibility: hidden;
     height: 40px;
