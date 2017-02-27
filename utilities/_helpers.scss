@@ -83,6 +83,10 @@ __margin__
   overflow: hidden;
 }
 
+.#{$utility-prefix}white-space-no-wrap {
+  white-space: nowrap;
+}
+
 // Background colors
 @each $name, $complementarypalette in $complementary {
 .bg-color--#{$name} {

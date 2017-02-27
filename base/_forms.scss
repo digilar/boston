@@ -159,7 +159,6 @@ input[type=checkbox].#{$base-prefix}form-checkbox-input + .#{$base-prefix}form-l
   position: relative;
   cursor: pointer;
   min-height: 15px;
-  font-weight: normal;
   display: flex;
   align-items: center;
 }
@@ -215,7 +214,6 @@ input[type=radio].#{$base-prefix}form-radio-input + .#{$base-prefix}form-label {
   margin: 0;
   position: relative;
   cursor: pointer;
-  font-weight: normal;
   display: flex;
   align-items: center;
 }

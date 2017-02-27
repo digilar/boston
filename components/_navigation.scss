@@ -88,6 +88,7 @@
 .#{$component-prefix}pagination {
   display: flex;
   align-items: center;
+  font-weight: $font-weight-bold;
 }
 
 .#{$component-prefix}pagination-number--selected {

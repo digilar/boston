@@ -1,43 +1,3 @@
-///
-/// Viewport sized typography with minimum and maximum values
-///
-/// @author Eduardo Boucas (@eduardoboucas)
-///
-/// @param {Number}   $responsive  - Viewport-based size
-/// @param {Number}   $min         - Minimum font size (px)
-/// @param {Number}   $max         - Maximum font size (px)
-///                                  (optional)
-/// @param {Number}   $fallback    - Fallback for viewport-
-///                                  based units (optional)
-///
-/// @example scss - 5vw font size (with 50px fallback),
-///                 minumum of 35px and maximum of 150px
-///  @include responsive-font(5vw, 35px, 150px, 50px);
-///
-@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
-  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
-  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
-  $min-breakpoint: $min / $responsive-unitless * 100;
-
-  @media (max-#{$dimension}: #{$min-breakpoint}) {
-    font-size: $min;
-  }
-
-  @if $max {
-    $max-breakpoint: $max / $responsive-unitless * 100;
-
-    @media (min-#{$dimension}: #{$max-breakpoint}) {
-      font-size: $max;
-    }
-  }
-
-  @if $fallback {
-    font-size: $fallback;
-  }
-
-  font-size: $responsive;
-}
-
 .app {
   font-size: 62.5%;
   /* Makes rem units like pixels e.g 2.4rem = 24px */
@@ -94,13 +54,23 @@ h4 {
   font-weight: 600
 }
 
+// Reset paragraph
+
+p {
+  margin: 0;
+}
+
+#{$base-prefix}.paragraph {
+  margin: 0 0 1.2rem;
+}
+
 .#{$base-prefix}typography {
   h1,h2,h3,h4,h5,h6 {
     font-weight: 600;
     line-height: 1.2;
   }
   h1,h2,h3,h4,h5,h6,p {
-    margin: 0 0 1rem;
+    margin: 0 0 1.2rem;
   }
   h1 {
     @extend .#{$base-prefix}h1;
