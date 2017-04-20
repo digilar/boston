@@ -21,7 +21,7 @@ ol {
   padding:0 0 0 15px;
   list-style-type: disc;
   li {
-    padding: $list-padding 0 $list-padding 15px;
+    padding: $global-padding / 2 0 $global-padding / 2 15px;
   }
 }
 
@@ -32,6 +32,6 @@ ol {
   padding: 0 0 0 15px;
   list-style-type: decimal;
   li {
-    padding: $list-padding 0 $list-padding 15px;
+    padding: $global-padding / 2 0 $global-padding / 2 15px;
   }
 }
