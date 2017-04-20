@@ -9,9 +9,9 @@
 }
 
 @mixin list-reset() {
-  display: $display;
-  max-width: 100%;
-  height: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 %img-responsive { @include img-responsive }
