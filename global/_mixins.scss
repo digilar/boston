@@ -8,6 +8,12 @@
   height: auto;
 }
 
+@mixin list-reset() {
+  display: $display;
+  max-width: 100%;
+  height: auto;
+}
+
 %img-responsive { @include img-responsive }
 .img-responsive { @include img-responsive }
 

@@ -1,0 +1,37 @@
+.#{$base-prefix}list
+ul,
+ol {
+  @include list-reset();
+}
+
+.#{$base-prefix}list-bordered {
+  @extend .#{$base-prefix}list;
+  li {
+    border-top: 1px solid $global-border-color;
+    &:first-child {
+      border: 0;
+    }
+  }
+}
+
+// Unordered lists
+
+.#{$base-prefix}list-unordered {
+  margin: 15px 0 15px 15px;
+  padding:0 0 0 15px;
+  list-style-type: disc;
+  li {
+    padding: $list-padding 0 $list-padding 15px;
+  }
+}
+
+// Ordered lists
+
+.#{$base-prefix}list-ordered {
+  margin: 15px 0 15px 15px;
+  padding: 0 0 0 15px;
+  list-style-type: decimal;
+  li {
+    padding: $list-padding 0 $list-padding 15px;
+  }
+}

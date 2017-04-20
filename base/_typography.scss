@@ -33,6 +33,10 @@
   font-weight: $font-weight-bold;
 }
 
+.#{$base-prefix}text-italic {
+  font-style: italic;
+}
+
 .#{$base-prefix}text-ui {
   font-weight: $font-weight-bold;
   line-height: 1;
