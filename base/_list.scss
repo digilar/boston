@@ -1,4 +1,4 @@
-.#{$base-prefix}list
+.#{$base-prefix}list,
 ul,
 ol {
   @include list-reset();
