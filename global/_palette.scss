@@ -9,9 +9,6 @@ $color-marine: #0f5169 !default;
 $color-orange: #ea690a !default;
 $color-white: #ffffff !default;
 
-$color-altmarine: #28505a !default;
-$color-lightmarine: lighten($color-marine, 5%) !default;
-
 $complementary: (
 	grey: (
 		base: $color-grey

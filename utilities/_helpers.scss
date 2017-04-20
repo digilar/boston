@@ -354,7 +354,7 @@ __margin__
 @each $key, $value in $breakpoints {
 	$value: nth($key, 1);
 	
-	@include breakpoints(max-width, $value) {
+	@include breakpoint(max-width, $value) {
 		.hide-#{$value} {
 			display: none;
 		}
@@ -364,7 +364,7 @@ __margin__
 		}
 	}
 	
-	@include breakpoints(min-width, $value) {
+	@include breakpoint(min-width, $value) {
 		.show-#{$value} {
 			display: block;
 		}

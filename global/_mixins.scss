@@ -35,7 +35,7 @@
 // Breakpoints
 // -------------------------
 
-@mixin breakpoints($value,$name) {
+@mixin breakpoint($value,$name) {
   // Prints a media query based on the value
   @media (#{$value}:#{inspect(map-get($breakpoints, $name))}) {
     @content;

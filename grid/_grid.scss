@@ -42,7 +42,7 @@
 
 @each $key, $value in $breakpoints {
 	$value: nth($key, 1);
-	@include breakpoints(max-width,$value) {
+	@include breakpoint(max-width,$value) {
 		@include grid-html-classes($value);
 	}
 }

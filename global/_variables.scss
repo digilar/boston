@@ -22,17 +22,12 @@ $font-weight-bold: 600 !default;
 $heading-font-weight-base: 500 !default;
 
 $font-size-base: 1.5rem !default;
+$font-size-small: 1.4rem !default;
+
 $h1: 3.2rem !default;
 $h2: 2.4rem !default;
 $h3: 1.8rem !default;
 $h4: 1.6rem !default;
-$font-size-small: 1.4rem !default;
-
-// Rem-base
-
-$rem-base: $font-size-base !default;
-
-$list-padding: 8px !default;
 
 // Breakpoints
 
@@ -48,52 +43,24 @@ $breakpoints: (
 $container-xs: 480px !default;
 $container-sm: 640px !default;
 $container-md: 940px !default;
-$container-lg: 1080px !default;
+$container-lg: 1180px !default;
 
 // Prefixes
 
-$component-prefix: null !default;
 $layout-prefix: null !default;
 $grid-prefix: null !default;
 $base-prefix: null !default;
 $utility-prefix: null !default;
-$animation-prefix: null !default;
 
 $icon-path: "../img/svgicons/" !default;
 $icon-size: 24px !default;
 
-$inline-sizes: (
-  xs: (
-    padding: 4px 6px,
-    height: auto,
-    font-size: $font-size-base - 0.02,
-  ),
-  sm: (
-    padding: 7px 12px,
-    height: auto,
-    font-size:$font-size-base - 0.02,
-  ),
-  md: (
-    padding: 8px 14px,
-    height: auto,
-    font-size:$font-size-base,
-  ),
-  lg: (
-    padding: 10px 16px,
-    height: auto,
-    font-size:$font-size-base * 1.3,
-  ),
-);
+$inline-size-xs: 4px 6px;
+$inline-size-sm: 6px 12px;
+$inline-size-md: 8px 14px;
+$inline-size-lg: 12px 20px;
 
-// Ui
-
-$sidebar-width: 220px !default;
-$panel-width: 320px !default;
-$topbar-height: 44px !default;
-$bottombar-height: 44px !default;
+// z-index levels
 $depth-levels: 10;
 
-// Animations
 
-$animation-duration: 0.3s !default;
-$animation-timing: ease-in !default;

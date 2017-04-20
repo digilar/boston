@@ -44,9 +44,3 @@ and then:
 [data-ico~="autosize"] {
   background-size: auto;
 }
-
-[data-ico~="selected"] {
-  background: lighten($color-blue, 40%);
-  box-shadow: 0px 0px 0px 5px lighten($color-blue, 40%);
-  border-radius: $global-circle;
-}

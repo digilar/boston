@@ -13,28 +13,13 @@
 // @_Variables: $base-prefix
 @import "base/normalize";
 @import "base/typography";
-@import "base/data-ico";
-@import "base/forms";
-@import "base/tables";
-@import "base/lists";
-
-// components
-// @_Variables: $component-prefix
-@import "components/buttons";
-@import "components/card";
-@import "components/panel";
-@import "components/navigation";
-@import "components/alerts";
-@import "components/labels";
-@import "components/accordion";
 
 // LAYOUT
 @import "layout/ui";
-@import "layout/top-bar";
-@import "layout/bottom-bar";
 
 // @_Variables: $grid-prefix
 @import "grid/grid";
 
 // @_Variables: $utility-prefix
 @import "utilities/helpers";
+@import "utilities/data-ico";
