@@ -5,7 +5,7 @@ ol {
 }
 
 .#{$base-prefix}list-bordered {
-  @extend .#{$base-prefix}list;
+  @include list-reset();
   li {
     border-top: 1px solid $global-border-color;
     &:first-child {
