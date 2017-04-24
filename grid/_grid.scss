@@ -7,7 +7,7 @@
 
 [class*="#{$grid-prefix}col-"] {
 	padding: 0 $gutter;
-	margin-bottom: $gutter;
+	margin-bottom: $gutter * 2;
 	flex: 1 1 auto;
 }
 

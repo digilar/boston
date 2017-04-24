@@ -8,6 +8,7 @@ ol {
   @include list-reset();
   li {
     border-top: 1px solid $global-border-color;
+    padding: $global-padding / 2 0;
     &:first-child {
       border: 0;
     }
