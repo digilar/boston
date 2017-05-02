@@ -88,21 +88,21 @@ __margin__
 }
 
 // Background colors
-@each $name, $complementarypalette in $complementary {
+@each $name, $color in $colors {
 .bg-color--#{$name} {
     background: complementarypalette($name);
   }
 }
 
 // Text colors
-@each $name, $complementarypalette in $complementary {
+@each $name, $color in $colors {
 .text-color--#{$name} {
     color: complementarypalette($name);
   }
 }
 
 // Border colors
-@each $name, $complementarypalette in $complementary {
+@each $name, $color in $colors {
 .border-color--#{$name} {
     border-color: complementarypalette($name);
   }

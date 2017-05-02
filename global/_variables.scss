@@ -39,7 +39,7 @@ $breakpoints: (
   medium : ( 992px ),
   small  : ( 768px ),
   xsmall  : ( 480px )
-);
+) !default;
 
 $container-xs: 480px !default;
 $container-sm: 640px !default;

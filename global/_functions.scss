@@ -1,11 +1,11 @@
 // returns all colors in $colors and can be used as palette($name);
 @function palette($palette, $tone: "base") {
-  @return map-get(map-get($colors, $palette), $tone);
+  @return map-get(map-get($styles, $palette), $tone);
 }
 
 // returns all complementary colors in $complementary and can be used as palette($name);
 @function complementarypalette($complementarypalette, $tone: "base") {
-  @return map-get(map-get($complementary, $complementarypalette), $tone);
+  @return map-get(map-get($colors, $complementarypalette), $tone);
 }
 
 // returns all inline sizes in $inline-size and can be used as inline-size($name);

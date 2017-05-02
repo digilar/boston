@@ -9,7 +9,7 @@ $color-marine: #0f5169 !default;
 $color-orange: #ea690a !default;
 $color-white: #ffffff !default;
 
-$complementary: (
+$colors: (
 	grey: (
 		base: $color-grey
 	),
@@ -34,9 +34,9 @@ $complementary: (
 	marine: (
 		base: $color-marine
 	)
-);
+) !default;
 
-$colors: (
+$styles: (
 	primary: (
 		base: $color-orange,
 		dark: darken($color-orange, 10%),
@@ -74,8 +74,9 @@ $colors: (
 		textcolor: $color-black
 	),
 	link: (
-		base: $color-blue,
+		base: none,
 		dark: darken($color-blue, 10%),
-		light: lighten($color-blue, 10%)
+		light: lighten($color-blue, 10%),
+    textcolor: $color-blue
 	)
-);
+) !default;
