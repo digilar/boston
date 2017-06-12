@@ -16,17 +16,12 @@ and then:
 }
 
 [data-ico] {
-  width: $icon-size;
-  height: $icon-size;
+  @include icon-size($icon-size,$icon-size);
   display: inline-block;
   vertical-align: middle;
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
-}
-
-[data-ico~="logo"] {
-  @include icon-size(191px,64px);
 }
 
 [data-ico~="small"] {

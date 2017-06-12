@@ -25,6 +25,18 @@
   font-size: $h4;
 }
 
+.#{$base-prefix}text-primary {
+  font-size: $heading-primary;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+.#{$base-prefix}text-secondary {
+  font-size: $heading-secondary;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
 .#{$base-prefix}text-small {
   font-size: $font-size-xs;
 }
@@ -47,10 +59,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: $font-weight-bold;
-}
-
-.#{$base-prefix}text-lead {
-  font-size: $h4;
+  color: lighten($color-black, 40%);
 }
 
 .#{$base-prefix}h1,

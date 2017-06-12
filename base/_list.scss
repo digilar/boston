@@ -18,21 +18,21 @@ ol {
 // Unordered lists
 
 .#{$base-prefix}list-unordered {
-  margin: 15px 0 15px 15px;
+  margin: $global-margin 0 $global-margin $global-margin;
   padding:0 0 0 15px;
   list-style-type: disc;
   li {
-    padding: $global-padding / 2 0 $global-padding / 2 15px;
+    padding: $global-padding / 2 0 $global-padding / 2 $global-padding / 1.5;
   }
 }
 
 // Ordered lists
 
 .#{$base-prefix}list-ordered {
-  margin: 15px 0 15px 15px;
+  margin: $global-margin 0 $global-margin $global-margin;
   padding: 0 0 0 15px;
   list-style-type: decimal;
   li {
-    padding: $global-padding / 2 0 $global-padding / 2 15px;
+    padding: $global-padding / 2 0 $global-padding / 2 $global-padding / 1.5;
   }
 }
